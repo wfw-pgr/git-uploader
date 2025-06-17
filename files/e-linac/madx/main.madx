@@ -1,0 +1,30 @@
+// ================================= //
+// ===     e-linac for TAT       === //
+// ================================= //
+
+//  -- [1] beginning             --  //
+title, "e-linac for tat"
+option,-echo;
+
+//  -- [2] call sequence file    --  //
+call, file="e-linac.seq";
+
+//  -- [3] define beam           --  //
+Beam, particle=electron, sequence=hebt, energy=0.035;
+
+//  -- [4] sequence to be used   --  //
+use, sequence=hebt;
+
+//  -- [5] matching              --  //
+// match, orbit;
+//   constraint, range=bpmv5, y=0.0, py=0.0;     // global
+//   vary, name=kcv9, step=0.0001;               // knob
+//   lmdif,calls=1000,tolerance=1.0E-10;
+// endmatch;
+
+//  -- [6] twiss parameter       --  //
+select, flag=twiss, column=name,s,x,y,px,py,alfx,alfy,betx,bety,emitx,emity,dx,dy;
+survey, file="out/survey.tfs";
+twiss , betx=3.0, bety=3.0, save, centre, file="out/twiss.tfs";
+stop;
+
