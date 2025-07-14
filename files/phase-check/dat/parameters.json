@@ -1,0 +1,76 @@
+{
+
+    // ---------------------------- //
+    // --- [1] consntans        --- //
+    // ---------------------------- //
+    "umass"              : 931.494        , // [MeV]
+    "mass/u"             : 2.01410        , // [m/u]
+    "cv"                 : 2.99792458e8   , // [m/s]
+    "qe"                 : 1.60217663e-19 , // [C]
+    "Nu"                 : 2.0            , // #.of nucleis
+    "freq_0"             : 36.5           , // [MHz]
+    "harmonics"          : 4              , 
+
+    
+    // ---------------------------- //
+    // --- [2] modes            --- //
+    // ---------------------------- //
+    "mode.phase"          : "adjust",  // init, none, adjust / direct
+
+    
+    // ---------------------------- //
+    // --- [3] init. condition  --- //
+    // ---------------------------- //
+    "init.npt"           : 1000           ,
+    "init.emit_n"        : 25.0           , // normalized emittance [ pi * mm mrad]
+    "init.beta_x"        : 8.0            , // [m]
+    "init.beta_y"        : 4.0            , // [m]
+    "init.beta_z"        : 4.0            , // [m]
+    "init.Ek"            : 40.0           , // [MeV]
+    "init.plot.nbins"    : 40,
+    "init.plot.pngFile"  : "png/initial_particles__{0}_{1}.png", 
+
+    
+    // ---------------------------- //
+    // --- [4] translate        --- //
+    // ---------------------------- //
+    "translate.seqLabel"  : "MidBeta" ,
+    "translate.RFmode"    : "rfgap"   ,  // rfgap / rfcavity ( no vertical force in rfcavity )
+    "translate.lagSign"   : +1.0      ,  // (-) lag = -45 deg -> +45 deg
+    "translate.n_bessel"  : 4         ,
+    
+    "ptc.sw"              : false     ,
+
+    
+    // ---------------------------- //
+    // --- [5] file             --- //
+    // ---------------------------- //
+    "file.init.hdf"      : "dat/initial_particles.h5" , 
+    "file.sequence"      : "madx/1a-deuteron.seq"     , 
+    "file.start"         : "madx/start.madx"          , 
+    "file.observe"       : "madx/observe.madx"        , 
+    "file.sclinac"       : "track/sclinac.dat"        , 
+    "file.beam"          : "track/beam.out"           , 
+    "file.phase"         : "dat/phase.dat", 
+    
+    
+    // ---------------------------- //
+    // --- [6] post process     --- //
+    // ---------------------------- //
+    "post.digit"             : 6, 
+    
+    "post.twiss.sw"          :  true,
+    "post.twiss.inpFile"     :  "madx/out/twiss.tfs",
+    "post.twiss.outFile"     :  "dat/twiss.csv",
+    
+    "post.track.sw"          :  true,
+    "post.track.inpFile"     :  "madx/out/track.tfsone",
+    "post.track.outFile"     :  "dat/track.csv",
+
+    "post.compare.sw"        :  true,
+    "post.compare.trackFile" :  "track/beam.out",
+    "post.compare.pngFile"   :  "png/compare__track_madx.png", 
+
+
+    
+}
