@@ -219,13 +219,13 @@ def convert_to_rfgap( words, counts, params, Ek, E0, phase=None ):
         else:
             shiftT = phase[ phase["NAME"]==tag ]["SHIFT"].iloc[0]
             kick5  = phase[ phase["NAME"]==tag ]["KICK5"].iloc[0]
-        factor  = 0.8
+        factor  = 1.0
         tag_ps1 = "ps{}".format( counts["Nps"]+1 )
         tag_ps2 = "ps{}".format( counts["Nps"]+2 )
-        shift1  = (-1.0) * shiftT * np.pi/180.0 * params["cv"]/( 2.0*np.pi*freq ) * factor
-        shift2  = (+1.0) * shiftT * np.pi/180.0 * params["cv"]/( 2.0*np.pi*freq ) * factor
-        # shift1  = (-1.0) * kick5 * factor
-        # shift2  = (+1.0) * kick5 * factor
+        # shift1  = (-1.0) * shiftT * np.pi/180.0 * params["cv"]/( 2.0*np.pi*freq ) * factor
+        # shift2  = (+1.0) * shiftT * np.pi/180.0 * params["cv"]/( 2.0*np.pi*freq ) * factor
+        shift1  = (-1.0) * kick5 * factor
+        shift2  = (+1.0) * kick5 * factor
         ps1     = [ { "type":"phShifter", "tag":tag_ps1, "kick5":shift1, "at":counts["at"] } ]
         ps2     = [ { "type":"phShifter", "tag":tag_ps2, "kick5":shift2, "at":counts["at"] } ]
         ret     = ps1 + ret + ps2

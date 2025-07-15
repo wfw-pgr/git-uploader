@@ -84,13 +84,6 @@ def extract__phaseAtRFgap( inpFile="dat/parameters.json" ):
     with open( inpFile, "r" ) as f:
         params = json5.load( f )
     track = load__trackData( trackFile=params["post.track.inpFile"] )
-    if ( os.path.exists( params["file.phase"] ) ):
-        phase = pd.read_csv( params["file.phase"] )
-        phase = phase["PHASE"].values
-    else:
-        print( "no profile" )
-        input()
-        phase = 0.0
 
     # ------------------------------------------------- #
     # --- [2] extract particles at RFgap            --- #
@@ -112,9 +105,8 @@ def extract__phaseAtRFgap( inpFile="dat/parameters.json" ):
     # ------------------------------------------------- #
     freq        = params["harmonics"] * params["freq_0"] * MHz
     shift       = 2.0*np.pi*freq/params["cv"]* df["T"]
-    shift_deg   = 180.0/np.pi * shift
-    df["PHASE"] = phase + shift_deg
-    df["SHIFT"] =         shift_deg
+    df["PHASE"] = 0.0
+    df["SHIFT"] = 180.0/np.pi * shift
     df["KICK5"] = df["T"]
     df.to_csv( params["file.phase"], index=False )
     return( df )
@@ -205,7 +197,7 @@ def auto__adjustphase():
     prepare__referenceParticle()
     initialize__phaseFile()
 
-    Nloop = 7
+    Nloop = 3
     stack = []
     for ik in range( 1,Nloop+1 ):
         print( " Nloop == {}".format( ik ) )
@@ -244,16 +236,11 @@ def auto__adjustphase():
     fig2    = gp1.gplot1D( config=config_e )
     for ik,dic in enumerate(stack):
         fig1.add__plot( xAxis=dic["shifts"]["S"], yAxis=dic["shifts"]["SHIFT"], \
-                        label="iLoop={}".format(ik+1), color="C{}".format(ik+1)  )
-        fig1.add__plot( xAxis=dic["shifts"]["S"], yAxis=dic["shifts"]["PHASE"], \
-                        label="iLoop={}".format(ik+1), color="C{}".format(ik+1), \
-                        linestyle="--"  )
+                       label="iLoop={}".format(ik)  )
         fig2.add__plot( xAxis=dic["energy"]["sL"], yAxis=dic["energy"]["Ek"], \
-                        label="iLoop={}".format(ik+1) )
+                       label="iLoop={}".format(ik) )
     fig1.set__axis()
     fig2.set__axis()
-    fig1.set__legend()
-    fig2.set__legend()
     fig1.save__figure()
     fig2.save__figure()
     return()
