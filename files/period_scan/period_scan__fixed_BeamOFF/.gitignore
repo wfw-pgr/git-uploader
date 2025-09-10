@@ -1,0 +1,4 @@
+*.csv
+*.dat
+png/*.png
+summary*.json
