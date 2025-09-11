@@ -1,8 +1,11 @@
 #!/bin/bash
 
 
-for day in `seq 1 2 40`;
+for off in 0.5 1 1.5 2;
 do
-    sed -e 's/@DAY/'${day}'/g' dat/base__settings.json > dat/use.json
-    invoke run --settingFile="dat/use.json"
+    for on in `seq 1 1 40`;
+    do
+	cat dat/base__settings.json | sed -e 's/@ON/'${on}'/g' | sed -e 's/@OFF/'${off}'/g' > dat/use.json
+	invoke run --settingFile="dat/use.json"
+    done
 done

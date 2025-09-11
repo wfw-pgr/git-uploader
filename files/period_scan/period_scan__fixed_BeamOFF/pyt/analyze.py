@@ -6,21 +6,21 @@ import nk_toolkit.plot.gplot1D        as gp1
 
 GBq        = 1.e9
 outFile    = "dat/period_vs_annualProd.csv"
-beamon     = [ int(val) for val in np.arange( 0.0, 40.1, 1.0 ) ]
-beamoff    = 2
+beamon     = [ int(val) for val in np.arange( 1.0, 40.1, 1.0 ) ]
+beamoff    = [ 0.5, 1, 1.5, 2 ]
 
 # ------------------------------------------------- #
 # --- [1] data summary                          --- #
 # ------------------------------------------------- #
-filenames  = [ "dat/summary__{}d.json".format( ik ) for ik in beamon ]
 stack      = []
-for ifile in filenames:
-    with open( ifile, "r" ) as f:
-        hdict = json5.load( f )
-    stack += [ hdict["normalized.Bcum"] ]
-period     = np.array( beamon ) + beamoff
-annual     = np.array( stack  ) / GBq
-df         = pd.DataFrame( { "period[d]":period, "annual[GBq]":annual } )
+for off in beamoff:
+    for on in beamon:
+        ifile  = "dat/summary__{0}d_{1}d.json".format( on, off )
+        with open( ifile, "r" ) as f:
+            hdict  = json5.load( f )
+        stack     += [ ( on, off*2, hdict["normalized.Bcum"] / GBq ) ]
+df              = pd.DataFrame( stack, columns=["beamon[d]","beamoff[d]","annual[GBq]"] )
+df["period[d]"] = df["beamon[d]"] + df["beamoff[d]"]
 df.to_csv( outFile, index=False )
 print( "[analyze.py] output :: {} ".format( outFile ) )
 
@@ -44,7 +44,12 @@ config_    = {
 }
 config = { **config, **config_ }
     
-fig    = gp1.gplot1D( config=config )
-fig.add__plot( xAxis=period, yAxis=annual )
+fig     = gp1.gplot1D( config=config )
+beamoff = list( set( df["beamoff[d]"] ) )
+for off in beamoff:
+    df_   = df[ df["beamoff[d]"] == off ]
+    label = "{} [d] off".format( off )
+    fig.add__plot( xAxis=df_["period[d]"], yAxis=df_["annual[GBq]"], label=label )
 fig.set__axis()
+fig.set__legend()
 fig.save__figure()

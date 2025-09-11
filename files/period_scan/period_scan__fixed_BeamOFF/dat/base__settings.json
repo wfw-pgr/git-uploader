@@ -1,12 +1,12 @@
 {
 
-    // @DAY
+    // @ON, @OFF
     
     // ------------------------------------------------- //
     // --- [1] General settings                      --- //
     // ------------------------------------------------- //
     "result.file"            : null,
-    "summary.file"           : "dat/summary__@DAYd.json",
+    "summary.file"           : "dat/summary__@ONd_@OFFd.json",
     "summary.period"         : 365.0, 
     
     "series"                 :[ "beamON.01", "separation.01", "preparation.01" ],
@@ -47,19 +47,19 @@
     // ------------------------------------------------- //
 
     "preparation.01"         : {
-	"dt"                 : [ 1, "d" ],  
+	"dt"                 : [ @OFF, "d" ],  
 	"beam.relint"        : 0.0,
 	"nPoints"            : 11,
 	"separation"         : false, 
     },
     "beamON.01"              : {
-	"dt"                 : [ @DAY, "d" ], // [ time, unit ]  
+	"dt"                 : [ @ON, "d" ], // [ time, unit ]  
 	"beam.relint"        : 1.0,          // relative Yield rate: Y  ==>  beam on/off = ( 1/0 )
 	"nPoints"            : 11,           // number of data samplings
 	"separation"         : false, 
     },
     "separation.01"          : {
-	"dt"                 : [ 1, "d" ],
+	"dt"                 : [ @OFF, "d" ],
 	"beam.relint"        : 0.0,
 	"nPoints"            : 11,
 	"separation"         : true,
@@ -93,7 +93,7 @@
 
     "figure.act.config"      :{				  
 	"figure.size"        : [4.5,4.5],
-	"figure.pngFile"     : "png/time_vs_activity__@DAYd.png",
+	"figure.pngFile"     : "png/time_vs_activity__@ONd_@OFF.png",
 	"figure.position"    : [ 0.16, 0.16, 0.84, 0.84 ]    ,
 	"ax1.y.normalize"    : 1.0e9, 
 	"ax2.y.normalize"    : 1.0e9, 
