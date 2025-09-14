@@ -259,11 +259,11 @@ def display__risk_return( data=None, pareto=None, pngFile=None ):
         "figure.pngFile"     : "png/Pmiss-EY.png", 
         "figure.position"    : [ 0.16, 0.16, 0.94, 0.94 ],
         "ax1.y.normalize"    : 1.0e0, 
-        "ax1.x.range"        : { "auto":True , "min":  0.0, "max":5.0e-10, "num":6 },
+        "ax1.x.range"        : { "auto":True , "min":  0.0, "max":0.20   , "num":6 },
         "ax1.y.range"        : { "auto":False, "min":  0.0, "max":1.6e-8 , "num":9 },
         "ax1.x.label"        : r"$P(Y<Y_{c})$", 
         "ax1.y.label"        : r"$E[Y]$",
-        "ax1.x.minor.nticks" : 1, 
+        "ax1.x.minor.nticks" : 5, 
         "plot.marker"        : "o",
         "plot.linestyle"     : "none",
         "plot.markersize"    : 3.0,
@@ -271,16 +271,15 @@ def display__risk_return( data=None, pareto=None, pngFile=None ):
     }
     config  = { **config, **config_ }
     
-    grp     = { k: g for k, g in df.groupby([ 'FWHM', 'Diameter' ] ) }
+    grp     = { k: g for k, g in data.groupby([ 'FWHM', 'Diameter' ] ) }
     args    = [ (4,3), (4,5), (4,7), (5,3), (5,5), (5,7), (6,3), (6,5), (6,7) ]
     fig     = gp1.gplot1D( config=config, pngFile=pngFile )
     for ia,arg in enumerate( args ):
         val  = grp.get( arg )
         fig.add__plot( xAxis=val["Pmiss"], yAxis=val["EY"], label="FWHM{0}mm D{1}mm".format( arg[0], arg[1] ) )
     if ( pareto is not None ):
-        print( pareto )
-        fig.add__plot( xAxis=pareto["xn"], yAxis=pareto["yn"], color="cyan", linestyle="--", marker="none", label="PF"    )
-        fig.add__plot( xAxis=pareto["xe"], yAxis=pareto["ye"], color="cyan", linestyle="none", marker="o" , label="elbow" )
+        fig.add__plot( xAxis=pareto["xn"], yAxis=pareto["yn"], color="cyan", linestyle="--", marker="none", label="Pareto Frontier"    )
+        fig.add__plot( xAxis=pareto["xe"], yAxis=pareto["ye"], color="red" , linestyle="none", marker="o" , label="knee point" )
     fig.set__axis()
     fig.set__legend()
     fig.save__figure()
@@ -336,7 +335,7 @@ def get__paretoFrontier( df=None, fit_type="quantile_regression", label=None ):
         import statsmodels.api as sm
         import patsy
         dof   = 3
-        tau   = 0.98
+        tau   = 0.97
         Xspl  = patsy.dmatrix( f"bs( xvals, df={dof}, include_intercept=False)",
                                { "xvals": xvals }, return_type="dataframe" )
         X     = sm.add_constant( Xspl )
@@ -422,7 +421,7 @@ def find__elbowPoints( xnews, ynews, method="distance", spline_s=0.0, return_all
 
 if ( __name__=="__main__" ):
 
-    sigma_bs = [ 0.6, 0.8, 1.0, 1.2, 1.4, 1.6 ]
+    sigma_bs = [ 0.6, 0.8, 1.0, 1.2, 1.6, 2.0 ]
 
     # extract__efficiency()
     # fit__to_gaussian()
