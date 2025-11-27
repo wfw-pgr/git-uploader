@@ -1,0 +1,20 @@
+
+  Description of the element "rfgap" for a Zero length RF Gap as in Trace-3D.
+
+  Element entry in the lattice file "sclinac.dat":
+
+    nn  rfgap  voltage  phase  harm  aper
+  
+        nn: a number, not really used
+    vscale: Voltage in MV
+     phase: Phase in deg
+      harm: Harmonic number according to the base frequency
+      aper: Aperture in cm
+
+
+  Example: rfgap line
+
+    1  rfgap      0.036552  -45.0000    1.0000    1.2500
+
+ 
+  In this specific example: SNS/DTL-1 converted to Quads + RF Gaps

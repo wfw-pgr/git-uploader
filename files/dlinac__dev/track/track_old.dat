@@ -1,0 +1,35 @@
+&TRAN
+
+  Win =3.97067d03, atp =238
+  freqb =18.25D06,   part = 0.995
+
+  nqtot=1
+  qq=35 
+  amass= 238
+  npat= 1000
+  current=0.0
+
+  Qavr=35
+  Qdesign=35,Adesign=238, db_b=0.00001,df_4D=180. 
+
+  epsnx = 0.08,  alfax = 0, betax = 40
+  epsny = 0.08,  alfay =0, betay = 40
+  epsnz = 12.5,  alfaz =0.0, betaz = 2.9
+
+  phmax=90., dwwmax=0.05
+  
+  dWWacc=0.05
+  x00=0., xp00=0., y00=0., yp00=0., 
+  ph00=-0., dww00=0.,phi0=-0.
+
+&END
+
+&INDEX
+  
+  NRZ=1, igraph=1, iaccep=0, iflag_dis=1, iflag2D=0, iflag_qq=1,
+  iflag_rms=1,  iint=100,     nstep_cav=50
+  iflag_env=0,  iflag_cav=1,  iflag_ell=0,  iflag_fenv=0
+  iflag_halo=0, iflag_lev=0,  isrf=100,     iflag_bc=1
+  iread_dis=0,  iwrite_dis=0, iflag_corr=0, iflag_match=0 
+
+&END

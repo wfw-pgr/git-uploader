@@ -1,0 +1,90 @@
+{
+
+    // ---------------------------- //
+    // --- [1] constants        --- //
+    // ---------------------------- //
+    "beam.charge"                :  +1.0,       // unit=[-qe] :  -1.0 for e, +1.0 for p,
+    "beam.mass.amu"              : 2.014,       // mass [amu]
+    "beam.Ek.MeV/u"              :  20.0,       // kinetic energy [MeV]
+    "beam.u"                     :   2.0,       // number of nucleon
+    "beam.bunch_charge"          : 1e-12,       // charge of bunch in [C]
+    "beam.nparticles"            :   1e4,       // 
+    
+    "beam.freq"                  : 36.5e6,      // [Hz]
+    "beam.mass"                  : 1876.0289,   // E0 : rest mass energy [MeV]   = 2.014 * 931.494
+    "beam.harmonics"             : 4    ,       // int   rf.freq = h * beam.freq
+    "rf.harmonics"               : 4    ,       // int   rf.freq = h * beam.freq
+    
+    "pic.trackmode"              : "nonlinear", // "nonlinear", "linear", "envelope"
+    "pic.particle_shape"         : 2,
+    "pic.space_charge"           : false,
+    "pic.slice_step_diagnostics" : false,
+    "pic.output.backend"         : ".h5", 
+
+    // ---------------------------- //
+    // --- [2] translate        --- //
+    // ---------------------------- //
+    "translate.rf.thickness"     : 5.e-5,
+    "translate.cavity.length"    : 5.e-5, 
+    "translate.cavity.phase"     : -45.0,
+    "translate.rfgap.trace3D"    : true,
+    "translate.quad.factor"      : @factor, 
+    // "translate.cavity.phase"     : -45.0,
+
+    // "translate.cavity.options"   : { "cos_coefficients" : [   1.99954614e+00, -1.81511288e+00,  1.39083536e+00, -9.45721338e-01,  5.97445646e-01, -3.61465987e-01 ], 
+    //                                  "sin_coefficients" : [   0, 0, 0, 0, 0, 0 ], 
+                                     // "sin_coefficients" : [   0.00000000e+00,  9.83261932e-05, -1.76575054e-04,  1.60768545e-04, -2.12315992e-04,  1.88908689e-04 ], 
+
+    // "translate.cavity.options"   : { "cos_coefficients" : [ 1.99954614e+00, -1.81511288e+00,  1.39083536e+00, -9.45721338e-01,  5.97445646e-01, -3.61465987e-01,  2.12937976e-01, -1.23277123e-01,  7.07753119e-02, -4.03459503e-02,  2.28699767e-02, -1.26867935e-02,  6.97191832e-03, -3.70460280e-03,  1.81250970e-03, -8.64218139e-04,  4.93751751e-04, -8.50928072e-05, -4.00700101e-04,  9.31218185e-04 ], 
+    //                                  "sin_coefficients" : [ 0.00000000e+00,  9.83261932e-05, -1.76575054e-04,  1.60768545e-04, -2.12315992e-04,  1.88908689e-04, -2.11542314e-04,  1.97099769e-04, -2.16537758e-04,  1.53902652e-04, -1.12553027e-04,  2.94303721e-05, -3.42721103e-05, -1.18599891e-05,  9.06996034e-05, -6.59903884e-05,  1.18996071e-04, -1.34714253e-04,  1.20955910e-04, -1.46842103e-04 ], 
+    // "translate.cavity.options"   : { "cos_coefficients" : [ 2.0, -1.0 ],
+    //                                  "sin_coefficients" : [ 0.0,  0.0 ],
+    "translate.cavity.options"   : { "cos_coefficients" : [ 2.0,  0.0 ],
+                                     "sin_coefficients" : [ 0.0,  0.0 ],
+                                     "nslice"  : 1,      // 1  def.
+                                     "mapsteps": 10,     // 10
+                                     "aperture_x":0.2, 
+                                     "aperture_y":0.2, 
+                                   },
+    "translate.quad.options"     : { "unit"    : 1,
+                                     "nslice"  : 1,       // 1
+                                     "mapsteps": 10,      // 5
+                                     "int_order" :  4, 
+                                     "aperture_x":0.2, 
+                                     "aperture_y":0.2, 
+                                   },
+    "translate.drift.options"    : { "nslice": 1, 
+                                     "aperture_x":0.2, 
+                                     "aperture_y":0.2, 
+                                   },
+    "translate.nslice"           : 10   ,
+    "translate.add_monitor"      : true ,
+    "translate.nonlinear"        : true ,
+    "translate.aperture"         : 0.20 ,
+    "translate.trackmode"        : "nonlinear",
+    
+    "translate.skip.rf"          : false, 
+    "translate.skip.dr"          : false, 
+    "translate.skip.qm"          : false, 
+
+
+    // ---------------------------- //
+    // --- [3] plot             --- //
+    // ---------------------------- //
+    "plot.conf.refp"         : {
+        "ax1.x.range": { "auto":false, "min": 0.0, "max":70.0, "num":8 }
+    },
+    "plot.conf.stat"         : {
+        "ax1.x.range": { "auto":false, "min": 0.0, "max":70.0, "num":8 }
+    },
+    "plot.conf.traj"         : {
+        "ax1.x.range": { "auto":false, "min": 0.0, "max":70.0, "num":8 }
+    },
+    
+    // ---------------------------- //
+    // --- [4] file             --- //
+    // ---------------------------- //
+    "file.sclinac"           : "track/sclinac_short.dat" , 
+    "file.sequence"          : "impactx/lattice_elements.py", 
+    
+}
