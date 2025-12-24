@@ -1,0 +1,85 @@
+{
+
+    // ---------------------------- //
+    // --- [1] constants        --- //
+    // ---------------------------- //
+    "beam.charge.qe"             :  +1.0  , // for 1-particle, unit=[-qe]: -1 for e, +1 for p
+    "beam.charge.C"              : 1.e-12 , // for bunch, unit=[C]
+    "beam.nparticles"            :   1e4  , // #. of super-particles 
+    "beam.u.nucleon"             :   2.0  , // #. of nucleon / particle
+    "beam.mass.amu"              : 2.014  , // mass [amu] :  2.014 for D, 1.0 for p, 
+    "beam.Ek.MeV/u"              :  20.0  , // kinetic energy [MeV]
+    "beam.freq.Hz"               : 36.5e6 , // [Hz]
+    "beam.harmonics"             : 4      , // int   rf.freq = h * beam.freq
+
+    "beam.twiss.alpha"           : [   0.0,     0.0,    0.0 ], 
+    "beam.twiss.beta"            : [ 7.9083, 3.9808, 442.31 ], 
+    "beam.emittance.geom"        : [ 94.312, 93.568, 16.785 ], // [mm mrad] - RMS, geometric
+    
+    // ---------------------------- //
+    // --- [2] main's settings  --- //
+    // ---------------------------- //
+    "mode.linear"                : false,
+    "mode.space_charge"          : false,
+    
+    // ---------------------------- //
+    // --- [3] translate        --- //
+    // ---------------------------- //
+    "translate.quad.skip"             : false, 
+    "translate.drift.skip"            : false, 
+    "translate.cavity.skip"           : false,
+    
+    "translate.cavity.type"           : "rfcavity",    // [ rfcavity, shortrf ]
+    "translate.cavity.rfgap"          : true, 
+    "translate.cavity.length"         : 1.e-5,        // for rfcavity
+    "translate.cavity.phase"          : -45.0,
+    "translate.cavity.phase.fromfile" : false,
+    
+    "translate.cavity.options"      : {
+        "cos_coefficients" : [ 2.0,  0.0 ],
+        "sin_coefficients" : [ 0.0,  0.0 ],
+        "nslice"           : 1,
+        "aperture_x"       : 0.1,
+        "aperture_y"       : 0.1,
+    },                                                 // for "rfcavity"
+    // "translate.cavity.options"       : {
+    // },                                              // for "shortrf"
+    
+    "translate.quad.factor"           : 1.0, 
+    "translate.quad.options"          : { "unit"      :  1,  // unit=0: MADX, unit=1: MaryLie 
+                                          "nslice"    :  1,
+                                          "aperture_x":0.1, 
+                                          "aperture_y":0.1,
+                                        },
+    "translate.drift.options"         : {
+        "nslice"    :  1, 
+        "aperture_x":0.1, 
+        "aperture_y":0.1,  // 0.2
+    },
+    
+
+    
+    // ---------------------------- //
+    // --- [4] plot             --- //
+    // ---------------------------- //
+    "plot.conf.refp"         : {
+        "ax1.x.range": { "auto":false, "min": 0.0, "max":70.0, "num":8 }
+    },
+    "plot.conf.stat"         : {
+        "ax1.x.range": { "auto":false, "min": 0.0, "max":70.0, "num":8 }
+    },
+    "plot.conf.traj"         : {
+        "ax1.x.range": { "auto":false, "min": 0.0, "max":70.0, "num":8 }
+    },
+
+
+    // ---------------------------- //
+    // --- [5] file             --- //
+    // ---------------------------- //
+    "file.ref"          : "impactx/diags/ref_particle.0", 
+    "file.sta"          : "impactx/reduced_beam_characteristics.0", 
+    "file.bpm"          : "impactx/diags/openPMD/bpm.h5", 
+    "file.beamline"     : "beamline.json",
+    "file.adjust_phase" : "dat/adjust_phase.csv", 
+    
+}

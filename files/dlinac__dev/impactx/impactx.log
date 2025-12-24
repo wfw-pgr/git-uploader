@@ -1,0 +1,2410 @@
+Initializing AMReX (25.12)...
+AMReX (25.12) initialized
+
+Grids Summary:
+  Level 0   4 grids  4096 cells  100 % of domain
+            smallest grid: 16 x 16 x 4  biggest grid: 16 x 16 x 4
+  Level 1   32 grids  32768 cells  100 % of domain
+            smallest grid: 16 x 16 x 4  biggest grid: 16 x 16 x 4
+
+
+Grids Summary:
+  Level 0   4 grids  4096 cells  100 % of domain
+            smallest grid: 16 x 16 x 4  biggest grid: 16 x 16 x 4
+  Level 1   32 grids  32768 cells  100 % of domain
+            smallest grid: 16 x 16 x 4  biggest grid: 16 x 16 x 4
+
+ Diagnostics: 1
+ Space Charge effects: False
+ CSR effects: 0
+ ISR effects: 0
+
+++++ Starting step=1 slice_step=0
+
+**** WARNINGS ******************************************************************
+* GLOBAL warning list  after  [ FIRST STEP ]
+*
+* No recorded warnings.
+********************************************************************************
+
+
+++++ Starting step=2 slice_step=0
+
+++++ Starting step=3 slice_step=0
+
+++++ Starting step=4 slice_step=0
+
+++++ Starting step=5 slice_step=0
+
+++++ Starting step=6 slice_step=0
+
+++++ Starting step=7 slice_step=0
+
+++++ Starting step=8 slice_step=0
+
+++++ Starting step=9 slice_step=0
+
+++++ Starting step=10 slice_step=0
+
+++++ Starting step=11 slice_step=0
+
+++++ Starting step=12 slice_step=0
+
+++++ Starting step=13 slice_step=0
+
+++++ Starting step=14 slice_step=0
+
+++++ Starting step=15 slice_step=0
+
+++++ Starting step=16 slice_step=0
+
+++++ Starting step=17 slice_step=0
+
+++++ Starting step=18 slice_step=0
+
+++++ Starting step=19 slice_step=0
+
+++++ Starting step=20 slice_step=0
+
+++++ Starting step=21 slice_step=0
+
+++++ Starting step=22 slice_step=0
+
+++++ Starting step=23 slice_step=0
+
+++++ Starting step=24 slice_step=0
+
+++++ Starting step=25 slice_step=0
+
+++++ Starting step=26 slice_step=0
+
+++++ Starting step=27 slice_step=0
+
+++++ Starting step=28 slice_step=0
+
+++++ Starting step=29 slice_step=0
+
+++++ Starting step=30 slice_step=0
+
+++++ Starting step=31 slice_step=0
+
+++++ Starting step=32 slice_step=0
+
+++++ Starting step=33 slice_step=0
+
+++++ Starting step=34 slice_step=0
+
+++++ Starting step=35 slice_step=0
+
+++++ Starting step=36 slice_step=0
+
+++++ Starting step=37 slice_step=0
+
+++++ Starting step=38 slice_step=0
+
+++++ Starting step=39 slice_step=0
+
+++++ Starting step=40 slice_step=0
+
+++++ Starting step=41 slice_step=0
+
+++++ Starting step=42 slice_step=0
+
+++++ Starting step=43 slice_step=0
+
+++++ Starting step=44 slice_step=0
+
+++++ Starting step=45 slice_step=0
+
+++++ Starting step=46 slice_step=0
+
+++++ Starting step=47 slice_step=0
+
+++++ Starting step=48 slice_step=0
+
+++++ Starting step=49 slice_step=0
+
+++++ Starting step=50 slice_step=0
+
+++++ Starting step=51 slice_step=0
+
+++++ Starting step=52 slice_step=0
+
+++++ Starting step=53 slice_step=0
+
+++++ Starting step=54 slice_step=0
+
+++++ Starting step=55 slice_step=0
+
+++++ Starting step=56 slice_step=0
+
+++++ Starting step=57 slice_step=0
+
+++++ Starting step=58 slice_step=0
+
+++++ Starting step=59 slice_step=0
+
+++++ Starting step=60 slice_step=0
+
+++++ Starting step=61 slice_step=0
+
+++++ Starting step=62 slice_step=0
+
+++++ Starting step=63 slice_step=0
+
+++++ Starting step=64 slice_step=0
+
+++++ Starting step=65 slice_step=0
+
+++++ Starting step=66 slice_step=0
+
+++++ Starting step=67 slice_step=0
+
+++++ Starting step=68 slice_step=0
+
+++++ Starting step=69 slice_step=0
+
+++++ Starting step=70 slice_step=0
+
+++++ Starting step=71 slice_step=0
+
+++++ Starting step=72 slice_step=0
+
+++++ Starting step=73 slice_step=0
+
+++++ Starting step=74 slice_step=0
+
+++++ Starting step=75 slice_step=0
+
+++++ Starting step=76 slice_step=0
+
+++++ Starting step=77 slice_step=0
+
+++++ Starting step=78 slice_step=0
+
+++++ Starting step=79 slice_step=0
+
+++++ Starting step=80 slice_step=0
+
+++++ Starting step=81 slice_step=0
+
+++++ Starting step=82 slice_step=0
+
+++++ Starting step=83 slice_step=0
+
+++++ Starting step=84 slice_step=0
+
+++++ Starting step=85 slice_step=0
+
+++++ Starting step=86 slice_step=0
+
+++++ Starting step=87 slice_step=0
+
+++++ Starting step=88 slice_step=0
+
+++++ Starting step=89 slice_step=0
+
+++++ Starting step=90 slice_step=0
+
+++++ Starting step=91 slice_step=0
+
+++++ Starting step=92 slice_step=0
+
+++++ Starting step=93 slice_step=0
+
+++++ Starting step=94 slice_step=0
+
+++++ Starting step=95 slice_step=0
+
+++++ Starting step=96 slice_step=0
+
+++++ Starting step=97 slice_step=0
+
+++++ Starting step=98 slice_step=0
+
+++++ Starting step=99 slice_step=0
+
+++++ Starting step=100 slice_step=0
+
+++++ Starting step=101 slice_step=0
+
+++++ Starting step=102 slice_step=0
+
+++++ Starting step=103 slice_step=0
+
+++++ Starting step=104 slice_step=0
+
+++++ Starting step=105 slice_step=0
+
+++++ Starting step=106 slice_step=0
+
+++++ Starting step=107 slice_step=0
+
+++++ Starting step=108 slice_step=0
+
+++++ Starting step=109 slice_step=0
+
+++++ Starting step=110 slice_step=0
+
+++++ Starting step=111 slice_step=0
+
+++++ Starting step=112 slice_step=0
+
+++++ Starting step=113 slice_step=0
+
+++++ Starting step=114 slice_step=0
+
+++++ Starting step=115 slice_step=0
+
+++++ Starting step=116 slice_step=0
+
+++++ Starting step=117 slice_step=0
+
+++++ Starting step=118 slice_step=0
+
+++++ Starting step=119 slice_step=0
+
+++++ Starting step=120 slice_step=0
+
+++++ Starting step=121 slice_step=0
+
+++++ Starting step=122 slice_step=0
+
+++++ Starting step=123 slice_step=0
+
+++++ Starting step=124 slice_step=0
+
+++++ Starting step=125 slice_step=0
+
+++++ Starting step=126 slice_step=0
+
+++++ Starting step=127 slice_step=0
+
+++++ Starting step=128 slice_step=0
+
+++++ Starting step=129 slice_step=0
+
+++++ Starting step=130 slice_step=0
+
+++++ Starting step=131 slice_step=0
+
+++++ Starting step=132 slice_step=0
+
+++++ Starting step=133 slice_step=0
+
+++++ Starting step=134 slice_step=0
+
+++++ Starting step=135 slice_step=0
+
+++++ Starting step=136 slice_step=0
+
+++++ Starting step=137 slice_step=0
+
+++++ Starting step=138 slice_step=0
+
+++++ Starting step=139 slice_step=0
+
+++++ Starting step=140 slice_step=0
+
+++++ Starting step=141 slice_step=0
+
+++++ Starting step=142 slice_step=0
+
+++++ Starting step=143 slice_step=0
+
+++++ Starting step=144 slice_step=0
+
+++++ Starting step=145 slice_step=0
+
+++++ Starting step=146 slice_step=0
+
+++++ Starting step=147 slice_step=0
+
+++++ Starting step=148 slice_step=0
+
+++++ Starting step=149 slice_step=0
+
+++++ Starting step=150 slice_step=0
+
+++++ Starting step=151 slice_step=0
+
+++++ Starting step=152 slice_step=0
+
+++++ Starting step=153 slice_step=0
+
+++++ Starting step=154 slice_step=0
+
+++++ Starting step=155 slice_step=0
+
+++++ Starting step=156 slice_step=0
+
+++++ Starting step=157 slice_step=0
+
+++++ Starting step=158 slice_step=0
+
+++++ Starting step=159 slice_step=0
+
+++++ Starting step=160 slice_step=0
+
+++++ Starting step=161 slice_step=0
+
+++++ Starting step=162 slice_step=0
+
+++++ Starting step=163 slice_step=0
+
+++++ Starting step=164 slice_step=0
+
+++++ Starting step=165 slice_step=0
+
+++++ Starting step=166 slice_step=0
+
+++++ Starting step=167 slice_step=0
+
+++++ Starting step=168 slice_step=0
+
+++++ Starting step=169 slice_step=0
+
+++++ Starting step=170 slice_step=0
+
+++++ Starting step=171 slice_step=0
+
+++++ Starting step=172 slice_step=0
+
+++++ Starting step=173 slice_step=0
+
+++++ Starting step=174 slice_step=0
+
+++++ Starting step=175 slice_step=0
+
+++++ Starting step=176 slice_step=0
+
+++++ Starting step=177 slice_step=0
+
+++++ Starting step=178 slice_step=0
+
+++++ Starting step=179 slice_step=0
+
+++++ Starting step=180 slice_step=0
+
+++++ Starting step=181 slice_step=0
+
+++++ Starting step=182 slice_step=0
+
+++++ Starting step=183 slice_step=0
+
+++++ Starting step=184 slice_step=0
+
+++++ Starting step=185 slice_step=0
+
+++++ Starting step=186 slice_step=0
+
+++++ Starting step=187 slice_step=0
+
+++++ Starting step=188 slice_step=0
+
+++++ Starting step=189 slice_step=0
+
+++++ Starting step=190 slice_step=0
+
+++++ Starting step=191 slice_step=0
+
+++++ Starting step=192 slice_step=0
+
+++++ Starting step=193 slice_step=0
+
+++++ Starting step=194 slice_step=0
+
+++++ Starting step=195 slice_step=0
+
+++++ Starting step=196 slice_step=0
+
+++++ Starting step=197 slice_step=0
+
+++++ Starting step=198 slice_step=0
+
+++++ Starting step=199 slice_step=0
+
+++++ Starting step=200 slice_step=0
+
+++++ Starting step=201 slice_step=0
+
+++++ Starting step=202 slice_step=0
+
+++++ Starting step=203 slice_step=0
+
+++++ Starting step=204 slice_step=0
+
+++++ Starting step=205 slice_step=0
+
+++++ Starting step=206 slice_step=0
+
+++++ Starting step=207 slice_step=0
+
+++++ Starting step=208 slice_step=0
+
+++++ Starting step=209 slice_step=0
+
+++++ Starting step=210 slice_step=0
+
+++++ Starting step=211 slice_step=0
+
+++++ Starting step=212 slice_step=0
+
+++++ Starting step=213 slice_step=0
+
+++++ Starting step=214 slice_step=0
+
+++++ Starting step=215 slice_step=0
+
+++++ Starting step=216 slice_step=0
+
+++++ Starting step=217 slice_step=0
+
+++++ Starting step=218 slice_step=0
+
+++++ Starting step=219 slice_step=0
+
+++++ Starting step=220 slice_step=0
+
+++++ Starting step=221 slice_step=0
+
+++++ Starting step=222 slice_step=0
+
+++++ Starting step=223 slice_step=0
+
+++++ Starting step=224 slice_step=0
+
+++++ Starting step=225 slice_step=0
+
+++++ Starting step=226 slice_step=0
+
+++++ Starting step=227 slice_step=0
+
+++++ Starting step=228 slice_step=0
+
+++++ Starting step=229 slice_step=0
+
+++++ Starting step=230 slice_step=0
+
+++++ Starting step=231 slice_step=0
+
+++++ Starting step=232 slice_step=0
+
+++++ Starting step=233 slice_step=0
+
+++++ Starting step=234 slice_step=0
+
+++++ Starting step=235 slice_step=0
+
+++++ Starting step=236 slice_step=0
+
+++++ Starting step=237 slice_step=0
+
+++++ Starting step=238 slice_step=0
+
+++++ Starting step=239 slice_step=0
+
+++++ Starting step=240 slice_step=0
+
+++++ Starting step=241 slice_step=0
+
+++++ Starting step=242 slice_step=0
+
+++++ Starting step=243 slice_step=0
+
+++++ Starting step=244 slice_step=0
+
+++++ Starting step=245 slice_step=0
+
+++++ Starting step=246 slice_step=0
+
+++++ Starting step=247 slice_step=0
+
+++++ Starting step=248 slice_step=0
+
+++++ Starting step=249 slice_step=0
+
+++++ Starting step=250 slice_step=0
+
+++++ Starting step=251 slice_step=0
+
+++++ Starting step=252 slice_step=0
+
+++++ Starting step=253 slice_step=0
+
+++++ Starting step=254 slice_step=0
+
+++++ Starting step=255 slice_step=0
+
+++++ Starting step=256 slice_step=0
+
+++++ Starting step=257 slice_step=0
+
+++++ Starting step=258 slice_step=0
+
+++++ Starting step=259 slice_step=0
+
+++++ Starting step=260 slice_step=0
+
+++++ Starting step=261 slice_step=0
+
+++++ Starting step=262 slice_step=0
+
+++++ Starting step=263 slice_step=0
+
+++++ Starting step=264 slice_step=0
+
+++++ Starting step=265 slice_step=0
+
+++++ Starting step=266 slice_step=0
+
+++++ Starting step=267 slice_step=0
+
+++++ Starting step=268 slice_step=0
+
+++++ Starting step=269 slice_step=0
+
+++++ Starting step=270 slice_step=0
+
+++++ Starting step=271 slice_step=0
+
+++++ Starting step=272 slice_step=0
+
+++++ Starting step=273 slice_step=0
+
+++++ Starting step=274 slice_step=0
+
+++++ Starting step=275 slice_step=0
+
+++++ Starting step=276 slice_step=0
+
+++++ Starting step=277 slice_step=0
+
+++++ Starting step=278 slice_step=0
+
+++++ Starting step=279 slice_step=0
+
+++++ Starting step=280 slice_step=0
+
+++++ Starting step=281 slice_step=0
+
+++++ Starting step=282 slice_step=0
+
+++++ Starting step=283 slice_step=0
+
+++++ Starting step=284 slice_step=0
+
+++++ Starting step=285 slice_step=0
+
+++++ Starting step=286 slice_step=0
+
+++++ Starting step=287 slice_step=0
+
+++++ Starting step=288 slice_step=0
+
+++++ Starting step=289 slice_step=0
+
+++++ Starting step=290 slice_step=0
+
+++++ Starting step=291 slice_step=0
+
+++++ Starting step=292 slice_step=0
+
+++++ Starting step=293 slice_step=0
+
+++++ Starting step=294 slice_step=0
+
+++++ Starting step=295 slice_step=0
+
+++++ Starting step=296 slice_step=0
+
+++++ Starting step=297 slice_step=0
+
+++++ Starting step=298 slice_step=0
+
+++++ Starting step=299 slice_step=0
+
+++++ Starting step=300 slice_step=0
+
+++++ Starting step=301 slice_step=0
+
+++++ Starting step=302 slice_step=0
+
+++++ Starting step=303 slice_step=0
+
+++++ Starting step=304 slice_step=0
+
+++++ Starting step=305 slice_step=0
+
+++++ Starting step=306 slice_step=0
+
+++++ Starting step=307 slice_step=0
+
+++++ Starting step=308 slice_step=0
+
+++++ Starting step=309 slice_step=0
+
+++++ Starting step=310 slice_step=0
+
+++++ Starting step=311 slice_step=0
+
+++++ Starting step=312 slice_step=0
+
+++++ Starting step=313 slice_step=0
+
+++++ Starting step=314 slice_step=0
+
+++++ Starting step=315 slice_step=0
+
+++++ Starting step=316 slice_step=0
+
+++++ Starting step=317 slice_step=0
+
+++++ Starting step=318 slice_step=0
+
+++++ Starting step=319 slice_step=0
+
+++++ Starting step=320 slice_step=0
+
+++++ Starting step=321 slice_step=0
+
+++++ Starting step=322 slice_step=0
+
+++++ Starting step=323 slice_step=0
+
+++++ Starting step=324 slice_step=0
+
+++++ Starting step=325 slice_step=0
+
+++++ Starting step=326 slice_step=0
+
+++++ Starting step=327 slice_step=0
+
+++++ Starting step=328 slice_step=0
+
+++++ Starting step=329 slice_step=0
+
+++++ Starting step=330 slice_step=0
+
+++++ Starting step=331 slice_step=0
+
+++++ Starting step=332 slice_step=0
+
+++++ Starting step=333 slice_step=0
+
+++++ Starting step=334 slice_step=0
+
+++++ Starting step=335 slice_step=0
+
+++++ Starting step=336 slice_step=0
+
+++++ Starting step=337 slice_step=0
+
+++++ Starting step=338 slice_step=0
+
+++++ Starting step=339 slice_step=0
+
+++++ Starting step=340 slice_step=0
+
+++++ Starting step=341 slice_step=0
+
+++++ Starting step=342 slice_step=0
+
+++++ Starting step=343 slice_step=0
+
+++++ Starting step=344 slice_step=0
+
+++++ Starting step=345 slice_step=0
+
+++++ Starting step=346 slice_step=0
+
+++++ Starting step=347 slice_step=0
+
+++++ Starting step=348 slice_step=0
+
+++++ Starting step=349 slice_step=0
+
+++++ Starting step=350 slice_step=0
+
+++++ Starting step=351 slice_step=0
+
+++++ Starting step=352 slice_step=0
+
+++++ Starting step=353 slice_step=0
+
+++++ Starting step=354 slice_step=0
+
+++++ Starting step=355 slice_step=0
+
+++++ Starting step=356 slice_step=0
+
+++++ Starting step=357 slice_step=0
+
+++++ Starting step=358 slice_step=0
+
+++++ Starting step=359 slice_step=0
+
+++++ Starting step=360 slice_step=0
+
+++++ Starting step=361 slice_step=0
+
+++++ Starting step=362 slice_step=0
+
+++++ Starting step=363 slice_step=0
+
+++++ Starting step=364 slice_step=0
+
+++++ Starting step=365 slice_step=0
+
+++++ Starting step=366 slice_step=0
+
+++++ Starting step=367 slice_step=0
+
+++++ Starting step=368 slice_step=0
+
+++++ Starting step=369 slice_step=0
+
+++++ Starting step=370 slice_step=0
+
+++++ Starting step=371 slice_step=0
+
+++++ Starting step=372 slice_step=0
+
+++++ Starting step=373 slice_step=0
+
+++++ Starting step=374 slice_step=0
+
+++++ Starting step=375 slice_step=0
+
+++++ Starting step=376 slice_step=0
+
+++++ Starting step=377 slice_step=0
+
+++++ Starting step=378 slice_step=0
+
+++++ Starting step=379 slice_step=0
+
+++++ Starting step=380 slice_step=0
+
+++++ Starting step=381 slice_step=0
+
+++++ Starting step=382 slice_step=0
+
+++++ Starting step=383 slice_step=0
+
+++++ Starting step=384 slice_step=0
+
+++++ Starting step=385 slice_step=0
+
+++++ Starting step=386 slice_step=0
+
+++++ Starting step=387 slice_step=0
+
+++++ Starting step=388 slice_step=0
+
+++++ Starting step=389 slice_step=0
+
+++++ Starting step=390 slice_step=0
+
+++++ Starting step=391 slice_step=0
+
+++++ Starting step=392 slice_step=0
+
+++++ Starting step=393 slice_step=0
+
+++++ Starting step=394 slice_step=0
+
+++++ Starting step=395 slice_step=0
+
+++++ Starting step=396 slice_step=0
+
+++++ Starting step=397 slice_step=0
+
+++++ Starting step=398 slice_step=0
+
+++++ Starting step=399 slice_step=0
+
+++++ Starting step=400 slice_step=0
+
+++++ Starting step=401 slice_step=0
+
+++++ Starting step=402 slice_step=0
+
+++++ Starting step=403 slice_step=0
+
+++++ Starting step=404 slice_step=0
+
+++++ Starting step=405 slice_step=0
+
+++++ Starting step=406 slice_step=0
+
+++++ Starting step=407 slice_step=0
+
+++++ Starting step=408 slice_step=0
+
+++++ Starting step=409 slice_step=0
+
+++++ Starting step=410 slice_step=0
+
+++++ Starting step=411 slice_step=0
+
+++++ Starting step=412 slice_step=0
+
+++++ Starting step=413 slice_step=0
+
+++++ Starting step=414 slice_step=0
+
+++++ Starting step=415 slice_step=0
+
+++++ Starting step=416 slice_step=0
+
+++++ Starting step=417 slice_step=0
+
+++++ Starting step=418 slice_step=0
+
+++++ Starting step=419 slice_step=0
+
+++++ Starting step=420 slice_step=0
+
+++++ Starting step=421 slice_step=0
+
+++++ Starting step=422 slice_step=0
+
+++++ Starting step=423 slice_step=0
+
+++++ Starting step=424 slice_step=0
+
+++++ Starting step=425 slice_step=0
+
+++++ Starting step=426 slice_step=0
+
+++++ Starting step=427 slice_step=0
+
+++++ Starting step=428 slice_step=0
+
+++++ Starting step=429 slice_step=0
+
+++++ Starting step=430 slice_step=0
+
+++++ Starting step=431 slice_step=0
+
+++++ Starting step=432 slice_step=0
+
+++++ Starting step=433 slice_step=0
+
+++++ Starting step=434 slice_step=0
+
+++++ Starting step=435 slice_step=0
+
+++++ Starting step=436 slice_step=0
+
+++++ Starting step=437 slice_step=0
+
+++++ Starting step=438 slice_step=0
+
+++++ Starting step=439 slice_step=0
+
+++++ Starting step=440 slice_step=0
+
+++++ Starting step=441 slice_step=0
+
+++++ Starting step=442 slice_step=0
+
+++++ Starting step=443 slice_step=0
+
+++++ Starting step=444 slice_step=0
+
+++++ Starting step=445 slice_step=0
+
+++++ Starting step=446 slice_step=0
+
+++++ Starting step=447 slice_step=0
+
+++++ Starting step=448 slice_step=0
+
+++++ Starting step=449 slice_step=0
+
+++++ Starting step=450 slice_step=0
+
+++++ Starting step=451 slice_step=0
+
+++++ Starting step=452 slice_step=0
+
+++++ Starting step=453 slice_step=0
+
+++++ Starting step=454 slice_step=0
+
+++++ Starting step=455 slice_step=0
+
+++++ Starting step=456 slice_step=0
+
+++++ Starting step=457 slice_step=0
+
+++++ Starting step=458 slice_step=0
+
+++++ Starting step=459 slice_step=0
+
+++++ Starting step=460 slice_step=0
+
+++++ Starting step=461 slice_step=0
+
+++++ Starting step=462 slice_step=0
+
+++++ Starting step=463 slice_step=0
+
+++++ Starting step=464 slice_step=0
+
+++++ Starting step=465 slice_step=0
+
+++++ Starting step=466 slice_step=0
+
+++++ Starting step=467 slice_step=0
+
+++++ Starting step=468 slice_step=0
+
+++++ Starting step=469 slice_step=0
+
+++++ Starting step=470 slice_step=0
+
+++++ Starting step=471 slice_step=0
+
+++++ Starting step=472 slice_step=0
+
+++++ Starting step=473 slice_step=0
+
+++++ Starting step=474 slice_step=0
+
+++++ Starting step=475 slice_step=0
+
+++++ Starting step=476 slice_step=0
+
+++++ Starting step=477 slice_step=0
+
+++++ Starting step=478 slice_step=0
+
+++++ Starting step=479 slice_step=0
+
+++++ Starting step=480 slice_step=0
+
+++++ Starting step=481 slice_step=0
+
+++++ Starting step=482 slice_step=0
+
+++++ Starting step=483 slice_step=0
+
+++++ Starting step=484 slice_step=0
+
+++++ Starting step=485 slice_step=0
+
+++++ Starting step=486 slice_step=0
+
+++++ Starting step=487 slice_step=0
+
+++++ Starting step=488 slice_step=0
+
+++++ Starting step=489 slice_step=0
+
+++++ Starting step=490 slice_step=0
+
+++++ Starting step=491 slice_step=0
+
+++++ Starting step=492 slice_step=0
+
+++++ Starting step=493 slice_step=0
+
+++++ Starting step=494 slice_step=0
+
+++++ Starting step=495 slice_step=0
+
+++++ Starting step=496 slice_step=0
+
+++++ Starting step=497 slice_step=0
+
+++++ Starting step=498 slice_step=0
+
+++++ Starting step=499 slice_step=0
+
+++++ Starting step=500 slice_step=0
+
+++++ Starting step=501 slice_step=0
+
+++++ Starting step=502 slice_step=0
+
+++++ Starting step=503 slice_step=0
+
+++++ Starting step=504 slice_step=0
+
+++++ Starting step=505 slice_step=0
+
+++++ Starting step=506 slice_step=0
+
+++++ Starting step=507 slice_step=0
+
+++++ Starting step=508 slice_step=0
+
+++++ Starting step=509 slice_step=0
+
+++++ Starting step=510 slice_step=0
+
+++++ Starting step=511 slice_step=0
+
+++++ Starting step=512 slice_step=0
+
+++++ Starting step=513 slice_step=0
+
+++++ Starting step=514 slice_step=0
+
+++++ Starting step=515 slice_step=0
+
+++++ Starting step=516 slice_step=0
+
+++++ Starting step=517 slice_step=0
+
+++++ Starting step=518 slice_step=0
+
+++++ Starting step=519 slice_step=0
+
+++++ Starting step=520 slice_step=0
+
+++++ Starting step=521 slice_step=0
+
+++++ Starting step=522 slice_step=0
+
+++++ Starting step=523 slice_step=0
+
+++++ Starting step=524 slice_step=0
+
+++++ Starting step=525 slice_step=0
+
+++++ Starting step=526 slice_step=0
+
+++++ Starting step=527 slice_step=0
+
+++++ Starting step=528 slice_step=0
+
+++++ Starting step=529 slice_step=0
+
+++++ Starting step=530 slice_step=0
+
+++++ Starting step=531 slice_step=0
+
+++++ Starting step=532 slice_step=0
+
+++++ Starting step=533 slice_step=0
+
+++++ Starting step=534 slice_step=0
+
+++++ Starting step=535 slice_step=0
+
+++++ Starting step=536 slice_step=0
+
+++++ Starting step=537 slice_step=0
+
+++++ Starting step=538 slice_step=0
+
+++++ Starting step=539 slice_step=0
+
+++++ Starting step=540 slice_step=0
+
+++++ Starting step=541 slice_step=0
+
+++++ Starting step=542 slice_step=0
+
+++++ Starting step=543 slice_step=0
+
+++++ Starting step=544 slice_step=0
+
+++++ Starting step=545 slice_step=0
+
+++++ Starting step=546 slice_step=0
+
+++++ Starting step=547 slice_step=0
+
+++++ Starting step=548 slice_step=0
+
+++++ Starting step=549 slice_step=0
+
+++++ Starting step=550 slice_step=0
+
+++++ Starting step=551 slice_step=0
+
+++++ Starting step=552 slice_step=0
+
+++++ Starting step=553 slice_step=0
+
+++++ Starting step=554 slice_step=0
+
+++++ Starting step=555 slice_step=0
+
+++++ Starting step=556 slice_step=0
+
+++++ Starting step=557 slice_step=0
+
+++++ Starting step=558 slice_step=0
+
+++++ Starting step=559 slice_step=0
+
+++++ Starting step=560 slice_step=0
+
+++++ Starting step=561 slice_step=0
+
+++++ Starting step=562 slice_step=0
+
+++++ Starting step=563 slice_step=0
+
+++++ Starting step=564 slice_step=0
+
+++++ Starting step=565 slice_step=0
+
+++++ Starting step=566 slice_step=0
+
+++++ Starting step=567 slice_step=0
+
+++++ Starting step=568 slice_step=0
+
+++++ Starting step=569 slice_step=0
+
+++++ Starting step=570 slice_step=0
+
+++++ Starting step=571 slice_step=0
+
+++++ Starting step=572 slice_step=0
+
+++++ Starting step=573 slice_step=0
+
+++++ Starting step=574 slice_step=0
+
+++++ Starting step=575 slice_step=0
+
+++++ Starting step=576 slice_step=0
+
+++++ Starting step=577 slice_step=0
+
+++++ Starting step=578 slice_step=0
+
+++++ Starting step=579 slice_step=0
+
+++++ Starting step=580 slice_step=0
+
+++++ Starting step=581 slice_step=0
+
+++++ Starting step=582 slice_step=0
+
+++++ Starting step=583 slice_step=0
+
+++++ Starting step=584 slice_step=0
+
+++++ Starting step=585 slice_step=0
+
+++++ Starting step=586 slice_step=0
+
+++++ Starting step=587 slice_step=0
+
+++++ Starting step=588 slice_step=0
+
+++++ Starting step=589 slice_step=0
+
+++++ Starting step=590 slice_step=0
+
+++++ Starting step=591 slice_step=0
+
+++++ Starting step=592 slice_step=0
+
+++++ Starting step=593 slice_step=0
+
+++++ Starting step=594 slice_step=0
+
+++++ Starting step=595 slice_step=0
+
+++++ Starting step=596 slice_step=0
+
+++++ Starting step=597 slice_step=0
+
+++++ Starting step=598 slice_step=0
+
+++++ Starting step=599 slice_step=0
+
+++++ Starting step=600 slice_step=0
+
+++++ Starting step=601 slice_step=0
+
+++++ Starting step=602 slice_step=0
+
+++++ Starting step=603 slice_step=0
+
+++++ Starting step=604 slice_step=0
+
+++++ Starting step=605 slice_step=0
+
+++++ Starting step=606 slice_step=0
+
+++++ Starting step=607 slice_step=0
+
+++++ Starting step=608 slice_step=0
+
+++++ Starting step=609 slice_step=0
+
+++++ Starting step=610 slice_step=0
+
+++++ Starting step=611 slice_step=0
+
+++++ Starting step=612 slice_step=0
+
+++++ Starting step=613 slice_step=0
+
+++++ Starting step=614 slice_step=0
+
+++++ Starting step=615 slice_step=0
+
+++++ Starting step=616 slice_step=0
+
+++++ Starting step=617 slice_step=0
+
+++++ Starting step=618 slice_step=0
+
+++++ Starting step=619 slice_step=0
+
+++++ Starting step=620 slice_step=0
+
+++++ Starting step=621 slice_step=0
+
+++++ Starting step=622 slice_step=0
+
+++++ Starting step=623 slice_step=0
+
+++++ Starting step=624 slice_step=0
+
+++++ Starting step=625 slice_step=0
+
+++++ Starting step=626 slice_step=0
+
+++++ Starting step=627 slice_step=0
+
+++++ Starting step=628 slice_step=0
+
+++++ Starting step=629 slice_step=0
+
+++++ Starting step=630 slice_step=0
+
+++++ Starting step=631 slice_step=0
+
+++++ Starting step=632 slice_step=0
+
+++++ Starting step=633 slice_step=0
+
+++++ Starting step=634 slice_step=0
+
+++++ Starting step=635 slice_step=0
+
+++++ Starting step=636 slice_step=0
+
+++++ Starting step=637 slice_step=0
+
+++++ Starting step=638 slice_step=0
+
+++++ Starting step=639 slice_step=0
+
+++++ Starting step=640 slice_step=0
+
+++++ Starting step=641 slice_step=0
+
+++++ Starting step=642 slice_step=0
+
+++++ Starting step=643 slice_step=0
+
+++++ Starting step=644 slice_step=0
+
+++++ Starting step=645 slice_step=0
+
+++++ Starting step=646 slice_step=0
+
+++++ Starting step=647 slice_step=0
+
+++++ Starting step=648 slice_step=0
+
+++++ Starting step=649 slice_step=0
+
+++++ Starting step=650 slice_step=0
+
+++++ Starting step=651 slice_step=0
+
+++++ Starting step=652 slice_step=0
+
+++++ Starting step=653 slice_step=0
+
+++++ Starting step=654 slice_step=0
+
+++++ Starting step=655 slice_step=0
+
+++++ Starting step=656 slice_step=0
+
+++++ Starting step=657 slice_step=0
+
+++++ Starting step=658 slice_step=0
+
+++++ Starting step=659 slice_step=0
+
+++++ Starting step=660 slice_step=0
+
+++++ Starting step=661 slice_step=0
+
+++++ Starting step=662 slice_step=0
+
+++++ Starting step=663 slice_step=0
+
+++++ Starting step=664 slice_step=0
+
+++++ Starting step=665 slice_step=0
+
+++++ Starting step=666 slice_step=0
+
+++++ Starting step=667 slice_step=0
+
+++++ Starting step=668 slice_step=0
+
+++++ Starting step=669 slice_step=0
+
+++++ Starting step=670 slice_step=0
+
+++++ Starting step=671 slice_step=0
+
+++++ Starting step=672 slice_step=0
+
+++++ Starting step=673 slice_step=0
+
+++++ Starting step=674 slice_step=0
+
+++++ Starting step=675 slice_step=0
+
+++++ Starting step=676 slice_step=0
+
+++++ Starting step=677 slice_step=0
+
+++++ Starting step=678 slice_step=0
+
+++++ Starting step=679 slice_step=0
+
+++++ Starting step=680 slice_step=0
+
+++++ Starting step=681 slice_step=0
+
+++++ Starting step=682 slice_step=0
+
+++++ Starting step=683 slice_step=0
+
+++++ Starting step=684 slice_step=0
+
+++++ Starting step=685 slice_step=0
+
+++++ Starting step=686 slice_step=0
+
+++++ Starting step=687 slice_step=0
+
+++++ Starting step=688 slice_step=0
+
+++++ Starting step=689 slice_step=0
+
+++++ Starting step=690 slice_step=0
+
+++++ Starting step=691 slice_step=0
+
+++++ Starting step=692 slice_step=0
+
+++++ Starting step=693 slice_step=0
+
+++++ Starting step=694 slice_step=0
+
+++++ Starting step=695 slice_step=0
+
+++++ Starting step=696 slice_step=0
+
+++++ Starting step=697 slice_step=0
+
+++++ Starting step=698 slice_step=0
+
+++++ Starting step=699 slice_step=0
+
+++++ Starting step=700 slice_step=0
+
+++++ Starting step=701 slice_step=0
+
+++++ Starting step=702 slice_step=0
+
+++++ Starting step=703 slice_step=0
+
+++++ Starting step=704 slice_step=0
+
+++++ Starting step=705 slice_step=0
+
+++++ Starting step=706 slice_step=0
+
+++++ Starting step=707 slice_step=0
+
+++++ Starting step=708 slice_step=0
+
+++++ Starting step=709 slice_step=0
+
+++++ Starting step=710 slice_step=0
+
+++++ Starting step=711 slice_step=0
+
+++++ Starting step=712 slice_step=0
+
+++++ Starting step=713 slice_step=0
+
+++++ Starting step=714 slice_step=0
+
+++++ Starting step=715 slice_step=0
+
+++++ Starting step=716 slice_step=0
+
+++++ Starting step=717 slice_step=0
+
+++++ Starting step=718 slice_step=0
+
+++++ Starting step=719 slice_step=0
+
+++++ Starting step=720 slice_step=0
+
+++++ Starting step=721 slice_step=0
+
+++++ Starting step=722 slice_step=0
+
+++++ Starting step=723 slice_step=0
+
+++++ Starting step=724 slice_step=0
+
+++++ Starting step=725 slice_step=0
+
+++++ Starting step=726 slice_step=0
+
+++++ Starting step=727 slice_step=0
+
+++++ Starting step=728 slice_step=0
+
+++++ Starting step=729 slice_step=0
+
+++++ Starting step=730 slice_step=0
+
+++++ Starting step=731 slice_step=0
+
+++++ Starting step=732 slice_step=0
+
+++++ Starting step=733 slice_step=0
+
+++++ Starting step=734 slice_step=0
+
+++++ Starting step=735 slice_step=0
+
+++++ Starting step=736 slice_step=0
+
+++++ Starting step=737 slice_step=0
+
+++++ Starting step=738 slice_step=0
+
+++++ Starting step=739 slice_step=0
+
+++++ Starting step=740 slice_step=0
+
+++++ Starting step=741 slice_step=0
+
+++++ Starting step=742 slice_step=0
+
+++++ Starting step=743 slice_step=0
+
+++++ Starting step=744 slice_step=0
+
+++++ Starting step=745 slice_step=0
+
+++++ Starting step=746 slice_step=0
+
+++++ Starting step=747 slice_step=0
+
+++++ Starting step=748 slice_step=0
+
+++++ Starting step=749 slice_step=0
+
+++++ Starting step=750 slice_step=0
+
+++++ Starting step=751 slice_step=0
+
+++++ Starting step=752 slice_step=0
+
+++++ Starting step=753 slice_step=0
+
+++++ Starting step=754 slice_step=0
+
+++++ Starting step=755 slice_step=0
+
+++++ Starting step=756 slice_step=0
+
+++++ Starting step=757 slice_step=0
+
+++++ Starting step=758 slice_step=0
+
+++++ Starting step=759 slice_step=0
+
+++++ Starting step=760 slice_step=0
+
+++++ Starting step=761 slice_step=0
+
+++++ Starting step=762 slice_step=0
+
+++++ Starting step=763 slice_step=0
+
+++++ Starting step=764 slice_step=0
+
+++++ Starting step=765 slice_step=0
+
+++++ Starting step=766 slice_step=0
+
+++++ Starting step=767 slice_step=0
+
+++++ Starting step=768 slice_step=0
+
+++++ Starting step=769 slice_step=0
+
+++++ Starting step=770 slice_step=0
+
+++++ Starting step=771 slice_step=0
+
+++++ Starting step=772 slice_step=0
+
+++++ Starting step=773 slice_step=0
+
+++++ Starting step=774 slice_step=0
+
+++++ Starting step=775 slice_step=0
+
+++++ Starting step=776 slice_step=0
+
+++++ Starting step=777 slice_step=0
+
+++++ Starting step=778 slice_step=0
+
+++++ Starting step=779 slice_step=0
+
+++++ Starting step=780 slice_step=0
+
+++++ Starting step=781 slice_step=0
+
+++++ Starting step=782 slice_step=0
+
+++++ Starting step=783 slice_step=0
+
+++++ Starting step=784 slice_step=0
+
+++++ Starting step=785 slice_step=0
+
+++++ Starting step=786 slice_step=0
+
+++++ Starting step=787 slice_step=0
+
+++++ Starting step=788 slice_step=0
+
+++++ Starting step=789 slice_step=0
+
+++++ Starting step=790 slice_step=0
+
+++++ Starting step=791 slice_step=0
+
+++++ Starting step=792 slice_step=0
+
+++++ Starting step=793 slice_step=0
+
+++++ Starting step=794 slice_step=0
+
+++++ Starting step=795 slice_step=0
+
+++++ Starting step=796 slice_step=0
+
+++++ Starting step=797 slice_step=0
+
+++++ Starting step=798 slice_step=0
+
+++++ Starting step=799 slice_step=0
+
+++++ Starting step=800 slice_step=0
+
+++++ Starting step=801 slice_step=0
+
+++++ Starting step=802 slice_step=0
+
+++++ Starting step=803 slice_step=0
+
+++++ Starting step=804 slice_step=0
+
+++++ Starting step=805 slice_step=0
+
+++++ Starting step=806 slice_step=0
+
+++++ Starting step=807 slice_step=0
+
+++++ Starting step=808 slice_step=0
+
+++++ Starting step=809 slice_step=0
+
+++++ Starting step=810 slice_step=0
+
+++++ Starting step=811 slice_step=0
+
+++++ Starting step=812 slice_step=0
+
+++++ Starting step=813 slice_step=0
+
+++++ Starting step=814 slice_step=0
+
+++++ Starting step=815 slice_step=0
+
+++++ Starting step=816 slice_step=0
+
+++++ Starting step=817 slice_step=0
+
+++++ Starting step=818 slice_step=0
+
+++++ Starting step=819 slice_step=0
+
+++++ Starting step=820 slice_step=0
+
+++++ Starting step=821 slice_step=0
+
+++++ Starting step=822 slice_step=0
+
+++++ Starting step=823 slice_step=0
+
+++++ Starting step=824 slice_step=0
+
+++++ Starting step=825 slice_step=0
+
+++++ Starting step=826 slice_step=0
+
+++++ Starting step=827 slice_step=0
+
+++++ Starting step=828 slice_step=0
+
+++++ Starting step=829 slice_step=0
+
+++++ Starting step=830 slice_step=0
+
+++++ Starting step=831 slice_step=0
+
+++++ Starting step=832 slice_step=0
+
+++++ Starting step=833 slice_step=0
+
+++++ Starting step=834 slice_step=0
+
+++++ Starting step=835 slice_step=0
+
+++++ Starting step=836 slice_step=0
+
+++++ Starting step=837 slice_step=0
+
+++++ Starting step=838 slice_step=0
+
+++++ Starting step=839 slice_step=0
+
+++++ Starting step=840 slice_step=0
+
+++++ Starting step=841 slice_step=0
+
+++++ Starting step=842 slice_step=0
+
+++++ Starting step=843 slice_step=0
+
+++++ Starting step=844 slice_step=0
+
+++++ Starting step=845 slice_step=0
+
+++++ Starting step=846 slice_step=0
+
+++++ Starting step=847 slice_step=0
+
+++++ Starting step=848 slice_step=0
+
+++++ Starting step=849 slice_step=0
+
+++++ Starting step=850 slice_step=0
+
+++++ Starting step=851 slice_step=0
+
+++++ Starting step=852 slice_step=0
+
+++++ Starting step=853 slice_step=0
+
+++++ Starting step=854 slice_step=0
+
+++++ Starting step=855 slice_step=0
+
+++++ Starting step=856 slice_step=0
+
+++++ Starting step=857 slice_step=0
+
+++++ Starting step=858 slice_step=0
+
+++++ Starting step=859 slice_step=0
+
+++++ Starting step=860 slice_step=0
+
+++++ Starting step=861 slice_step=0
+
+++++ Starting step=862 slice_step=0
+
+++++ Starting step=863 slice_step=0
+
+++++ Starting step=864 slice_step=0
+
+++++ Starting step=865 slice_step=0
+
+++++ Starting step=866 slice_step=0
+
+++++ Starting step=867 slice_step=0
+
+++++ Starting step=868 slice_step=0
+
+++++ Starting step=869 slice_step=0
+
+++++ Starting step=870 slice_step=0
+
+++++ Starting step=871 slice_step=0
+
+++++ Starting step=872 slice_step=0
+
+++++ Starting step=873 slice_step=0
+
+++++ Starting step=874 slice_step=0
+
+++++ Starting step=875 slice_step=0
+
+++++ Starting step=876 slice_step=0
+
+++++ Starting step=877 slice_step=0
+
+++++ Starting step=878 slice_step=0
+
+++++ Starting step=879 slice_step=0
+
+++++ Starting step=880 slice_step=0
+
+++++ Starting step=881 slice_step=0
+
+++++ Starting step=882 slice_step=0
+
+++++ Starting step=883 slice_step=0
+
+++++ Starting step=884 slice_step=0
+
+++++ Starting step=885 slice_step=0
+
+++++ Starting step=886 slice_step=0
+
+++++ Starting step=887 slice_step=0
+
+++++ Starting step=888 slice_step=0
+
+++++ Starting step=889 slice_step=0
+
+++++ Starting step=890 slice_step=0
+
+++++ Starting step=891 slice_step=0
+
+++++ Starting step=892 slice_step=0
+
+++++ Starting step=893 slice_step=0
+
+++++ Starting step=894 slice_step=0
+
+++++ Starting step=895 slice_step=0
+
+++++ Starting step=896 slice_step=0
+
+++++ Starting step=897 slice_step=0
+
+++++ Starting step=898 slice_step=0
+
+++++ Starting step=899 slice_step=0
+
+++++ Starting step=900 slice_step=0
+
+++++ Starting step=901 slice_step=0
+
+++++ Starting step=902 slice_step=0
+
+++++ Starting step=903 slice_step=0
+
+++++ Starting step=904 slice_step=0
+
+++++ Starting step=905 slice_step=0
+
+++++ Starting step=906 slice_step=0
+
+++++ Starting step=907 slice_step=0
+
+++++ Starting step=908 slice_step=0
+
+++++ Starting step=909 slice_step=0
+
+++++ Starting step=910 slice_step=0
+
+++++ Starting step=911 slice_step=0
+
+++++ Starting step=912 slice_step=0
+
+++++ Starting step=913 slice_step=0
+
+++++ Starting step=914 slice_step=0
+
+++++ Starting step=915 slice_step=0
+
+++++ Starting step=916 slice_step=0
+
+++++ Starting step=917 slice_step=0
+
+++++ Starting step=918 slice_step=0
+
+++++ Starting step=919 slice_step=0
+
+++++ Starting step=920 slice_step=0
+
+++++ Starting step=921 slice_step=0
+
+++++ Starting step=922 slice_step=0
+
+++++ Starting step=923 slice_step=0
+
+++++ Starting step=924 slice_step=0
+
+++++ Starting step=925 slice_step=0
+
+++++ Starting step=926 slice_step=0
+
+++++ Starting step=927 slice_step=0
+
+++++ Starting step=928 slice_step=0
+
+++++ Starting step=929 slice_step=0
+
+++++ Starting step=930 slice_step=0
+
+++++ Starting step=931 slice_step=0
+
+++++ Starting step=932 slice_step=0
+
+++++ Starting step=933 slice_step=0
+
+++++ Starting step=934 slice_step=0
+
+++++ Starting step=935 slice_step=0
+
+++++ Starting step=936 slice_step=0
+
+++++ Starting step=937 slice_step=0
+
+++++ Starting step=938 slice_step=0
+
+++++ Starting step=939 slice_step=0
+
+++++ Starting step=940 slice_step=0
+
+++++ Starting step=941 slice_step=0
+
+++++ Starting step=942 slice_step=0
+
+++++ Starting step=943 slice_step=0
+
+++++ Starting step=944 slice_step=0
+
+++++ Starting step=945 slice_step=0
+
+++++ Starting step=946 slice_step=0
+
+++++ Starting step=947 slice_step=0
+
+++++ Starting step=948 slice_step=0
+
+++++ Starting step=949 slice_step=0
+
+++++ Starting step=950 slice_step=0
+
+++++ Starting step=951 slice_step=0
+
+++++ Starting step=952 slice_step=0
+
+++++ Starting step=953 slice_step=0
+
+++++ Starting step=954 slice_step=0
+
+++++ Starting step=955 slice_step=0
+
+++++ Starting step=956 slice_step=0
+
+++++ Starting step=957 slice_step=0
+
+++++ Starting step=958 slice_step=0
+
+++++ Starting step=959 slice_step=0
+
+++++ Starting step=960 slice_step=0
+
+++++ Starting step=961 slice_step=0
+
+++++ Starting step=962 slice_step=0
+
+++++ Starting step=963 slice_step=0
+
+++++ Starting step=964 slice_step=0
+
+++++ Starting step=965 slice_step=0
+
+++++ Starting step=966 slice_step=0
+
+++++ Starting step=967 slice_step=0
+
+++++ Starting step=968 slice_step=0
+
+++++ Starting step=969 slice_step=0
+
+++++ Starting step=970 slice_step=0
+
+++++ Starting step=971 slice_step=0
+
+++++ Starting step=972 slice_step=0
+
+++++ Starting step=973 slice_step=0
+
+++++ Starting step=974 slice_step=0
+
+++++ Starting step=975 slice_step=0
+
+++++ Starting step=976 slice_step=0
+
+++++ Starting step=977 slice_step=0
+
+++++ Starting step=978 slice_step=0
+
+++++ Starting step=979 slice_step=0
+
+++++ Starting step=980 slice_step=0
+
+++++ Starting step=981 slice_step=0
+
+++++ Starting step=982 slice_step=0
+
+++++ Starting step=983 slice_step=0
+
+++++ Starting step=984 slice_step=0
+
+++++ Starting step=985 slice_step=0
+
+++++ Starting step=986 slice_step=0
+
+++++ Starting step=987 slice_step=0
+
+++++ Starting step=988 slice_step=0
+
+++++ Starting step=989 slice_step=0
+
+++++ Starting step=990 slice_step=0
+
+++++ Starting step=991 slice_step=0
+
+++++ Starting step=992 slice_step=0
+
+++++ Starting step=993 slice_step=0
+
+++++ Starting step=994 slice_step=0
+
+++++ Starting step=995 slice_step=0
+
+++++ Starting step=996 slice_step=0
+
+++++ Starting step=997 slice_step=0
+
+++++ Starting step=998 slice_step=0
+
+++++ Starting step=999 slice_step=0
+
+++++ Starting step=1000 slice_step=0
+
+++++ Starting step=1001 slice_step=0
+
+++++ Starting step=1002 slice_step=0
+
+++++ Starting step=1003 slice_step=0
+
+++++ Starting step=1004 slice_step=0
+
+++++ Starting step=1005 slice_step=0
+
+++++ Starting step=1006 slice_step=0
+
+++++ Starting step=1007 slice_step=0
+
+++++ Starting step=1008 slice_step=0
+
+++++ Starting step=1009 slice_step=0
+
+++++ Starting step=1010 slice_step=0
+
+++++ Starting step=1011 slice_step=0
+
+++++ Starting step=1012 slice_step=0
+
+++++ Starting step=1013 slice_step=0
+
+++++ Starting step=1014 slice_step=0
+
+++++ Starting step=1015 slice_step=0
+
+++++ Starting step=1016 slice_step=0
+
+++++ Starting step=1017 slice_step=0
+
+++++ Starting step=1018 slice_step=0
+
+++++ Starting step=1019 slice_step=0
+
+++++ Starting step=1020 slice_step=0
+
+++++ Starting step=1021 slice_step=0
+
+++++ Starting step=1022 slice_step=0
+
+++++ Starting step=1023 slice_step=0
+
+++++ Starting step=1024 slice_step=0
+
+++++ Starting step=1025 slice_step=0
+
+++++ Starting step=1026 slice_step=0
+
+++++ Starting step=1027 slice_step=0
+
+++++ Starting step=1028 slice_step=0
+
+++++ Starting step=1029 slice_step=0
+
+++++ Starting step=1030 slice_step=0
+
+++++ Starting step=1031 slice_step=0
+
+++++ Starting step=1032 slice_step=0
+
+++++ Starting step=1033 slice_step=0
+
+++++ Starting step=1034 slice_step=0
+
+++++ Starting step=1035 slice_step=0
+
+++++ Starting step=1036 slice_step=0
+
+++++ Starting step=1037 slice_step=0
+
+++++ Starting step=1038 slice_step=0
+
+++++ Starting step=1039 slice_step=0
+
+++++ Starting step=1040 slice_step=0
+
+++++ Starting step=1041 slice_step=0
+
+++++ Starting step=1042 slice_step=0
+
+++++ Starting step=1043 slice_step=0
+
+++++ Starting step=1044 slice_step=0
+
+++++ Starting step=1045 slice_step=0
+
+++++ Starting step=1046 slice_step=0
+
+++++ Starting step=1047 slice_step=0
+
+++++ Starting step=1048 slice_step=0
+
+++++ Starting step=1049 slice_step=0
+
+++++ Starting step=1050 slice_step=0
+
+++++ Starting step=1051 slice_step=0
+
+++++ Starting step=1052 slice_step=0
+
+++++ Starting step=1053 slice_step=0
+
+++++ Starting step=1054 slice_step=0
+
+++++ Starting step=1055 slice_step=0
+
+++++ Starting step=1056 slice_step=0
+
+++++ Starting step=1057 slice_step=0
+
+++++ Starting step=1058 slice_step=0
+
+++++ Starting step=1059 slice_step=0
+
+++++ Starting step=1060 slice_step=0
+
+++++ Starting step=1061 slice_step=0
+
+++++ Starting step=1062 slice_step=0
+
+++++ Starting step=1063 slice_step=0
+
+++++ Starting step=1064 slice_step=0
+
+++++ Starting step=1065 slice_step=0
+
+++++ Starting step=1066 slice_step=0
+
+++++ Starting step=1067 slice_step=0
+
+++++ Starting step=1068 slice_step=0
+
+++++ Starting step=1069 slice_step=0
+
+++++ Starting step=1070 slice_step=0
+
+++++ Starting step=1071 slice_step=0
+
+++++ Starting step=1072 slice_step=0
+
+++++ Starting step=1073 slice_step=0
+
+++++ Starting step=1074 slice_step=0
+
+++++ Starting step=1075 slice_step=0
+
+++++ Starting step=1076 slice_step=0
+
+++++ Starting step=1077 slice_step=0
+
+++++ Starting step=1078 slice_step=0
+
+++++ Starting step=1079 slice_step=0
+
+++++ Starting step=1080 slice_step=0
+
+++++ Starting step=1081 slice_step=0
+
+++++ Starting step=1082 slice_step=0
+
+++++ Starting step=1083 slice_step=0
+
+++++ Starting step=1084 slice_step=0
+
+++++ Starting step=1085 slice_step=0
+
+++++ Starting step=1086 slice_step=0
+
+++++ Starting step=1087 slice_step=0
+
+++++ Starting step=1088 slice_step=0
+
+++++ Starting step=1089 slice_step=0
+
+++++ Starting step=1090 slice_step=0
+
+++++ Starting step=1091 slice_step=0
+
+++++ Starting step=1092 slice_step=0
+
+++++ Starting step=1093 slice_step=0
+
+++++ Starting step=1094 slice_step=0
+
+++++ Starting step=1095 slice_step=0
+
+++++ Starting step=1096 slice_step=0
+
+++++ Starting step=1097 slice_step=0
+
+++++ Starting step=1098 slice_step=0
+
+++++ Starting step=1099 slice_step=0
+
+++++ Starting step=1100 slice_step=0
+
+++++ Starting step=1101 slice_step=0
+
+++++ Starting step=1102 slice_step=0
+
+++++ Starting step=1103 slice_step=0
+
+++++ Starting step=1104 slice_step=0
+
+++++ Starting step=1105 slice_step=0
+
+++++ Starting step=1106 slice_step=0
+
+++++ Starting step=1107 slice_step=0
+
+++++ Starting step=1108 slice_step=0
+
+++++ Starting step=1109 slice_step=0
+
+++++ Starting step=1110 slice_step=0
+
+++++ Starting step=1111 slice_step=0
+
+++++ Starting step=1112 slice_step=0
+
+++++ Starting step=1113 slice_step=0
+
+++++ Starting step=1114 slice_step=0
+
+++++ Starting step=1115 slice_step=0
+
+++++ Starting step=1116 slice_step=0
+
+++++ Starting step=1117 slice_step=0
+
+++++ Starting step=1118 slice_step=0
+
+++++ Starting step=1119 slice_step=0
+
+++++ Starting step=1120 slice_step=0
+
+++++ Starting step=1121 slice_step=0
+
+++++ Starting step=1122 slice_step=0
+
+++++ Starting step=1123 slice_step=0
+
+++++ Starting step=1124 slice_step=0
+
+++++ Starting step=1125 slice_step=0
+
+++++ Starting step=1126 slice_step=0
+
+++++ Starting step=1127 slice_step=0
+
+++++ Starting step=1128 slice_step=0
+
+++++ Starting step=1129 slice_step=0
+
+++++ Starting step=1130 slice_step=0
+
+++++ Starting step=1131 slice_step=0
+
+++++ Starting step=1132 slice_step=0
+
+++++ Starting step=1133 slice_step=0
+
+++++ Starting step=1134 slice_step=0
+
+++++ Starting step=1135 slice_step=0
+
+++++ Starting step=1136 slice_step=0
+
+++++ Starting step=1137 slice_step=0
+
+++++ Starting step=1138 slice_step=0
+
+++++ Starting step=1139 slice_step=0
+
+++++ Starting step=1140 slice_step=0
+
+++++ Starting step=1141 slice_step=0
+
+++++ Starting step=1142 slice_step=0
+
+++++ Starting step=1143 slice_step=0
+
+++++ Starting step=1144 slice_step=0
+
+++++ Starting step=1145 slice_step=0
+
+++++ Starting step=1146 slice_step=0
+
+++++ Starting step=1147 slice_step=0
+
+++++ Starting step=1148 slice_step=0
+
+++++ Starting step=1149 slice_step=0
+
+++++ Starting step=1150 slice_step=0
+
+++++ Starting step=1151 slice_step=0
+
+++++ Starting step=1152 slice_step=0
+
+++++ Starting step=1153 slice_step=0
+
+++++ Starting step=1154 slice_step=0
+
+++++ Starting step=1155 slice_step=0
+
+ ===     initial particle distribution    === 
+  * alpha    ::  [0. 0. 0.]
+  * beta     ::  [  7.9083   3.9808 442.31  ]
+  * gamma    ::  [0.12644943 0.25120579 0.00226086]
+  * eps_geom ::  [9.4312e-05 9.3568e-05 1.6785e-05]
+  * sigma    ::  [0.02731021 0.01929962 0.08616364]
+  * sigma_p  ::  [0.00345336 0.00484818 0.0001948 ]
+  * mu_qp    ::  [0. 0. 0.]
+ ============================================ 
+
+ records output :: diags/records.json 
+
+
+
+TinyProfiler total time across processes [min...avg...max]: 15.17 ... 15.17 ... 15.17
+
+-------------------------------------------------------------------------------------------------------
+Name                                                    NCalls  Excl. Min  Excl. Avg  Excl. Max   Max %
+-------------------------------------------------------------------------------------------------------
+impactx::push::BeamMonitor                                 578      9.049      9.049      9.049  59.64%
+impactx::diagnostics::DiagnosticOutput(pc)                2314     0.5612     0.5612     0.5612   3.70%
+impactx::diagnostics::reduced_beam_characteristics(pc)    1735     0.3909     0.3909     0.3909   2.58%
+ParticleContainer::addParticles                            578     0.1176     0.1176     0.1176   0.77%
+impactx::push::ChrQuad                                      73     0.1083     0.1083     0.1083   0.71%
+impactx::push::ExactDrift                                  216    0.05767    0.05767    0.05767   0.38%
+impactx::push                                             1155    0.05704    0.05704    0.05704   0.38%
+ImpactX::evolve::slice_step                               1155    0.05257    0.05257    0.05257   0.35%
+ImpactX::track_particles                                     1    0.00286    0.00286    0.00286   0.02%
+ParticleContainer::copyParticles                           578   0.001295   0.001295   0.001295   0.01%
+Other                                                     6148     0.1234     0.1234     0.1234   0.81%
+-------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------
+Name                                                    NCalls  Incl. Min  Incl. Avg  Incl. Max   Max %
+-------------------------------------------------------------------------------------------------------
+ImpactX::track_particles                                     1      10.51      10.51      10.51  69.27%
+ImpactX::evolve::slice_step                               1155      10.51      10.51      10.51  69.24%
+impactx::push                                             1155      9.589      9.589      9.589  63.20%
+impactx::push::BeamMonitor                                 578      9.295      9.295      9.295  61.26%
+impactx::diagnostics::DiagnosticOutput(pc)                2314     0.8254     0.8254     0.8254   5.44%
+impactx::diagnostics::reduced_beam_characteristics(pc)    1735     0.3909     0.3909     0.3909   2.58%
+ParticleContainer::copyParticles                           578     0.1194     0.1194     0.1194   0.79%
+ParticleContainer::addParticles                            578     0.1176     0.1176     0.1176   0.77%
+impactx::push::ChrQuad                                      73     0.1083     0.1083     0.1083   0.71%
+impactx::push::ExactDrift                                  216    0.05791    0.05791    0.05791   0.38%
+Other                                                     6148      0.128      0.128      0.128   0.84%
+-------------------------------------------------------------------------------------------------------
+
+Pinned Memory Usage:
+------------------------------------------------------------------
+Name                             Nalloc  Nfree    AvgMem    MaxMem
+------------------------------------------------------------------
+The_Pinned_Arena::Initialize()        1      1  1807   B  8192 KiB
+ParticleContainer::addParticles    5202   5202   436 KiB   724 KiB
+AmrMesh::MakeNewGrids()               4      4     0   B    32   B
+ImpactX::early_param_check            1      1     0   B    32   B
+ImpactX::init_grids                   7      7     0   B    32   B
+ImpactX::track_particles              1      1     0   B    32   B
+impactx::push                      1155   1155     0   B    32   B
+------------------------------------------------------------------
+
+Cpu Memory Usage:
+----------------------------------------------------------
+Name                     Nalloc  Nfree    AvgMem    MaxMem
+----------------------------------------------------------
+ImpactX::init_grids         360    360  6097 KiB  6101 KiB
+AmrMesh::MakeNewGrids()      32     32     0   B  7840   B
+OwnerMask()                  16     16     0   B  1024   B
+TagBoxArray::mapPRD          16     16     0   B   256   B
+----------------------------------------------------------
+
+AMReX (25.12) finalized
