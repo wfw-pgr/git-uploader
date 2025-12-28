@@ -1,0 +1,27 @@
+{
+  "date": "2025-12-05",
+  "company_names": [
+    "ペプチドリーム",
+    "PDRファーマ"
+  ],
+  "radionuclides": [
+    "Ac-225",
+    "Lu-177",
+    "Cu-64",
+    "Ga-68"
+  ],
+  "drug_names": [
+    "225Ac/177Lu-CDH3",
+    "64Cu/68Ga-CDH3",
+    "CA9プログラム",
+    "CLDN18.2プログラム"
+  ],
+  "english_news_article": null,
+  "japanese_translation": null,
+  "summary": "ペプチドリームは、自社開発の放射性医薬品プログラムの3つ目として、Cadherin-3 (CDH3) を標的とする新規ファースト・イン・クラスの開発候補化合物の選定を完了したと発表した。この化合物は、頭頸部扁平上皮癌（HNSCC）を対象としたセラノスティクスアプローチ（治療薬: 225Ac/177Lu-CDH3、診断薬: 64Cu/68Ga-CDH3）として開発され、IND申請に向けた準備試験を開始する予定である。同社は、CA9プログラムやCLDN18.2プログラムを含むRI-PDCパイプラインの拡充を進めている。",
+  "impact_opinion": "ペプチドリームが自社プログラムとして3つ目の放射性医薬品（RI-PDC）候補を発表したことで、同社のRI-PDCパイプライン構築への強いコミットメントが確認できる。CDH3を標的としたファースト・イン・クラスのセラノスティクス開発は、既存治療が不十分な頭頸部扁平上皮癌（HNSCC）に対する新たな治療法となる可能性を秘めている。診断薬と治療薬をペアで開発することで、治療効果が期待できる患者の選別が可能となり、臨床開発の効率化や治療成績の向上に寄与すると推測される。",
+  "sender_opinion": "ペプチドリームが自社開発品の適用先として放射性薬剤に本格的に注力している可能性があり、子会社PDRファーマとの協業の可能性も含め、今後の情報を注視したい。",
+  "title_en": "PeptiDream Announces Third Radiopharmaceutical Program Targeting Cadherin-3",
+  "title_ja": "ペプチドリーム、3番目の放射性医薬品プログラム（CDH3標的）を発表",
+  "title": "20251205-peptidream-announces-third-radiopharmaceutical-program-targeting-cadherin-3"
+}
