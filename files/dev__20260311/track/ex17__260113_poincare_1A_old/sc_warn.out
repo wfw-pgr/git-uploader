@@ -1,0 +1,13 @@
+                           SPACE CHARGE GRID 
+          *drift*      z=      14.95 cm                                 
+     Grid warning output    
+  WARNING --> coarse mesh
+  NXgrd= 33    NYgrd= 33    NZgrd= 65
+ charge= 0.2740E-07 mC
+  gamSC= 0.1021E+01
+  betSC= 0.2040E+00
+  zlhSC=  1000.0000
+     Hx=    0.6250 cm     rmsX=    2.4948 cm    Hx/rmsX=    0.2505
+     Hy=    0.6250 cm     rmsY=    2.0348 cm    Hy/rmsY=    0.3071
+     Hz=    2.6175 cm     rmsZ=    0.8076 cm    Hz/rmsZ=    3.2412  in lab SC
+     Hz=    2.6737 cm     rmsZ=    0.8249 cm    Hz/rmsZ=    3.2412  in beam rest SC
