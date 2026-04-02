@@ -1,0 +1,582 @@
+Initializing AMReX (26.03)...
+AMReX (26.03) initialized
+
+Grids Summary:
+  Level 0   1 grids  4096 cells  100 % of domain
+  Level 1   1 grids  32768 cells  100 % of domain
+
+ Diagnostics: 1
+ Space Charge effects: 3D
+ CSR effects: 0
+ ISR effects: 0
+ Spin tracking: 0
+
+++++ Starting step=1 slice_step=0MLMG: Initial rhs               = 47277907.66
+MLMG: Initial residual (resid0) = 47277907.66
+MLMG: Final Iter. 5 resid, resid/bnorm = 1.9917162, 4.21278415e-08
+MLMG: Timers: Solve = 0.05062537 Iter = 0.047618502 Bottom = 0.00061022
+
+
+**** WARNINGS ******************************************************************
+* GLOBAL warning list  after  [ FIRST STEP ]
+*
+* No recorded warnings.
+********************************************************************************
+
+
+++++ Starting step=2 slice_step=0MLMG: Initial rhs               = 47277907.66
+MLMG: Initial residual (resid0) = 47277907.66
+MLMG: Final Iter. 5 resid, resid/bnorm = 1.991716165, 4.212784075e-08
+MLMG: Timers: Solve = 0.054376831 Iter = 0.051084329 Bottom = 0.000400483
+
+
+++++ Starting step=3 slice_step=0MLMG: Initial rhs               = 44136134.66
+MLMG: Initial residual (resid0) = 44136134.66
+MLMG: Final Iter. 6 resid, resid/bnorm = 0.2370806411, 5.371576893e-09
+MLMG: Timers: Solve = 0.060488477 Iter = 0.058153045 Bottom = 0.000539341
+
+
+++++ Starting step=4 slice_step=0MLMG: Initial rhs               = 44136134.66
+MLMG: Initial residual (resid0) = 44136134.66
+MLMG: Final Iter. 6 resid, resid/bnorm = 0.2370804902, 5.371573475e-09
+MLMG: Timers: Solve = 0.062835628 Iter = 0.061043212 Bottom = 0.000537884
+
+
+++++ Starting step=5 slice_step=0MLMG: Initial rhs               = 47643112.27
+MLMG: Initial residual (resid0) = 47643112.27
+MLMG: Final Iter. 6 resid, resid/bnorm = 0.5732657332, 1.203249968e-08
+MLMG: Timers: Solve = 0.059711437 Iter = 0.057095837 Bottom = 0.000567808
+
+
+++++ Starting step=6 slice_step=0MLMG: Initial rhs               = 47643112.27
+MLMG: Initial residual (resid0) = 47643112.27
+MLMG: Final Iter. 6 resid, resid/bnorm = 0.573265681, 1.203249859e-08
+MLMG: Timers: Solve = 0.056083748 Iter = 0.054253538 Bottom = 0.000473304
+
+
+++++ Starting step=7 slice_step=0MLMG: Initial rhs               = 46703979.43
+MLMG: Initial residual (resid0) = 46703979.43
+MLMG: Final Iter. 6 resid, resid/bnorm = 0.5224761544, 1.118697295e-08
+MLMG: Timers: Solve = 0.061281856 Iter = 0.058190392 Bottom = 0.000638853
+
+
+++++ Starting step=8 slice_step=0MLMG: Initial rhs               = 46703979.43
+MLMG: Initial residual (resid0) = 46703979.43
+MLMG: Final Iter. 6 resid, resid/bnorm = 0.5224758079, 1.118696553e-08
+MLMG: Timers: Solve = 0.063379152 Iter = 0.061184665 Bottom = 0.000468391
+
+
+++++ Starting step=9 slice_step=0MLMG: Initial rhs               = 44587075.17
+MLMG: Initial residual (resid0) = 44587075.17
+MLMG: Final Iter. 6 resid, resid/bnorm = 0.5260618357, 1.179852757e-08
+MLMG: Timers: Solve = 0.06045163 Iter = 0.058515049 Bottom = 0.000579948
+
+
+++++ Starting step=10 slice_step=0MLMG: Initial rhs               = 44587075.17
+MLMG: Initial residual (resid0) = 44587075.17
+MLMG: Final Iter. 6 resid, resid/bnorm = 0.5260620574, 1.179853254e-08
+MLMG: Timers: Solve = 0.092608024 Iter = 0.087428222 Bottom = 0.00066504
+
+
+++++ Starting step=11 slice_step=0MLMG: Initial rhs               = 66811575.71
+MLMG: Initial residual (resid0) = 66811575.71
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.8369980901, 1.252774061e-08
+MLMG: Timers: Solve = 0.065073236 Iter = 0.06323338 Bottom = 0.000584379
+
+
+++++ Starting step=12 slice_step=0MLMG: Initial rhs               = 66811575.71
+MLMG: Initial residual (resid0) = 66811575.71
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.8369980911, 1.252774062e-08
+MLMG: Timers: Solve = 0.059311196 Iter = 0.057332661 Bottom = 0.000466387
+
+
+++++ Starting step=13 slice_step=0MLMG: Initial rhs               = 66718025.9
+MLMG: Initial residual (resid0) = 66718025.9
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.7446891349, 1.116173815e-08
+MLMG: Timers: Solve = 0.04353801 Iter = 0.041846541 Bottom = 0.000369539
+
+
+++++ Starting step=14 slice_step=0MLMG: Initial rhs               = 66718025.9
+MLMG: Initial residual (resid0) = 66718025.9
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.7446891349, 1.116173815e-08
+MLMG: Timers: Solve = 0.056551114 Iter = 0.054507178 Bottom = 0.000519968
+
+
+++++ Starting step=15 slice_step=0MLMG: Initial rhs               = 70694868.22
+MLMG: Initial residual (resid0) = 70694868.22
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.7475275509, 1.05740002e-08
+MLMG: Timers: Solve = 0.044036685 Iter = 0.041052253 Bottom = 0.000330952
+
+
+++++ Starting step=16 slice_step=0MLMG: Initial rhs               = 70694868.22
+MLMG: Initial residual (resid0) = 70694868.22
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.7475275397, 1.057400005e-08
+MLMG: Timers: Solve = 0.049052161 Iter = 0.047022625 Bottom = 0.000385134
+
+
+++++ Starting step=17 slice_step=0MLMG: Initial rhs               = 98804582.64
+MLMG: Initial residual (resid0) = 98804582.64
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.7245903267, 7.333570036e-09
+MLMG: Timers: Solve = 0.053297462 Iter = 0.05032729 Bottom = 0.000666038
+
+
+++++ Starting step=18 slice_step=0MLMG: Initial rhs               = 98804582.64
+MLMG: Initial residual (resid0) = 98804582.64
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.7245908193, 7.333575022e-09
+MLMG: Timers: Solve = 0.051178768 Iter = 0.048197025 Bottom = 0.000376617
+
+
+++++ Starting step=19 slice_step=0MLMG: Initial rhs               = 359293570.7
+MLMG: Initial residual (resid0) = 359293570.7
+MLMG: Final Iter. 9 resid, resid/bnorm = 32.56415254, 9.063383036e-08
+MLMG: Timers: Solve = 0.082171485 Iter = 0.080068324 Bottom = 0.000760036
+
+
+++++ Starting step=20 slice_step=0MLMG: Initial rhs               = 359293570.7
+MLMG: Initial residual (resid0) = 359293570.7
+MLMG: Final Iter. 9 resid, resid/bnorm = 32.56415308, 9.063383185e-08
+MLMG: Timers: Solve = 0.088766069 Iter = 0.08677599 Bottom = 0.000837195
+
+
+++++ Starting step=21 slice_step=0MLMG: Initial rhs               = 1367220749
+MLMG: Initial residual (resid0) = 1367220749
+MLMG: Final Iter. 40 resid, resid/bnorm = 104.4569011, 7.640090391e-08
+MLMG: Timers: Solve = 0.276852726 Iter = 0.27373288 Bottom = 0.003967115
+
+
+++++ Starting step=22 slice_step=0MLMG: Initial rhs               = 1367220749
+MLMG: Initial residual (resid0) = 1367220749
+MLMG: Final Iter. 40 resid, resid/bnorm = 104.4568807, 7.6400889e-08
+MLMG: Timers: Solve = 0.464666766 Iter = 0.462391844 Bottom = 0.005187874
+
+
+++++ Starting step=23 slice_step=0MLMG: Initial rhs               = 1355412123
+MLMG: Initial residual (resid0) = 1355412123
+MLMG: Final Iter. 39 resid, resid/bnorm = 125.2968529, 9.244188596e-08
+MLMG: Timers: Solve = 0.430321997 Iter = 0.42833192 Bottom = 0.005765646
+
+
+++++ Starting step=24 slice_step=0MLMG: Initial rhs               = 1355412123
+MLMG: Initial residual (resid0) = 1355412123
+MLMG: Final Iter. 39 resid, resid/bnorm = 125.2968681, 9.244189713e-08
+MLMG: Timers: Solve = 0.268353956 Iter = 0.265848277 Bottom = 0.003602724
+
+
+++++ Starting step=25 slice_step=0MLMG: Initial rhs               = 1353499294
+MLMG: Initial residual (resid0) = 1353499294
+MLMG: Final Iter. 39 resid, resid/bnorm = 123.7396595, 9.142203482e-08
+MLMG: Timers: Solve = 0.258326761 Iter = 0.256063849 Bottom = 0.003426542
+
+
+++++ Starting step=26 slice_step=0MLMG: Initial rhs               = 1353499294
+MLMG: Initial residual (resid0) = 1353499294
+MLMG: Final Iter. 39 resid, resid/bnorm = 123.7396744, 9.142204583e-08
+MLMG: Timers: Solve = 0.290222944 Iter = 0.285965345 Bottom = 0.003884919
+
+
+++++ Starting step=27 slice_step=0MLMG: Initial rhs               = 708745252
+MLMG: Initial residual (resid0) = 708745252
+MLMG: Final Iter. 8 resid, resid/bnorm = 18.01795924, 2.542233502e-08
+MLMG: Timers: Solve = 0.072902947 Iter = 0.069814339 Bottom = 0.00074043
+
+
+++++ Starting step=28 slice_step=0MLMG: Initial rhs               = 708745252
+MLMG: Initial residual (resid0) = 708745252
+MLMG: Final Iter. 8 resid, resid/bnorm = 18.01795089, 2.542232324e-08
+MLMG: Timers: Solve = 0.070524514 Iter = 0.067509335 Bottom = 0.000587291
+
+
+++++ Starting step=29 slice_step=0MLMG: Initial rhs               = 700972284.5
+MLMG: Initial residual (resid0) = 700972284.5
+MLMG: Final Iter. 8 resid, resid/bnorm = 15.04663038, 2.146537134e-08
+MLMG: Timers: Solve = 0.070505559 Iter = 0.0683838 Bottom = 0.00058885
+
+
+++++ Starting step=30 slice_step=0MLMG: Initial rhs               = 700972284.5
+MLMG: Initial residual (resid0) = 700972284.5
+MLMG: Final Iter. 8 resid, resid/bnorm = 15.04662627, 2.146536547e-08
+MLMG: Timers: Solve = 0.120981754 Iter = 0.117542404 Bottom = 0.000874015
+
+
+++++ Starting step=31 slice_step=0MLMG: Initial rhs               = 694668404.1
+MLMG: Initial residual (resid0) = 694668404.1
+MLMG: Final Iter. 8 resid, resid/bnorm = 14.51719862, 2.089802636e-08
+MLMG: Timers: Solve = 0.069514118 Iter = 0.064520088 Bottom = 0.000543032
+
+
+++++ Starting step=32 slice_step=0MLMG: Initial rhs               = 694668404.1
+MLMG: Initial residual (resid0) = 694668404.1
+MLMG: Final Iter. 8 resid, resid/bnorm = 14.51720256, 2.089803202e-08
+MLMG: Timers: Solve = 0.066970497 Iter = 0.065379676 Bottom = 0.000534989
+
+
+++++ Starting step=33 slice_step=0MLMG: Initial rhs               = 877373842.8
+MLMG: Initial residual (resid0) = 877373842.8
+MLMG: Final Iter. 4 resid, resid/bnorm = 25.60602307, 2.918484895e-08
+MLMG: Timers: Solve = 0.030267349 Iter = 0.028564569 Bottom = 0.000249874
+
+
+++++ Starting step=34 slice_step=0MLMG: Initial rhs               = 877373842.8
+MLMG: Initial residual (resid0) = 877373842.8
+MLMG: Final Iter. 4 resid, resid/bnorm = 25.60600805, 2.918483183e-08
+MLMG: Timers: Solve = 0.031516587 Iter = 0.029459998 Bottom = 0.000251615
+
+
+++++ Starting step=35 slice_step=0MLMG: Initial rhs               = 560545494.1
+MLMG: Initial residual (resid0) = 560545494.1
+MLMG: Final Iter. 4 resid, resid/bnorm = 31.75897259, 5.66572614e-08
+MLMG: Timers: Solve = 0.029938465 Iter = 0.028581213 Bottom = 0.000174676
+
+
+++++ Starting step=36 slice_step=0MLMG: Initial rhs               = 560545494.1
+MLMG: Initial residual (resid0) = 560545494.1
+MLMG: Final Iter. 4 resid, resid/bnorm = 31.75897259, 5.66572614e-08
+MLMG: Timers: Solve = 0.030325743 Iter = 0.028672383 Bottom = 0.000184049
+
+
+++++ Starting step=37 slice_step=0MLMG: Initial rhs               = 261975128.2
+MLMG: Initial residual (resid0) = 261975128.2
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.601067096, 2.294367027e-09
+MLMG: Timers: Solve = 0.036825275 Iter = 0.035359919 Bottom = 0.000206897
+
+
+++++ Starting step=38 slice_step=0MLMG: Initial rhs               = 261975128.2
+MLMG: Initial residual (resid0) = 261975128.2
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.6010709107, 2.294381588e-09
+MLMG: Timers: Solve = 0.038009865 Iter = 0.03625268 Bottom = 0.00025952
+
+
+++++ Starting step=39 slice_step=0MLMG: Initial rhs               = 260357189.1
+MLMG: Initial residual (resid0) = 260357189.1
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.5856606066, 2.24945049e-09
+MLMG: Timers: Solve = 0.037286474 Iter = 0.034006383 Bottom = 0.000210563
+
+
+++++ Starting step=40 slice_step=0MLMG: Initial rhs               = 260357189.1
+MLMG: Initial residual (resid0) = 260357189.1
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.5856456757, 2.249393142e-09
+MLMG: Timers: Solve = 0.033590556 Iter = 0.032291671 Bottom = 0.000188534
+
+
+++++ Starting step=41 slice_step=0MLMG: Initial rhs               = 254804917.9
+MLMG: Initial residual (resid0) = 254804917.9
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.5817548931, 2.283138402e-09
+MLMG: Timers: Solve = 0.035052467 Iter = 0.03279264 Bottom = 0.000261417
+
+
+++++ Starting step=42 slice_step=0MLMG: Initial rhs               = 254804917.9
+MLMG: Initial residual (resid0) = 254804917.9
+MLMG: Final Iter. 5 resid, resid/bnorm = 0.5817587972, 2.283153724e-09
+MLMG: Timers: Solve = 0.035203673 Iter = 0.033799291 Bottom = 0.000222733
+
+
+++++ Starting step=43 slice_step=0MLMG: Initial rhs               = 111023483.1
+MLMG: Initial residual (resid0) = 111023483.1
+MLMG: Final Iter. 4 resid, resid/bnorm = 2.866798431, 2.582155009e-08
+MLMG: Timers: Solve = 0.028944813 Iter = 0.027689084 Bottom = 0.000235023
+
+
+++++ Starting step=44 slice_step=0MLMG: Initial rhs               = 111023483.1
+MLMG: Initial residual (resid0) = 111023483.1
+MLMG: Final Iter. 4 resid, resid/bnorm = 2.866796523, 2.582153291e-08
+MLMG: Timers: Solve = 0.029392628 Iter = 0.027826117 Bottom = 0.000209581
+
+
+++++ Starting step=45 slice_step=0MLMG: Initial rhs               = 109002534.1
+MLMG: Initial residual (resid0) = 109002534.1
+MLMG: Final Iter. 4 resid, resid/bnorm = 2.886654377, 2.6482452e-08
+MLMG: Timers: Solve = 0.029758522 Iter = 0.028154044 Bottom = 0.000253642
+
+
+++++ Starting step=46 slice_step=0MLMG: Initial rhs               = 109002534.1
+MLMG: Initial residual (resid0) = 109002534.1
+MLMG: Final Iter. 4 resid, resid/bnorm = 2.886650577, 2.648241714e-08
+MLMG: Timers: Solve = 0.031107894 Iter = 0.02946132 Bottom = 0.000241072
+
+
+++++ Starting step=47 slice_step=0MLMG: Initial rhs               = 113948713.1
+MLMG: Initial residual (resid0) = 113948713.1
+MLMG: Final Iter. 4 resid, resid/bnorm = 2.925014243, 2.566956804e-08
+MLMG: Timers: Solve = 0.029752314 Iter = 0.028006613 Bottom = 0.000224451
+
+
+++++ Starting step=48 slice_step=0MLMG: Initial rhs               = 113948713.1
+MLMG: Initial residual (resid0) = 113948713.1
+MLMG: Final Iter. 4 resid, resid/bnorm = 2.92501238, 2.566955169e-08
+MLMG: Timers: Solve = 0.034587697 Iter = 0.032747105 Bottom = 0.000241208
+
+
+++++ Starting step=49 slice_step=0MLMG: Initial rhs               = 92519086.61
+MLMG: Initial residual (resid0) = 92519086.61
+MLMG: Final Iter. 4 resid, resid/bnorm = 3.768518269, 4.073233327e-08
+MLMG: Timers: Solve = 0.029993475 Iter = 0.028616781 Bottom = 0.000289613
+
+
+++++ Starting step=50 slice_step=0MLMG: Initial rhs               = 92519086.61
+MLMG: Initial residual (resid0) = 92519086.61
+MLMG: Final Iter. 4 resid, resid/bnorm = 3.768518254, 4.07323331e-08
+MLMG: Timers: Solve = 0.032384601 Iter = 0.030882678 Bottom = 0.000257818
+
+
+++++ Starting step=51 slice_step=0MLMG: Initial rhs               = 74699750.61
+MLMG: Initial residual (resid0) = 74699750.61
+MLMG: Final Iter. 4 resid, resid/bnorm = 1.859955817, 2.489909005e-08
+MLMG: Timers: Solve = 0.035203572 Iter = 0.033031378 Bottom = 0.000244901
+
+
+++++ Starting step=52 slice_step=0MLMG: Initial rhs               = 74699750.61
+MLMG: Initial residual (resid0) = 74699750.61
+MLMG: Final Iter. 4 resid, resid/bnorm = 1.859953895, 2.489906432e-08
+MLMG: Timers: Solve = 0.033279393 Iter = 0.031881316 Bottom = 0.000288834
+
+
+++++ Starting step=53 slice_step=0MLMG: Initial rhs               = 60845956.15
+MLMG: Initial residual (resid0) = 60845956.15
+MLMG: Final Iter. 4 resid, resid/bnorm = 1.944497868, 3.195771735e-08
+MLMG: Timers: Solve = 0.029595822 Iter = 0.028151205 Bottom = 0.000242625
+
+
+++++ Starting step=54 slice_step=0MLMG: Initial rhs               = 60845956.15
+MLMG: Initial residual (resid0) = 60845956.15
+MLMG: Final Iter. 4 resid, resid/bnorm = 1.9444969, 3.195770143e-08
+MLMG: Timers: Solve = 0.032114716 Iter = 0.030475964 Bottom = 0.000297344
+
+
+++++ Starting step=55 slice_step=0MLMG: Initial rhs               = 60625983.17
+MLMG: Initial residual (resid0) = 60625983.17
+MLMG: Final Iter. 4 resid, resid/bnorm = 1.849172242, 3.050131553e-08
+MLMG: Timers: Solve = 0.030717622 Iter = 0.029089851 Bottom = 0.000240399
+
+
+++++ Starting step=56 slice_step=0MLMG: Initial rhs               = 60625983.17
+MLMG: Initial residual (resid0) = 60625983.17
+MLMG: Final Iter. 4 resid, resid/bnorm = 1.849171862, 3.050130926e-08
+MLMG: Timers: Solve = 0.030420614 Iter = 0.028886748 Bottom = 0.000250758
+
+
+++++ Starting step=57 slice_step=0MLMG: Initial rhs               = 61173084.17
+MLMG: Initial residual (resid0) = 61173084.17
+MLMG: Final Iter. 4 resid, resid/bnorm = 1.856604531, 3.035002333e-08
+MLMG: Timers: Solve = 0.03071771 Iter = 0.029123299 Bottom = 0.00027274
+
+
+++++ Starting step=58 slice_step=0MLMG: Initial rhs               = 61173084.17
+MLMG: Initial residual (resid0) = 61173084.17
+MLMG: Final Iter. 4 resid, resid/bnorm = 1.856603578, 3.035000774e-08
+MLMG: Timers: Solve = 0.03098123 Iter = 0.029397329 Bottom = 0.000295693
+
+
+++++ Starting step=59 slice_step=0MLMG: Initial rhs               = 55835853.45
+MLMG: Initial residual (resid0) = 55835853.45
+MLMG: Final Iter. 6 resid, resid/bnorm = 4.177017916, 7.480888456e-08
+MLMG: Timers: Solve = 0.044560208 Iter = 0.042072188 Bottom = 0.000330559
+
+
+++++ Starting step=60 slice_step=0MLMG: Initial rhs               = 55835853.45
+MLMG: Initial residual (resid0) = 55835853.45
+MLMG: Final Iter. 6 resid, resid/bnorm = 4.177018154, 7.480888883e-08
+MLMG: Timers: Solve = 0.044037216 Iter = 0.042314939 Bottom = 0.000354623
+
+
+++++ Starting step=61 slice_step=0MLMG: Initial rhs               = 55775265.27
+MLMG: Initial residual (resid0) = 55775265.27
+MLMG: Final Iter. 6 resid, resid/bnorm = 3.8456155, 6.894840358e-08
+MLMG: Timers: Solve = 0.043558298 Iter = 0.042178343 Bottom = 0.000396218
+
+
+
+TinyProfiler total time across processes [min...avg...max]: 10.48 ... 10.48 ... 10.48
+
+--------------------------------------------------------------------------------------------------------------
+Name                                                           NCalls  Excl. Min  Excl. Avg  Excl. Max   Max %
+--------------------------------------------------------------------------------------------------------------
+MLNodeTensorLaplacian::Fsmooth()                                33792      3.318      3.318      3.318  31.65%
+OpenBCSolver::setGreensFunction                                    61     0.9204     0.9204     0.9204   8.78%
+impactx::push::BeamMonitor                                         31     0.7686     0.7686     0.7686   7.33%
+MLNodeTensorLaplacian::Fapply()                                  4724     0.6482     0.6482     0.6482   6.18%
+FFT::R2C::forward(in)                                             122     0.2937     0.2937     0.2937   2.80%
+FFT::R2C::backward(out)                                            61     0.1361     0.1361     0.1361   1.30%
+MLNodeTensorLaplacian::interpolation()                           2112     0.1147     0.1147     0.1147   1.09%
+FabArray::setVal()                                               5896    0.09206    0.09206    0.09206   0.88%
+ablastr::coarsen::Coarsen()                                        61    0.08602    0.08602    0.08602   0.82%
+ParticleContainer::RedistributeCPU()                               62    0.05961    0.05961    0.05961   0.57%
+FabArray::norminf()                                              3445    0.05881    0.05881    0.05881   0.56%
+MLMG::computeResidual()                                           528    0.04878    0.04878    0.04878   0.47%
+MLNodeTensorLaplacian::restriction()                             2112    0.04482    0.04482    0.04482   0.43%
+MLNodeLinOp::applyBC()                                          38516    0.04039    0.04039    0.04039   0.39%
+FabArray::Xpay()                                                 2112    0.03918    0.03918    0.03918   0.37%
+impactx::diagnostics::DiagnosticOutput(pc)                        126    0.03805    0.03805    0.03805   0.36%
+impactx::spacecharge::GatherAndPush                                61    0.03596    0.03596    0.03596   0.34%
+amrex::Add()                                                      528    0.03431    0.03431    0.03431   0.33%
+FabArrayBase::getFB()                                           48102    0.03402    0.03402    0.03402   0.32%
+ablastr::particles::deposit_charge::ChargeDeposition              488    0.03143    0.03143    0.03143   0.30%
+MLNodeTensorLaplacian::smooth()                                  4752    0.03013    0.03013    0.03013   0.29%
+impactx::diagnostics::reduced_beam_characteristics(pc)             94    0.02578    0.02578    0.02578   0.25%
+FillBoundary_nowait()                                           47797    0.02418    0.02418    0.02418   0.23%
+MLCGSolver::bicgstab                                              528     0.0212     0.0212     0.0212   0.20%
+OpenBCSolver::solve                                                61    0.01974    0.01974    0.01974   0.19%
+amrex::Copy()                                                    1767    0.01869    0.01869    0.01869   0.18%
+MLNodeLinOp::buildMasks()                                          61    0.01857    0.01857    0.01857   0.18%
+FabArray::FillBoundary()                                        38638    0.01772    0.01772    0.01772   0.17%
+ImpactXParticleContainer::DepositCharge                            61    0.01612    0.01612    0.01612   0.15%
+FabArray::BuildMask()                                             305    0.01244    0.01244    0.01244   0.12%
+impactx::spacecharge::ForceFromSelfFields                          61    0.01233    0.01233    0.01233   0.12%
+computePhi                                                         61    0.01108    0.01108    0.01108   0.11%
+FabArray::mult()                                                  244   0.009532   0.009532   0.009532   0.09%
+MLMG::prepareForSolve()                                            61   0.009128   0.009128   0.009128   0.09%
+FAbArray::OverrideSync()                                         9037   0.007965   0.007965   0.007965   0.08%
+MLMG::solve()                                                      61   0.007188   0.007188   0.007188   0.07%
+OverrideSync_nowait()                                            9037   0.005599   0.005599   0.005599   0.05%
+MLMG::computeMLResidual()                                          61   0.005371   0.005371   0.005371   0.05%
+impactx::spacecharge::PoissonSolve                                 61   0.003837   0.003837   0.003837   0.04%
+MLMG:computeResOfCorrection()                                    2112   0.003688   0.003688   0.003688   0.04%
+impactx::push                                                      61   0.003439   0.003439   0.003439   0.03%
+MLMG::addInterpCorrection()                                      2112   0.003417   0.003417   0.003417   0.03%
+MLMG::mgVcycle()                                                  528   0.003259   0.003259   0.003259   0.03%
+ImpactX::add_particles                                              1   0.003146   0.003146   0.003146   0.03%
+ImpactX::evolve::slice_step                                        61   0.003022   0.003022   0.003022   0.03%
+MLNodeTensorLaplacian::define()                                    61   0.002695   0.002695   0.002695   0.03%
+MLMG::mgVcycle_down::0                                            528   0.002054   0.002054   0.002054   0.02%
+MLMG::oneIter()                                                   528   0.002044   0.002044   0.002044   0.02%
+MLMG::actualBottomSolve()                                         528    0.00193    0.00193    0.00193   0.02%
+MLMG::mgVcycle_down::1                                            528   0.001649   0.001649   0.001649   0.02%
+impactx::particles::wakefields::HandleSpacecharge                  61   0.001598   0.001598   0.001598   0.02%
+MLMG::ResNormInf()                                                589   0.001418   0.001418   0.001418   0.01%
+MLMG::mgVcycle_bottom                                             528   0.001302   0.001302   0.001302   0.01%
+ablastr::fields::computePhiIGF                                     61   0.001223   0.001223   0.001223   0.01%
+MLMG::mgVcycle_up::0                                              528   0.001128   0.001128   0.001128   0.01%
+impactx::transformation::CoordinateTransformation                 122   0.001107   0.001107   0.001107   0.01%
+MLMG::mgVcycle_down::2                                            528  0.0009656  0.0009656  0.0009656   0.01%
+MLMG::mgVcycle_down::3                                            528  0.0008475  0.0008475  0.0008475   0.01%
+MLMG::mgVcycle_up::1                                              528  0.0006964  0.0006964  0.0006964   0.01%
+MLMG::mgVcycle_up::3                                              528  0.0006617  0.0006617  0.0006617   0.01%
+MLMG::mgVcycle_up::2                                              528  0.0004605  0.0004605  0.0004605   0.00%
+ImpactX::track_particles                                            1  0.0002485  0.0002485  0.0002485   0.00%
+MLNodeTensorLaplacian::prepareForSolve()                           61  0.0001287  0.0001287  0.0001287   0.00%
+ParticleContainer::copyParticles                                   31  4.993e-05  4.993e-05  4.993e-05   0.00%
+Other                                                           25465    0.07969    0.07969    0.07969   0.76%
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+Name                                                           NCalls  Incl. Min  Incl. Avg  Incl. Max   Max %
+--------------------------------------------------------------------------------------------------------------
+ImpactX::track_particles                                            1      7.231      7.231      7.231  68.97%
+ImpactX::evolve::slice_step                                        61      7.229      7.229      7.229  68.95%
+impactx::particles::wakefields::HandleSpacecharge                  61       6.37       6.37       6.37  60.75%
+impactx::spacecharge::PoissonSolve                                 61      6.082      6.082      6.082  58.01%
+computePhi                                                         61      6.069      6.069      6.069  57.89%
+MLMG::solve()                                                      61      4.645      4.645      4.645  44.30%
+MLMG::oneIter()                                                   528      4.139      4.139      4.139  39.47%
+MLMG::mgVcycle()                                                  528        4.1        4.1        4.1  39.11%
+MLNodeTensorLaplacian::smooth()                                  4752      3.463      3.463      3.463  33.03%
+MLNodeTensorLaplacian::Fsmooth()                                33792      3.318      3.318      3.318  31.65%
+MLMG::mgVcycle_down::0                                            528      1.686      1.686      1.686  16.08%
+ablastr::fields::computePhiIGF                                     61      1.384      1.384      1.384  13.20%
+MLMG::mgVcycle_up::0                                              528      1.368      1.368      1.368  13.05%
+OpenBCSolver::setGreensFunction                                    61      1.071      1.071      1.071  10.21%
+impactx::push                                                      61     0.7972     0.7972     0.7972   7.60%
+impactx::push::BeamMonitor                                         31     0.7832     0.7832     0.7832   7.47%
+MLNodeTensorLaplacian::Fapply()                                  4724     0.6482     0.6482     0.6482   6.18%
+MLMG::mgVcycle_down::1                                            528     0.4061     0.4061     0.4061   3.87%
+MLMG:computeResOfCorrection()                                    2112     0.3758     0.3758     0.3758   3.58%
+MLMG::mgVcycle_up::1                                              528     0.3392     0.3392     0.3392   3.24%
+MLMG::computeResidual()                                           528     0.3307     0.3307     0.3307   3.15%
+OpenBCSolver::solve                                                61     0.3109     0.3109     0.3109   2.97%
+FFT::R2C::forward(in)                                             122     0.2937     0.2937     0.2937   2.80%
+ImpactXParticleContainer::DepositCharge                            61     0.1474     0.1474     0.1474   1.41%
+FFT::R2C::backward(out)                                            61     0.1393     0.1393     0.1393   1.33%
+MLMG::addInterpCorrection()                                      2112     0.1181     0.1181     0.1181   1.13%
+MLNodeTensorLaplacian::interpolation()                           2112     0.1147     0.1147     0.1147   1.09%
+MLNodeLinOp::applyBC()                                          38516     0.1043     0.1043     0.1043   0.99%
+MLMG::mgVcycle_down::2                                            528    0.09876    0.09876    0.09876   0.94%
+FabArray::setVal()                                               5896    0.09206    0.09206    0.09206   0.88%
+ablastr::coarsen::Coarsen()                                        61    0.08602    0.08602    0.08602   0.82%
+MLMG::mgVcycle_up::2                                              528     0.0814     0.0814     0.0814   0.78%
+MLMG::prepareForSolve()                                            61    0.07838    0.07838    0.07838   0.75%
+FabArray::FillBoundary()                                        38638    0.06423    0.06423    0.06423   0.61%
+ParticleContainer::RedistributeCPU()                               62    0.05961    0.05961    0.05961   0.57%
+FabArray::norminf()                                              3445    0.05881    0.05881    0.05881   0.56%
+FillBoundary_nowait()                                           47797    0.05831    0.05831    0.05831   0.56%
+impactx::diagnostics::DiagnosticOutput(pc)                        126    0.05771    0.05771    0.05771   0.55%
+MLNodeTensorLaplacian::restriction()                             2112    0.05027    0.05027    0.05027   0.48%
+MLMG::mgVcycle_bottom                                             528    0.04951    0.04951    0.04951   0.47%
+MLMG::actualBottomSolve()                                         528    0.04821    0.04821    0.04821   0.46%
+MLCGSolver::bicgstab                                              528    0.04527    0.04527    0.04527   0.43%
+MLMG::computeMLResidual()                                          61    0.04085    0.04085    0.04085   0.39%
+MLMG::ResNormInf()                                                589    0.04084    0.04084    0.04084   0.39%
+FabArray::Xpay()                                                 2112    0.03918    0.03918    0.03918   0.37%
+impactx::spacecharge::GatherAndPush                                61    0.03889    0.03889    0.03889   0.37%
+MLMG::mgVcycle_down::3                                            528    0.03568    0.03568    0.03568   0.34%
+FabArrayBase::getFB()                                           48102     0.0349     0.0349     0.0349   0.33%
+amrex::Add()                                                      528    0.03431    0.03431    0.03431   0.33%
+MLMG::mgVcycle_up::3                                              528    0.03267    0.03267    0.03267   0.31%
+MLNodeTensorLaplacian::prepareForSolve()                           61    0.03208    0.03208    0.03208   0.31%
+MLNodeLinOp::buildMasks()                                          61    0.03195    0.03195    0.03195   0.30%
+ablastr::particles::deposit_charge::ChargeDeposition              488    0.03143    0.03143    0.03143   0.30%
+FAbArray::OverrideSync()                                         9037    0.02746    0.02746    0.02746   0.26%
+impactx::spacecharge::ForceFromSelfFields                          61    0.02654    0.02654    0.02654   0.25%
+impactx::diagnostics::reduced_beam_characteristics(pc)             94    0.02578    0.02578    0.02578   0.25%
+amrex::Copy()                                                    1767    0.01869    0.01869    0.01869   0.18%
+OverrideSync_nowait()                                            9037     0.0171     0.0171     0.0171   0.16%
+FabArray::BuildMask()                                             305    0.01338    0.01338    0.01338   0.13%
+impactx::transformation::CoordinateTransformation                 122    0.01278    0.01278    0.01278   0.12%
+ImpactX::add_particles                                              1    0.01022    0.01022    0.01022   0.10%
+MLNodeTensorLaplacian::define()                                    61   0.009872   0.009872   0.009872   0.09%
+FabArray::mult()                                                  244   0.009532   0.009532   0.009532   0.09%
+ParticleContainer::copyParticles                                   31    0.00855    0.00855    0.00855   0.08%
+Other                                                           25465     0.1018     0.1018     0.1018   0.97%
+--------------------------------------------------------------------------------------------------------------
+
+Pinned Memory Usage:
+-------------------------------------------------------------
+Name                                 Nalloc  AvgMem    MaxMem
+-------------------------------------------------------------
+The_Pinned_Arena::Initialize()            1   4   B  8192 KiB
+ParticleContainer::addParticles        2976  74 KiB  1017 KiB
+AmrMesh::MakeNewGrids()                   2   0   B    32   B
+ImpactX::ResizeMesh                      62   0   B    32   B
+ImpactX::early_param_check                1   0   B    32   B
+ImpactX::init_grids                       3   0   B    32   B
+ImpactX::track_particles                  1   0   B    32   B
+impactx::push                            61   0   B    32   B
+impactx::spacecharge::GatherAndPush      60   0   B    32   B
+impactx::spacecharge::PoissonSolve      240   0   B    32   B
+-------------------------------------------------------------
+
+Cpu Memory Usage:
+-------------------------------------------------------------------
+ ===     initial particle distribution    === 
+  * alpha    ::  [0. 0. 0.]
+  * beta     ::  [  7.9083   3.9808 442.31  ]
+  * gamma    ::  [0.12644943 0.25120579 0.00226086]
+  * eps_geom ::  [9.4312e-05 9.3568e-05 3.5200e-06]
+  * sigma    ::  [0.02731021 0.01929962 0.03945797]
+  * sigma_p  ::  [3.45336044e-03 4.84817730e-03 8.92088524e-05]
+  * mu_qp    ::  [0. 0. 0.]
+ ============================================ 
+
+
+ Elapsed time ::: 1.04978e+01 (s)
+
+ records output :: diags/records.json 
+
+
+Name                                     Nalloc    AvgMem    MaxMem
+-------------------------------------------------------------------
+MLMG::prepareForSolve()                    1281  1095 KiB  2556 KiB
+ImpactX::init_grids                          10  2428 KiB  2430 KiB
+ParticleContainer::RedistributeCPU()      16692  1226 KiB  2253 KiB
+FFT::R2C                                      2  1073 KiB  1553 KiB
+ImpactX::AddNParticles                       12   601   B   965 KiB
+ablastr::fields::computePhiIGF                1   547 KiB   793 KiB
+MLNodeTensorLaplacian::define()             305    83 KiB   192 KiB
+MLNodeLinOp::buildMasks()                   366   918   B   153 KiB
+OwnerMask()                                 185    62 KiB   141 KiB
+ImpactXParticleContainer::DepositCharge     671   901   B    91 KiB
+MLCGSolver::bicgstab                       2640    49   B    20 KiB
+AmrMesh::MakeNewGrids()                       4     0   B  6048   B
+TagBoxArray::mapPRD                           2     0   B   216   B
+impactX::collect_lost_particles              16    87   B   128   B
+-------------------------------------------------------------------
+
+AMReX (26.03) finalized
