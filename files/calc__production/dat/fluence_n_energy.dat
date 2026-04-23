@@ -1,0 +1,68 @@
+[ T-Track ]
+    title = [t-track] in region mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 345
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    1      345   1.0000E+00 # 345
+   e-type =    5            # e-mesh is log given by emin, emax and edel
+     emin =  1.0000000E-10  # minimum value of e-mesh points
+     emax =   100.0000      # maximum value of e-mesh points
+     edel =   2.302585      # mesh width of e-mesh points
+#      ne =   12            # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           1.00000E-10  1.00000E-09  1.00000E-08  1.00000E-07  1.00000E-06
+#           1.00000E-05  1.00000E-04  1.00000E-03  1.00000E-02  1.00000E-01
+#           1.00000E+00  1.00000E+01  1.00000E+02
+     unit =    2            # unit is [1/cm^2/MeV/source]
+ material =  all            # (D=all) number of specific material
+     axis =     eng            # axis of output
+     file = out/fluence_n_energy.dat  # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+    x-txt = energy [MeV]
+    y-txt = track length [neutrons m/MeV/s]
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          21 (  0)           0 (  0)          21 (  0)
+
+#------------------------------------------------------------------------------
+#newpage:
+#   no. =  1   reg =    345
+
+x: energy [MeV]
+y: track length [neutrons m/MeV/s]
+p: xlog ylog afac(0.8) form(0.9)
+h: n            x            y(neutron ),hh0l   n 
+#  e-lower      e-upper      neutron     r.err 
+   1.0000E-10   1.0000E-09   0.0000E+00  0.0000
+   1.0000E-09   1.0000E-08   0.0000E+00  0.0000
+   1.0000E-08   1.0000E-07   0.0000E+00  0.0000
+   1.0000E-07   1.0000E-06   0.0000E+00  0.0000
+   1.0000E-06   1.0000E-05   0.0000E+00  0.0000
+   1.0000E-05   1.0000E-04   0.0000E+00  0.0000
+   1.0000E-04   1.0000E-03   1.4214E+10  0.6174
+   1.0000E-03   1.0000E-02   1.2404E+10  0.2471
+   1.0000E-02   1.0000E-01   9.8340E+09  0.1157
+   1.0000E-01   1.0000E+00   1.3274E+10  0.0373
+   1.0000E+00   1.0000E+01   7.2869E+08  0.0471
+   1.0000E+01   1.0000E+02   1.9433E+05  0.6088
+
+#   sum over                 1.9532E+08
+
+'no. =  1,  reg  =    345'
+msuc: {\huge [t-track] in region mesh}
+msdr: {\it plotted by \ANGEL \version}
+msdl: {\it calculated by \PHITS  3.28}
+wt: s(0.7)
+\vspace{-3}
+   vol  &=&   1.0000E+00 [cm^3]
+e:
+ 
+# Information for Restart Calculation
+# This calculation was newly started
+# istdev =  2 # 1:Batch variance, 2:History variance
+# resc2  = 1.76224005096225168E-08 # Total source weight or Total source weight / maxcas
+# resc3  = 1.10002500000000000E+07 # Total history number or Total batch number
+# maxcas =       14667 # History / Batch, only used for istdev=1
+# bitrseed = 0111010011101011010101101110111010111111010111001010101101111111 # bit data of rseed
