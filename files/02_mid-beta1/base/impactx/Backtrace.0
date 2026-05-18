@@ -1,0 +1,45 @@
+ 0: amrex::BLBackTrace::print_backtrace_info(__sFILE*) (in libamrex_3d.dylib) + 58
+
+ 1: amrex::BLBackTrace::handler(int) (in libamrex_3d.dylib) + 639
+
+ 2: 0x000000010c475bfb (in impactx_pybind.cpython-313-darwin.so) + 11691
+
+ 3: impactx::particles::spacecharge::HandleSpacecharge(std::__1::unique_ptr<impactx::initialization::AmrCoreData, std::__1::default_delete<impactx::initialization::AmrCoreData>>&, std::__1::function<void ()>, double) (in impactx_pybind.cpython-313-darwin.so) + 309
+
+ 4: impactx::ImpactX::track_particles() (in impactx_pybind.cpython-313-darwin.so) + 4477
+
+ 5: 0x000000010c4727e4 (in impactx_pybind.cpython-313-darwin.so) + 116
+
+ 6: 0x000000010c33e57d (in impactx_pybind.cpython-313-darwin.so) + 5629
+
+ 7: cfunction_call (in libpython3.13.dylib) + 70
+
+ 8: _PyObject_MakeTpCall (in libpython3.13.dylib) + 226
+
+ 9: _PyEval_EvalFrameDefault (in libpython3.13.dylib) + 9783
+
+10: PyEval_EvalCode (in libpython3.13.dylib) + 209
+
+11: run_eval_code_obj (in libpython3.13.dylib) + 166
+
+12: run_mod (in libpython3.13.dylib) + 220
+
+13: _PyRun_SimpleFileObject (in libpython3.13.dylib) + 739
+
+14: _PyRun_AnyFileObject (in libpython3.13.dylib) + 123
+
+15: Py_RunMain (in libpython3.13.dylib) + 2376
+
+16: pymain_main (in libpython3.13.dylib) + 315
+
+17: Py_BytesMain (in libpython3.13.dylib) + 43
+
+18: start (in dyld) + 1909
+
+
+===== TinyProfilers ======
+ImpactX::track_particles
+ImpactX::evolve::slice_step
+impactx::particles::wakefields::HandleSpacecharge
+ParticleContainer::RedistributeCPU()
+
