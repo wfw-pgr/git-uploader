@@ -1,0 +1,131 @@
+  Description of the element "dtl" for a Drift Tube Linac with external 3D fields
+
+  Element entry in the lattice file "sclinac.dat":
+
+    nn  dtl  len  rad  vscale harm phase nbcells nstep
+  
+        nn: DTL # for cells information file (DTL.#nn) and field file (eh_DTL.#nn)
+       len: DTL length in cm
+       rad: DTL radius in cm
+    vscale: Voltage or Electric field scaling factor
+      harm: Harmonic number according to the base frequency
+   nbCells: Number of DTL cells
+     nstep: Number of integration steps per cell
+
+
+  Example:
+
+    1   dtl      415.23247  1.25    1.0     1.0   -45.      60       50
+
+
+  Format of the cell information file: DTL.#nn (DTL.#01 for nn=1), the header has:
+   
+     Cell Length Radius Eflvl    E0    Phase  Ql-len Qr-len  Ql-Bgrd  Qr-Bgrd  Ectr-Gctr
+       #   (cm)   (cm)   no.   (MV/m)  (deg)   (cm)   (cm)   (kG/cm)  (kG/cm)    (cm)
+     -----------------------------------------------------------------------------------
+      
+        Cell: Cell number
+      Length: Cell length (cm)
+      Radius: Cell radius (cm)
+       Eflvl: Electric field factor
+        E0  : Max electric field (MV/m)
+      Ql-len: Length of left quad (half quad) (cm)
+      Qr-len: Length of right quad (half quad) (cm)
+     Ql-Bgrd: Left quad gradiant (kG/cm)
+     Qr-Bgrd: Right quad gradiant (kG/cm)
+   Ectr-Gctr: Shift between the electric and geometric centers of the cell (cm)
+
+
+  Format of the 3D field file: eh_DTL.#nn (eh_DTL.#01 for nn=1)
+  -------------------------------------------------------------
+
+   Here is the piece of fortran code used to read the eh_DTL.#nn files. Here it is assumed that 
+  all the quads are of the same type so we have only one 3D magnetic field table with (Bx,By,Bz). 
+  For the electric field we read a 2D table (Er, Ez) for every cell sequentially considering 
+  eventual symmetries:
+ 
+-----------------------------------------------------------------------------------------
+
+c ... Open field file only at first cell
+      if (ncell.eq.1) then      
+
+c ..... Open field file
+        open(1, file=filename, status='old')
+
+c ..... Read B field once for all cells
+        read(1,*) icell, d_cell, aperture
+        read(1,*) ksym_x, ksym_y, ksym_z
+        read(1,*) xmini, xmaxi, nxx
+        read(1,*) ymini, ymaxi, nyy
+        read(1,*) zmini, zmaxi, nzz
+        read(1,*) (((bx(i,j,k),i=1,Nxx),j=1,Nyy),k=1,Nzz)
+        read(1,*) (((by(i,j,k),i=1,Nxx),j=1,Nyy),k=1,Nzz)
+        read(1,*) (((bz(i,j,k),i=1,Nxx),j=1,Nyy),k=1,Nzz)
+
+        xbmn = xmini
+        ybmn = ymini
+        zbmn = zmini
+        xbmx = xmaxi
+        ybmx = ymaxi
+        zbmx = zmaxi
+        nbxx = nxx
+        nbyy = nyy
+        nbzz = nzz
+        if (nbxx.gt.NXmax .or. nbyy.gt.NYmax .or. nbzz.gt.NZmax) 
+     &    stop ' DTL-Stop: Exceeded B field grid size '  
+      endif
+
+c ... Read E field sequentially cell by cell     
+      read(1,*) icell, d_elem, aperture, ksym
+      read(1,*) rmini, rmaxi, nrr
+      read(1,*) zmini, zmaxi, nzz
+      if (ksym.eq.0) then                ! No Z-symmetry
+        read(1,*) ((ey(1,ir,iz),ir=1,Nrr),iz=1,Nzz)
+        read(1,*) ((ez(1,ir,iz),ir=1,Nrr),iz=1,Nzz)
+      else if (ksym.eq.1) then         ! Z-symmetry, first half given
+        read(1,*) ((ey(1,ir,iz),ir=1,Nrr),iz=1,Nzz)
+        read(1,*) ((ez(1,ir,iz),ir=1,Nrr),iz=1,Nzz)
+        do ir = 1, Nrr                       ! Complete the missing second half
+          do iz = Nzz+1, 2*Nzz-1
+            ey(1,ir,iz) =-ey(1,ir,2*Nzz-iz)
+            ez(1,ir,iz) = ez(1,ir,2*Nzz-iz)
+          enddo
+        enddo    
+      else if (ksym.eq.2) then         ! Z-symmetry, second half given
+        read(1,*) ((ey(1,ir,iz),ir=1,Nrr),iz=Nzz,2*Nzz-1)
+        read(1,*) ((ez(1,ir,iz),ir=1,Nrr),iz=Nzz,2*Nzz-1)
+        do ir = 1, Nrr                       ! Complete the missing first half
+          do iz = 1, Nzz-1
+            ey(1,ir,iz) =-ey(1,ir,2*Nzz-iz)
+            ez(1,ir,iz) = ez(1,ir,2*Nzz-iz)
+          enddo
+        enddo
+      endif
+  
+      xemn = -rmaxi              ! x: -r -> +r
+      yemn = -rmaxi              ! y: -r -> +r
+      zemn =  zmini
+      
+      xemx =  rmaxi
+      yemx =  rmaxi
+      zemx =  zmaxi*2.d0         ! *2 symmetry
+      
+      nexx = nrr                 ! just half           
+      neyy = nrr                 ! just half
+      nezz = 2*nzz-1
+
+c ... Consider the possible difference between the cell and E-field lengths
+      if (dabs(zemx-dDTL(ncell)).gt.1.d-6) then
+        zemx = dDTL(ncell)                          ! force the same length
+        if (dabs(zemx-dDTL(ncell)).gt.1.d-1)        ! warning if > 1 mm
+     1    write(6,*) ' DTL-Warning: Elen-Clen > 1 mm'
+      endif
+      if (nexx.gt.NXmax .or. neyy.gt.NYmax .or. nezz.gt.NZmax) 
+     &  stop ' DTL-Stop: Exceeded E field grid size '
+
+-----------------------------------------------------------------------------------------
+
+  Note: the actual table limits inside TRACK are NXmax=NYmax=25 and NZmax=201, 
+       that's why we use symmetry whenever it is possible.
+
+
