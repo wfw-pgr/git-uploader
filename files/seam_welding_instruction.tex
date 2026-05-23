@@ -1,0 +1,587 @@
+% !TEX program = lualatex
+% Overleaf安定版：要求仕様書
+% Compiler: LuaLaTeX
+
+\documentclass[a4paper,10pt]{ltjsarticle}
+
+\usepackage[top=18mm,bottom=18mm,left=16mm,right=16mm]{geometry}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}
+
+% ===== 色：同系色のみ =====
+\definecolor{SpecInk}{HTML}{1F2F3D}
+\definecolor{SpecHead}{HTML}{2D4B63}
+\definecolor{SpecSoft}{HTML}{EEF3F6}
+\definecolor{SpecMuted}{HTML}{5F7180}
+
+% ===== 全体設定 =====
+\color{SpecInk}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3.5pt}
+\setlist[itemize]{
+  labelindent=0pt,
+  leftmargin=2.0em,
+  labelwidth=1.1em,
+  labelsep=0.5em,
+  itemsep=2pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+\setlist[enumerate]{
+  labelindent=0pt,
+  leftmargin=2.2em,
+  labelwidth=1.3em,
+  labelsep=0.5em,
+  itemsep=2pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% ===== 本文幅：章見出し・表・箇条書きの基準幅 =====
+% fancyhdr のヘッダ・フッタ罫線幅と完全に同じ長さにする。
+\newlength{\SpecBodyWidth}
+\AtBeginDocument{\setlength{\SpecBodyWidth}{\headwidth}}
+
+% ===== 入力欄 =====
+% 図番・仕様書番号等は、半角アンダースコアを避け、ハイフン推奨。
+\newcommand{\DocTitle}{シーム溶接指示書}
+\newcommand{\SpecNo}{001}
+\newcommand{\DocDate}{2026/05/22}
+\newcommand{\RefPdf}{reference.pdf}
+
+% ===== ヘッダー・フッター =====
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \DocTitle}
+\rhead{\small 仕様書番号：\SpecNo }
+\lfoot{\small\textcolor{SpecMuted}{\DocTitle}}
+\rfoot{\small\textcolor{SpecMuted}{Page \thepage\ / \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% ===== 見出し：ヘッダ・フッタ罫線と同じ幅 =====
+\newcommand{\PageTitle}[1]{%
+  \vspace*{2mm}%
+  \noindent\colorbox{SpecHead}{%
+    \parbox{\dimexpr\SpecBodyWidth-2\fboxsep\relax}{%
+      \large\bfseries\textcolor{white}{#1}%
+    }%
+  }%
+  \par\vspace{5mm}%
+}
+
+\newcommand{\BlockTitle}[1]{%
+  \vspace{4mm}%
+  \noindent\colorbox{SpecSoft}{%
+    \parbox{\dimexpr\SpecBodyWidth-2\fboxsep\relax}{%
+      \normalsize\bfseries\textcolor{SpecHead}{#1}%
+    }%
+  }%
+  \par\vspace{1.5mm}%
+}
+
+\newcommand{\Note}[1]{%
+  \vspace{1.5mm}%
+  \noindent\fbox{%
+    \parbox{\dimexpr\SpecBodyWidth-2\fboxsep-2\fboxrule\relax}{%
+      \footnotesize\textcolor{SpecMuted}{#1}%
+    }%
+  }%
+  \par\vspace{1.5mm}%
+}
+
+% ===== 表：全表を本文幅に統一 =====
+% tabularx を直接使用し、列間余白ではなく X 列側で幅を吸収する。
+% これにより、2列目以降に無意味な列間スペースが出ない。
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\Head}[1]{\textbf{\textcolor{SpecHead}{#1}}}
+\newcommand{\Lab}[1]{\textbf{\textcolor{SpecHead}{#1}}}
+\newcommand{\YN}{要 / 不要}
+
+
+\begin{document}
+
+% 表紙は別途作成。本テンプレートは本文ページ用。
+
+% =========================================================
+\PageTitle{1. 情報}
+
+\BlockTitle{1.1 基本情報}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{30mm}|Y|p{30mm}|Y|}
+\hline
+\Lab{対象品名} & 気密封止用 金属カプセル & \Lab{ 案件名 } & 金属カプセルのシーム溶接試作 \\
+\hline
+\Lab{仕様書番号} & \SpecNo & \Lab{作成日} & \DocDate \\
+\hline
+\Lab{希望数量} & 代表材料から１セット以上。 & \Lab{希望納期} & 別途相談 \\
+\hline
+\Lab{要求者 所属・名} & 日立製作所 西田 賢人 & \Lab{依頼先} & 三起工業株式会社さま \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\BlockTitle{1.2 調達対象品}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{9mm}|Y|p{35mm}|p{16mm}|Y|}
+\hline
+\Head{No.} & \Head{品名} & \Head{図面番号} & \Head{数量} & \Head{備考} \\
+\hline
+1 & シーム溶接後金属カプセルサンプル & 7.3 参考図 7.3.1 参照 & １個以上 & 溶接依頼対象品。 \\
+\hline
+2 & 使用しなかった部材等の返却 & なし & 使用しなかった部材すべて & - \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+
+\BlockTitle{1.3 支給品}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{9mm}|Y|p{35mm}|p{16mm}|Y|}
+\hline
+\Head{No.} & \Head{品名} & \Head{図面番号} & \Head{数量} & \Head{備考} \\
+\hline
+1 & 金属カプセル上 & 別途図、または、図7.3.2 参照 & 2枚 (異種材料 計6枚) & CP-Ti, SUS316, インコネル、各2枚 溝あり \\
+\hline
+2 & 金属カプセル下 & 別途図、または、図7.3.2 参照 & 2枚 (異種材料 計6枚) & CP-Ti, SUS316, インコネル、各2枚 溝なし \\
+\hline
+3 & ガラス蓋 & 別途図、または、図7.3.2 参照 & 6個 & 材質：石英ガラス、カプセル中央に配置して封入。 \\
+\hline
+4 & ガラス容器 & 別途図、または、図7.3.2 参照 & 6個 & 材質：石英ガラス、カプセル中央に配置して封入。 \\
+\hline
+5 & 各材料の端材 & なし & 適宜 & 材質：CP-Ti, SUS316, インコネル 溶接の条件だし等で利用可 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\Note{ 本指示書は、支給部品を用いたシーム溶接試作のサンプル製作依頼内容を整理したもので、実溶接条件等は、御社での調整結果に基づき決定ください。}
+
+\clearpage
+
+% =========================================================
+\PageTitle{2. 依頼範囲・資料}
+
+\BlockTitle{2.1 依頼範囲}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{40mm}|p{24mm}|Y|}
+\hline
+\Head{項目} & \Head{要否} & \Head{指定内容 / 備考} \\
+\hline
+材料手配 & 不要 & 当方支給部品を使用ください。材質の優先順位として、Ti→SUS316→インコネル。極力インコネルは避けたい。\\
+\hline
+機械加工 & 不要 & - \\
+\hline
+溶接 & 要 & 金属カプセル上下を重ね、中央ガラス部品（蓋・容器）を封入した状態でシーム溶接する。 \\
+\hline
+組立 & 要 & 金属カプセル上、金属カプセル下、ガラス蓋、ガラス容器の4点を組んだ状態で溶接する。 \\
+\hline
+熱処理・表面処理 & 不要 & - \\
+\hline
+検査・検査成績書 & 基本的には不要 & 外観状態を観察し、問題あればご相談ください。 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\BlockTitle{2.2 その他の依頼事項}
+\begin{itemize}
+  \item 本依頼の主目的は、気密封止を目的としたシーム溶接の試作可否確認である。
+  \item 溶接条件は施工会社側の推奨条件での条件出しを希望します。
+  \item 漏れ試験は当方でレンタル機を用いて実施を計画します。
+\end{itemize}
+
+\BlockTitle{2.3 留意事項}
+\begin{itemize}
+  \item 不一致、疑義、制約、干渉などがある場合は、施工前に西田へ確認をお願いします。
+\end{itemize}
+
+\BlockTitle{2.4 資料}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{32mm}|p{58mm}|Y|}
+\hline
+\Head{分類} & \Head{資料名} & \Head{備考} \\
+\hline
+製作図 & 本書 7.3 & 外径 \(\phi 85\) 程度 \\
+\hline
+部品表 & 本書 1.3 & 溶接作業の対象は1組4点。 \\
+\hline
+検査基準書 & - & - \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\clearpage
+
+% =========================================================
+\PageTitle{3. 材料・加工・溶接・処理・外観仕様}
+
+\BlockTitle{3.1 部品材料指定}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{9mm}|p{45mm}|p{35mm}|Y|}
+\hline
+\Head{No.} & \Head{部品名} & \Head{材質} & \Head{備考} \\
+\hline
+1 & 金属カプセル上 & CP-TiまたはSUS316またはインコネル (サンプルはCP-Tiが第１希望) & 板厚 \(0.1\,\mathrm{mm}\) 程度。凸溝あり。 \\
+\hline
+2 & 金属カプセル下 & CP-TiまたはSUS316またはインコネル (サンプルはCP-Tiが第１希望) & 板厚 \(0.1\,\mathrm{mm}\) 程度。凸溝なし。 \\
+\hline
+3 & ガラス蓋 & ガラス & 中央に配置。破損、位置ずれを避ける。 \\
+\hline
+4 & ガラス容器 & ガラス & 中央に配置。破損、位置ずれを避ける。 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\Note{参考資料にはCP-Ti / インコネル / SUS316の記載があるが、本依頼の暫定指定はTi系またはSUS316とする。インコネルのみを対象とする場合は別途確認する。}
+
+\BlockTitle{3.2 機械加工の基本要求}
+\begin{itemize}
+  \item 機械加工は依頼範囲外。
+\end{itemize}
+
+\BlockTitle{3.3 一般公差・標準仕上げ}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{42mm}|Y|}
+\hline
+\Lab{図面指示なき幾何公差} & 位置は極力中心を合わせる。一方で、精度、左右対称性、直角度、平行度は厳密には要求しない。\\
+\hline
+\Lab{指示なき角部} & 支給状態の維持でよい。
+\hline
+\Lab{指示なき面粗さ} & 支給状態の維持でよい。\\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\clearpage
+
+\BlockTitle{3.4 溶接仕様}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{42mm}|Y|}
+\hline
+\Lab{溶接方法} & シーム溶接。御社設備に合わせたシーム溶接条件にて溶接可。 \\
+\hline
+\Lab{溶接対象} & 金属カプセル上、金属カプセル下、ガラス蓋、ガラス容器を組んだ状態の金属カプセル上下重ね部。 \\
+\hline
+\Lab{母材} & CP-Ti (第１希望)、または、SUS316 (第２希望)。 板厚は \(0.1\,\mathrm{mm}\times2\) 程度。 \\
+\hline
+\Lab{溶接材料} & なし。抵抗シーム溶接による母材同士の接合を想定。 \\
+\hline
+\Lab{溶接線} & 中央ガラス部を囲む4辺の矩形状シーム。中心からの距離は14 mm 程度が望ましい。最大でも18mm以下の距離に収まることが望ましい。閉じられていればよく、溶接線の直角度・平行度・左右対称性は厳密には要求しない。 \\
+\hline
+\Lab{溶接長} & 1辺 約\(28\,\mathrm{mm}\) \(\times4\)辺、総溶接長 約\(112\,\mathrm{mm}\)。 \\
+\hline
+\Lab{希望溶接位置} & 4辺がカプセル中心から約\(14\,\mathrm{mm}\)の位置となることを希望。溶接辺の内側またはビード中心が約\(14\,\mathrm{mm}\)でも可。 \\
+\hline
+\Lab{許容上限位置} & ワーストの場合でも、4辺がカプセル中心から約\(18\,\mathrm{mm}\)以内に入ることが望ましい。外部干渉回避のため、極力内側に配置したい。 \\
+\hline
+\Lab{始端・終端} & 指定なし。任意位置から開始・終了可。ただし、未溶接部や開口部が残らないこと。 \\
+\hline
+\Lab{重ね代} & 支給部品形状による。指定なし。\\
+\hline
+\Lab{禁止範囲} & 中央のガラス蓋・ガラス容器を入れる部分、ならびにガラス部品を損傷するおそれのある範囲。 \\
+\hline
+\Lab{溶接条件} & 電流、加圧力、通電時間、送り速度、電極形状等は御社推奨条件で条件出しをお願いします。可能な範囲で条件のご教示を希望。 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\BlockTitle{3.5 溶接に関する要求事項}
+\begin{itemize}
+  \item 最重要要求は気密性。
+  \item 穴あき、割れ、貫通不良、未溶接による開口部がないこと。
+  \item 中央ガラス部品がみだりに動く状態、または気密が取れない状態を避けること。
+  \item 溶接部に力学的に大きな荷重が継続して作用する想定はないが、通常の取扱いで破断・剥離しない程度の接合強度を確保すること。
+  \item カプセルはもともと湾曲形状であるため、多少の変形は許容可能。ただし、ガラス破損、開口、外部干渉につながる著しい変形は不可とする。
+\end{itemize}
+
+\BlockTitle{3.6 熱処理・表面処理}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{36mm}|Y|}
+\hline
+\Lab{熱処理} & なし。\\
+\hline
+\Lab{表面処理} & なし。不要。 \\
+\hline
+\Lab{洗浄・脱脂} & 支給時点で油分・防錆油は基本的にない想定。溶接品質上必要な範囲で脱脂・清掃は問題ない。 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\BlockTitle{3.7 処理時の注意事項}
+\begin{itemize}
+  \item CP-Ti材料を施工する場合、酸化、脆化、過大入熱、電極汚染に注意。（特に指定等はなし。）
+  \item SUS316を施工する場合、過大入熱による変形、穴あき、ガラス部への熱影響に注意すること。 (石英ガラスは融点が高く、基本的には問題がないはずと想定している。)
+\end{itemize}
+
+\BlockTitle{3.8 外観・仕上げ要求}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{34mm}|Y|}
+\hline
+\Head{項目} & \Head{判定基準} \\
+\hline
+バリ・カエリ・エッジ & 使用上有害なものがないこと。 \\
+\hline
+傷・打痕 & 気密性、ガラス保持、通常取扱いに有害な傷・打痕がないこと。 \\
+\hline
+ケガキ線・ポンチ等、位置指示 & 特に不要。\\
+\hline
+汚れ・異物 & 特に指定なし。切粉、粉塵、溶接スパッタ、過剰な油分等は適宜、除去願います。。 \\
+\hline
+外観美観 & 重要ではない。気密性、穴あきなし、割れなし、過大変形なしを優先する。 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\BlockTitle{3.9 その他特記事項}
+\begin{itemize}
+  \item 本指示書の寸法・位置は試作用の暫定指定である。量産・実封入品に適用する場合は、漏れ試験結果および条件出し結果を反映して改訂する。
+\end{itemize}
+
+\clearpage
+
+% =========================================================
+\PageTitle{4. 検査要求}
+
+\BlockTitle{4.1 検査項目}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|Y|p{22mm}|p{24mm}|Y|}
+\hline
+\Head{検査項目} & \Head{要否} & \Head{記録提出} & \Head{備考} \\
+\hline
+外観検査 & 要 & 不要 & 穴あき、割れ、過大変形、ガラス破損がないことを確認。 \\
+\hline
+主要寸法検査 & 要 & 不要 & 溶接線位置が概ね中心から\(18\,\mathrm{mm}\)以内であることを確認。簡易測定可。 \\
+\hline
+幾何公差検査 & 不要 & 不要 & 直角度、平行度、左右対称性は要求しない。 \\
+\hline
+溶接外観検査 & 要 & 不要 & 4辺が閉じたシーム形状であること。未溶接開口がないこと。 \\
+\hline
+組立状態確認 & 要 & 不要 & ガラス蓋・ガラス容器が中央付近に保持され、みだりに動かないこと。 \\
+\hline
+気密性等、封止検査 & 御社側は不要 & 不要 & 当方でレンタル機を用いて漏れ試験を実施予定。 \\
+\hline
+機能確認 & 不要 & 不要 & 実封入は本サンプル試作範囲外。 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\BlockTitle{4.2 重点管理寸法・特性}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{8mm}|p{30mm}|Y|p{22mm}|p{42mm}|}
+\hline
+\Head{No.} & \Head{箇所} & \Head{寸法 / 特性} & \Head{公差} & \Head{備考} \\
+\hline
+1 & 溶接線位置 & 中央から約\(14\,\mathrm{mm}\)位置を希望 & 目標 & 溶接辺の内側またはビード中心がこの位置でも可。 \\
+\hline
+2 & 溶接線位置 & 中央から約\(18\,\mathrm{mm}\)以内 & 上限目安 & 外部干渉回避のため、ワーストでもこの範囲内を希望。 \\
+\hline
+3 & 溶接長 & 約\(28\,\mathrm{mm}\times4\)辺、総長約\(112\,\mathrm{mm}\) & 目安 & 閉じた4辺の封止形状であることを優先。 \\
+\hline
+4 & 中央ガラス部 & 溶接禁止、損傷不可 & 不可 & ガラス蓋・容器の破損、過大熱影響、位置ずれを避ける。 \\
+\hline
+5 & 気密性 & 漏れなしを目標 & 当方評価 & 施工会社側リーク試験は今回不要。 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\BlockTitle{4.3 検査・判定に関する補足}
+\begin{itemize}
+  \item 寸法確認は高精度測定ではなく、中心からの溶接線位置が概ね要求範囲内であることの確認でよい。
+\end{itemize}
+
+\clearpage
+
+% =========================================================
+\PageTitle{5. 提出物・納入条件}
+
+\BlockTitle{5.1 提出書類・納入物}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|Y|p{22mm}|p{34mm}|Y|}
+\hline
+\Head{提出物} & \Head{要否} & \Head{提出タイミング} & \Head{備考} \\
+\hline
+見積書 & 不要 & 発注前 & 御社サンプル試作で費用等が生じる場合は事前にご連絡ください。 \\
+\hline
+材料証明書 & 不要 & -- & - \\
+\hline
+検査成績書 & 不要 & -- & - \\
+\hline
+完成写真 & もしあれば◎ & -- & 溶接部と全体外観が分かる写真を納入時に当方で撮影予定。 \\
+\hline
+溶接条件メモ & もしあれば◎ & -- & 電流、加圧、送り速度、電極条件等。社外秘に該当する場合は省略可。 \\
+\hline
+漏れ試験結果 & 不要 & -- & 当方で実施予定。 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\BlockTitle{5.2 梱包要求}
+\begin{itemize}
+\item 輸送中に傷、打痕、変形、ガラス破損が生じないように梱包をお願いします。
+  \item 溶接部、中央ガラス部、カプセル曲面部に過大荷重が掛からない荷姿とするよう留意ください。
+\end{itemize}
+
+\BlockTitle{5.3 識別・納入条件}
+\begin{itemize}
+  \item 部品識別：特に指定なし。
+\end{itemize}
+
+\BlockTitle{5.4 納入時確認事項}
+\begin{itemize}
+  \item 納入品の品名、材質、数量が発注内容と一致していること。
+  \item 溶接部に穴あき、割れ、過大変形、開口部がないこと。
+  \item 中央ガラス部品に破損、明らかな位置ずれ、異物混入がないこと。
+  \item 当方で主要寸法確認および漏れ試験を実施する。
+\end{itemize}
+
+
+\BlockTitle{5.5 納入場所}
+
+\Note{ 319-1292 茨城県日立市大みか町7-1-2 エネ棟3F 304 西田 賢人 宛 }
+
+
+\clearpage
+
+% =========================================================
+\PageTitle{6. 品質保証・変更管理}
+
+\BlockTitle{6.1 事前承認を要する変更}
+\begin{itemize}
+  \item 材料の変更。特にCP-Ti、SUS316 ではなく、インコネルを使用する場合。
+  \item 溶接方法、電極形状、加圧方式、治具方式の大幅な変更。
+  \item 溶接位置を中心から約\(18\,\mathrm{mm}\)より外側へ変更すること。
+  \item 中央ガラス部品への接触、追加加工、仮固定材の使用。
+  \item 図面・仕様からの逸脱。
+\end{itemize}
+
+\BlockTitle{6.2 受入条件}
+\begin{enumerate}
+  \item 4辺のシーム溶接により、中央ガラス部を囲む閉じた封止形状が形成されていること。
+  \item 穴あき、割れ、ガラス破損、過大変形、明らかな開口部がないこと。
+\end{enumerate}
+
+\clearpage
+
+% =========================================================
+\PageTitle{7. 本案件固有の特記事項}
+
+\BlockTitle{7.1 設計・使用条件}
+\begin{itemize}
+  \item 使用目的：放射性物質を封じた気密金属カプセルの構造検討。及び、サンプル品としての確認のため。（試作段階では放射性物質は含めない。）
+  \item 最重要機能：気密封止。外観美観、直角度、平行度、左右対称性は重要管理項目ではない。
+  \item 強度要求：溶接部に大きな外力が継続作用する想定はない。通常取扱いで破断・剥離しないこと。
+  \item 禁止事項：中央ガラス部への溶接、ガラス部品の破損、未溶接開口の残存、過大変形。
+\end{itemize}
+
+\BlockTitle{7.2 御社への確認事項}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{46mm}|p{28mm}|Y|}
+\hline
+\Head{確認項目} & \Head{現時点の扱い} & \Head{備考} \\
+\hline
+推奨溶接条件 & 指定なし & 御社の標準条件または条件出し結果に従う。 \\
+\hline
+試作時の必要試験片数 & CP-Ti１種１個以上の返送を希望 & 可能であれば他の試作も。 \\
+\hline
+希望返送期日 & 6/11までを希望 & 不可の場合、ご連絡をお願いします。 \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\BlockTitle{7.3 参考図}
+\Note{以下の図は、溶接位置・組立状態・許容位置を説明するための参考図。}
+
+\begin{center}
+\includegraphics[page=2,width=0.92\SpecBodyWidth]{\RefPdf}
+\end{center}
+\footnotesize 図7.3-1　シーム溶接イメージ。閉じられていればよく、直角・平行は必須ではない。\normalsize
+
+\begin{center}
+\includegraphics[page=3,width=0.92\SpecBodyWidth]{\RefPdf}
+\end{center}
+\footnotesize 図7.3-2　金属カプセル形状、溶接作業時の対象4点、および組立状態。\normalsize
+
+\begin{center}
+\includegraphics[page=4,width=0.92\SpecBodyWidth]{\RefPdf}
+\end{center}
+\footnotesize 図7.3-3　希望溶接位置。4辺が中心から約\(14\,\mathrm{mm}\)位置となることを希望。\normalsize
+
+\begin{center}
+\includegraphics[page=5,width=0.92\SpecBodyWidth]{\RefPdf}
+\end{center}
+\footnotesize 図7.3-4　要求上限位置。ワーストでも中心から約\(18\,\mathrm{mm}\)以内を希望。\normalsize
+
+\clearpage
+
+% =========================================================
+\PageTitle{8. 改訂履歴}
+
+\BlockTitle{8.1 改訂履歴}
+\par\vspace{1mm}%
+\noindent\footnotesize%
+\renewcommand{\arraystretch}{1.10}%
+\setlength{\tabcolsep}{3.0pt}%
+\begin{tabularx}{\SpecBodyWidth}{|p{16mm}|p{28mm}|Y|p{28mm}|}
+\hline
+\Head{版} & \Head{日付} & \Head{改訂内容} & \Head{作成 / 確認} \\
+\hline
+0 & \today & 初版。参考資料および暫定依頼内容をもとにシーム溶接試作指示として整理。 & 西田 \\
+\hline
+ &  &  &  \\
+\hline
+ &  &  &  \\
+\hline
+ &  &  &  \\
+\hline
+\end{tabularx}%
+\par\vspace{1.5mm}
+
+\end{document}
