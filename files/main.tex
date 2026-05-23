@@ -1,243 +1,298 @@
 % !TEX program = lualatex
-% 機械加工・組立・溶接部品 要求仕様書テンプレート
-% 推奨コンパイル: lualatex spec.tex
+% Overleaf安定版：機械加工・組立・溶接部品 要求仕様書
+% Compiler: LuaLaTeX
 
-\documentclass[a4paper,10.5pt]{ltjsarticle}
+\documentclass[a4paper,10pt]{ltjsarticle}
 
-% ===== Page / layout =====
 \usepackage[top=18mm,bottom=18mm,left=16mm,right=16mm]{geometry}
-\usepackage{array,tabularx,longtable,multirow}
+\usepackage{xcolor}
+\usepackage{array}
 \usepackage{enumitem}
-\usepackage[table]{xcolor}
-\usepackage[explicit]{titlesec}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage{booktabs}
-\usepackage{pifont}
-\usepackage{setspace}
-\usepackage{needspace}
-% 図面番号・仕様書番号などの半角アンダースコア _ を本文中で安全に扱う。
 
-% ===== Color palette: same hue, low saturation =====
+% ===== 色：同系色のみ =====
 \definecolor{SpecInk}{HTML}{1F2F3D}
 \definecolor{SpecHead}{HTML}{2D4B63}
 \definecolor{SpecSoft}{HTML}{EEF3F6}
-\definecolor{SpecLine}{HTML}{CFD8DF}
 \definecolor{SpecMuted}{HTML}{5F7180}
 
-\pagecolor{white}
+% ===== 全体設定 =====
 \color{SpecInk}
-\setstretch{1.12}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{4pt}
-\renewcommand{\arraystretch}{1.32}
-\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=3pt}
-\setlist[enumerate]{leftmargin=1.6em,itemsep=2pt,topsep=3pt}
+\setlength{\parskip}{3.5pt}
+\setlist[itemize]{
+  labelindent=0pt,
+  leftmargin=2.0em,
+  labelwidth=1.1em,
+  labelsep=0.5em,
+  itemsep=2pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+\setlist[enumerate]{
+  labelindent=0pt,
+  leftmargin=2.2em,
+  labelwidth=1.3em,
+  labelsep=0.5em,
+  itemsep=2pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
 
-% ===== Header / Footer =====
+% ===== 本文幅：章見出し・表・箇条書きの基準幅 =====
+% ヘッダ・フッタ罫線と同じ幅にするため、本文幅そのものを使用。
+\newlength{\SpecBodyWidth}
+\setlength{\SpecBodyWidth}{\linewidth}
+
+% ===== 入力欄 =====
+% 図番・仕様書番号等は、半角アンダースコアを避け、ハイフン推奨。
+\newcommand{\DocTitle}{機械加工・組立・溶接部品 要求仕様書}
+\newcommand{\SpecNo}{記入}
+\newcommand{\SpecRev}{記入}
+\newcommand{\SpecDate}{記入}
+\newcommand{\ProjectName}{記入}
+\newcommand{\PartName}{記入}
+\newcommand{\DrawingNo}{記入}
+\newcommand{\Quantity}{記入}
+\newcommand{\DueDate}{記入}
+
+% ===== ヘッダー・フッター =====
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small 機械加工・組立・溶接部品 要求仕様書}
+\lhead{\small \DocTitle}
 \rhead{\small 仕様書番号：\SpecNo\quad Rev.：\SpecRev}
-\lfoot{\small\textcolor{SpecMuted}{\SpecDocTitle}}
+\lfoot{\small\textcolor{SpecMuted}{\DocTitle}}
 \rfoot{\small\textcolor{SpecMuted}{Page \thepage\ / \pageref{LastPage}}}
 \renewcommand{\headrulewidth}{0.6pt}
 \renewcommand{\footrulewidth}{0.4pt}
-\renewcommand{\headrule}{\hbox to\headwidth{\color{SpecHead}\leaders\hrule height \headrulewidth\hfill}}
-\renewcommand{\footrule}{\hbox to\headwidth{\color{SpecLine}\leaders\hrule height \footrulewidth\hfill}}
 
-% ===== Title styles =====
-\titleformat{\section}
-  {\Large\bfseries\color{white}}
-  {}{0pt}
-  {\colorbox{SpecHead}{\parbox{\dimexpr\linewidth-2\fboxsep}{\thesection\quad #1}}}
-\titlespacing*{\section}{0pt}{0pt}{14pt}
-
-\titleformat{\subsection}
-  {\large\bfseries\color{SpecHead}}
-  {}{0pt}
-  {\colorbox{SpecSoft}{\parbox{\dimexpr\linewidth-2\fboxsep}{\textcolor{SpecHead}{\thesubsection\quad #1}}}}
-\titlespacing*{\subsection}{0pt}{16pt}{6pt}
-
-% ===== Table helpers =====
-\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\newcommand{\thcell}[1]{\textbf{\textcolor{SpecHead}{#1}}}
-\newcommand{\labelcell}[1]{\cellcolor{SpecSoft}\textbf{\textcolor{SpecHead}{#1}}}
-\newcommand{\blank}{\rule{0pt}{2.1ex}\hspace{1em}}
-\newcommand{\cb}{\ding{113}}
-\newcommand{\choice}[1]{\textcolor{SpecMuted}{#1}}
-
-% SpecTable は未使用。tabularx は newenvironment で包まない。
-
-\newenvironment{SpecNote}{%
-  \par\vspace{3pt}%
-  \begin{center}%
-  \begin{minipage}{0.96\linewidth}%
-  \small\color{SpecMuted}%
-}{%
-  \end{minipage}%
-  \end{center}%
-  \vspace{2pt}%
+% ===== 見出し：ヘッダ・フッタ罫線と同じ幅 =====
+\newcommand{\PageTitle}[1]{%
+  \vspace*{2mm}%
+  \noindent\colorbox{SpecHead}{%
+    \parbox{\dimexpr\SpecBodyWidth-2\fboxsep\relax}{%
+      \large\bfseries\textcolor{white}{#1}%
+    }%
+  }%
+  \par\vspace{5mm}%
 }
 
-\newcommand{\PageBreak}{\clearpage}
+\newcommand{\BlockTitle}[1]{%
+  \vspace{4mm}%
+  \noindent\colorbox{SpecSoft}{%
+    \parbox{\dimexpr\SpecBodyWidth-2\fboxsep\relax}{%
+      \normalsize\bfseries\textcolor{SpecHead}{#1}%
+    }%
+  }%
+  \par\vspace{1.5mm}%
+}
 
-% ===== Editable document variables =====
-\newcommand{\SpecDocTitle}{機械加工・組立・溶接部品 要求仕様書}
-\newcommand{\SpecNo}{（記入）}
-\newcommand{\SpecRev}{（記入）}
-\newcommand{\SpecDate}{（記入）年（記入）月（記入）日}
-\newcommand{\ProjectName}{（記入）}
-\newcommand{\PartName}{（記入）}
-\newcommand{\DrawingNo}{（記入）}
-\newcommand{\Quantity}{（記入）}
-\newcommand{\DueDate}{（記入）年（記入）月（記入）日}
+\newcommand{\Note}[1]{%
+  \vspace{1.5mm}%
+  \noindent\fbox{%
+    \parbox{\dimexpr\SpecBodyWidth-2\fboxsep-2\fboxrule\relax}{%
+      \footnotesize\textcolor{SpecMuted}{#1}%
+    }%
+  }%
+  \par\vspace{1.5mm}%
+}
+
+% ===== 表：全表を本文幅に統一 =====
+% tabular* で外形幅を \SpecBodyWidth に固定。
+% 各表の列幅指定が多少異なっても、表全体の幅は同一になる。
+\newenvironment{SpecTable}[1]{%
+  \par\vspace{1mm}%
+  \noindent\footnotesize%
+  \renewcommand{\arraystretch}{1.10}%
+  \setlength{\tabcolsep}{3.0pt}%
+  \begin{tabular*}{\SpecBodyWidth}{@{\extracolsep{\fill}}#1@{}}%
+}{%
+  \end{tabular*}%
+  \par\vspace{1.5mm}%
+}
+
+\newcommand{\Head}[1]{\textbf{\textcolor{SpecHead}{#1}}}
+\newcommand{\Lab}[1]{\textbf{\textcolor{SpecHead}{#1}}}
+\newcommand{\YN}{要 / 不要}
 
 \begin{document}
 
 % 表紙は別途作成。本テンプレートは本文ページ用。
 
 % =========================================================
-\section{文書情報・調達対象}
+\PageTitle{1. 文書情報・調達対象}
 
-\subsection{文書基本情報}
-\begin{tabularx}{\linewidth}{|L{29mm}|Y|L{34mm}|Y|}
+\BlockTitle{1.1 文書基本情報}
+\begin{SpecTable}{|p{28mm}|p{43mm}|p{30mm}|p{43mm}|}
 \hline
-\labelcell{対象品名} & \PartName & \labelcell{適用装置 / 案件名} & \ProjectName \\ \hline
-\labelcell{図面番号} & \DrawingNo & \labelcell{図面 Rev.} & （記入） \\ \hline
-\labelcell{仕様書番号} & \SpecNo & \labelcell{仕様書 Rev.} & \SpecRev \\ \hline
-\labelcell{希望数量} & \Quantity & \labelcell{希望納期} & \DueDate \\ \hline
-\labelcell{作成部門 / 作成者} & （記入） & \labelcell{承認者} & （記入） \\ \hline
-\labelcell{作成日} & \SpecDate & \labelcell{取引先 / 製作者} & （記入） \\ \hline
-\end{tabularx}
-
-\subsection{改訂履歴}
-\begin{tabularx}{\linewidth}{|L{15mm}|L{28mm}|Y|L{35mm}|}
+\Lab{対象品名} & \PartName & \Lab{適用装置 / 案件名} & \ProjectName \\
 \hline
-\rowcolor{SpecSoft}\thcell{Rev.} & \thcell{日付} & \thcell{改訂内容} & \thcell{作成 / 承認} \\ \hline
-0 & （記入）/（記入）/（記入） & 初版 & （記入） / （記入） \\ \hline
-  &  &  &  \\ \hline
-  &  &  &  \\ \hline
-\end{tabularx}
-
-\subsection{調達対象品}
-\begin{tabularx}{\linewidth}{|L{10mm}|Y|L{32mm}|L{18mm}|Y|}
+\Lab{図面番号} & \DrawingNo & \Lab{図面 Rev.} & 記入 \\
 \hline
-\rowcolor{SpecSoft}\thcell{No.} & \thcell{品名} & \thcell{図面番号} & \thcell{数量} & \thcell{備考} \\ \hline
-1 &  &  &  &  \\ \hline
-2 &  &  &  &  \\ \hline
-3 &  &  &  &  \\ \hline
-4 &  &  &  &  \\ \hline
-\end{tabularx}
+\Lab{仕様書番号} & \SpecNo & \Lab{仕様書 Rev.} & \SpecRev \\
+\hline
+\Lab{希望数量} & \Quantity & \Lab{希望納期} & \DueDate \\
+\hline
+\Lab{作成部門 / 作成者} & 記入 & \Lab{取引先 / 製作者} & 記入 \\
+\hline
+\Lab{作成日} & \SpecDate & \Lab{承認者} & 記入 \\
+\hline
+\end{SpecTable}
 
-\PageBreak
+\BlockTitle{1.2 調達対象品}
+\begin{SpecTable}{|p{9mm}|p{52mm}|p{35mm}|p{16mm}|p{34mm}|}
+\hline
+\Head{No.} & \Head{品名} & \Head{図面番号} & \Head{数量} & \Head{備考} \\
+\hline
+1 &  &  &  &  \\
+\hline
+2 &  &  &  &  \\
+\hline
+3 &  &  &  &  \\
+\hline
+4 &  &  &  &  \\
+\hline
+\end{SpecTable}
+
+\BlockTitle{1.3 この文書で指定する事項}
+\begin{itemize}
+  \item 製作範囲、支給資料、図面・仕様の優先順位。
+  \item 材料、加工、溶接、組立、熱処理、表面処理に関する要求事項。
+  \item 検査、提出書類、梱包、識別、納入、不適合時の処置。
+\end{itemize}
+
+\clearpage
 
 % =========================================================
-\section{適用範囲・支給資料}
+\PageTitle{2. 適用範囲・支給資料}
 
-\subsection{本仕様書の適用範囲}
-\begin{tabularx}{\linewidth}{|L{38mm}|L{24mm}|Y|}
+\BlockTitle{2.1 本仕様書の適用範囲}
+\begin{SpecTable}{|p{36mm}|p{24mm}|p{86mm}|}
 \hline
-\rowcolor{SpecSoft}\thcell{項目} & \thcell{要否} & \thcell{指定内容 / 備考} \\ \hline
-材料手配 & \choice{要 / 不要} &  \\ \hline
-機械加工 & \choice{要 / 不要} &  \\ \hline
-溶接 & \choice{要 / 不要} &  \\ \hline
-組立 & \choice{要 / 不要} &  \\ \hline
-熱処理 & \choice{要 / 不要} &  \\ \hline
-表面処理 & \choice{要 / 不要} &  \\ \hline
-検査・検査成績書 & \choice{要 / 不要} &  \\ \hline
-梱包・識別・納入 & \choice{要 / 不要} &  \\ \hline
-\end{tabularx}
-
-\subsection{対象外範囲}
-\begin{tabularx}{\linewidth}{|L{35mm}|Y|}
+\Head{項目} & \Head{要否} & \Head{指定内容 / 備考} \\
 \hline
-\labelcell{対象外作業} &  \\ \hline
-\labelcell{別途手配品} &  \\ \hline
-\labelcell{支給品} &  \\ \hline
-\end{tabularx}
+材料手配 & \YN &  \\
+\hline
+機械加工 & \YN &  \\
+\hline
+溶接 & \YN &  \\
+\hline
+組立 & \YN &  \\
+\hline
+熱処理 & \YN &  \\
+\hline
+表面処理 & \YN &  \\
+\hline
+検査・検査成績書 & \YN &  \\
+\hline
+梱包・識別・納入 & \YN &  \\
+\hline
+\end{SpecTable}
 
-\subsection{図面・仕様の優先順位}
+\BlockTitle{2.2 対象外範囲・別途手配}
+\begin{itemize}
+  \item 対象外作業：記入。
+  \item 別途手配品：記入。
+  \item 支給品：記入。
+\end{itemize}
+
+\BlockTitle{2.3 図面・仕様の優先順位}
 \begin{enumerate}
-  \item 本要求仕様書
-  \item 承認済み製作図
-  \item 部品表
-  \item 3D CADデータ
-  \item その他参考資料
+  \item 本要求仕様書。
+  \item 承認済み製作図。
+  \item 部品表。
+  \item 3D CADデータ。
+  \item その他参考資料。
 \end{enumerate}
+\Note{不一致、疑義、製作上の制約を発見した場合は、製作前に発注者へ確認すること。}
 
-\begin{SpecNote}
-不一致、疑義、製作上の制約を発見した場合は、製作前に発注者へ確認すること。
-\end{SpecNote}
-
-\subsection{支給資料}
-\begin{tabularx}{\linewidth}{|Y|L{18mm}|L{35mm}|Y|}
+\BlockTitle{2.4 支給資料}
+\begin{SpecTable}{|p{46mm}|p{18mm}|p{34mm}|p{48mm}|}
 \hline
-\rowcolor{SpecSoft}\thcell{資料名} & \thcell{Rev.} & \thcell{形式} & \thcell{備考} \\ \hline
-製作図 &  & PDF / DXF &  \\ \hline
-3D CAD &  & STEP / Parasolid &  \\ \hline
-部品表 &  & Excel / PDF &  \\ \hline
-検査基準書 &  & PDF & 必要時 \\ \hline
-\end{tabularx}
+\Head{資料名} & \Head{Rev.} & \Head{形式} & \Head{備考} \\
+\hline
+製作図 &  & PDF / DXF &  \\
+\hline
+3D CAD &  & STEP / Parasolid &  \\
+\hline
+部品表 &  & Excel / PDF &  \\
+\hline
+検査基準書 &  & PDF & 必要時 \\
+\hline
+\end{SpecTable}
 
-\PageBreak
+\clearpage
 
 % =========================================================
-\section{材料仕様・加工仕様}
+\PageTitle{3. 材料仕様・加工仕様}
 
-\subsection{材料仕様}
-\begin{tabularx}{\linewidth}{|L{30mm}|Y|L{30mm}|Y|}
+\BlockTitle{3.1 材料仕様}
+\begin{SpecTable}{|p{28mm}|p{43mm}|p{30mm}|p{43mm}|}
 \hline
-\labelcell{材質} & 図面指示による / 下記指定 & \labelcell{材料規格} & JIS / ASTM / EN / その他 \\ \hline
-\labelcell{ミルシート} & \choice{要 / 不要} & \labelcell{代替材} & \choice{不可 / 可 / 要承認} \\ \hline
-\labelcell{支給材} & \choice{有 / 無} & \labelcell{材料ロット管理} & \choice{要 / 不要} \\ \hline
-\end{tabularx}
-
-\begin{SpecNote}
-代替材を提案する場合は、機械的性質、耐食性、熱処理性、溶接性、寸法安定性への影響を明記し、発注者の承認を得ること。
-\end{SpecNote}
-
-\subsection{部品別材料指定}
-\begin{tabularx}{\linewidth}{|L{10mm}|Y|L{30mm}|L{30mm}|Y|}
+\Lab{材質} & 図面指示による / 下記指定 & \Lab{材料規格} & JIS / ASTM / EN / その他 \\
 \hline
-\rowcolor{SpecSoft}\thcell{No.} & \thcell{部品名} & \thcell{材質} & \thcell{規格} & \thcell{備考} \\ \hline
-1 &  &  &  &  \\ \hline
-2 &  &  &  &  \\ \hline
-3 &  &  &  &  \\ \hline
-\end{tabularx}
-
-\subsection{機械加工の基本要求}
-\begin{tabularx}{\linewidth}{|Y|Y|}
+\Lab{ミルシート} & \YN & \Lab{代替材} & 不可 / 可 / 要承認 \\
 \hline
-\cb\ 図面指示寸法、公差、幾何公差を満足 & \cb\ 図面指示面粗さを満足 \\ \hline
-\cb\ バリ、カエリ、鋭利エッジを除去 & \cb\ ねじ部、はめあい部、シール面を保護 \\ \hline
-\cb\ 加工基準変更時は事前確認 & \cb\ 歪み懸念時は加工順序を事前確認 \\ \hline
-\end{tabularx}
-
-\subsection{一般公差・標準仕上げ}
-\begin{tabularx}{\linewidth}{|L{42mm}|Y|}
+\Lab{支給材} & 有 / 無 & \Lab{材料ロット管理} & \YN \\
 \hline
-\labelcell{図面指示なき寸法公差} & 例：JIS B 0405-m 相当 / 個別指定 \\ \hline
-\labelcell{図面指示なき幾何公差} & 例：JIS B 0419 相当 / 個別指定 \\ \hline
-\labelcell{指示なき角部} & 糸面取り / C0.2〜0.5 程度 / 個別指定 \\ \hline
-\labelcell{指示なき面粗さ} & 例：Ra 6.3 / 個別指定 \\ \hline
-\end{tabularx}
+\end{SpecTable}
+\Note{代替材を提案する場合は、機械的性質、耐食性、熱処理性、溶接性、寸法安定性への影響を明記し、発注者の承認を得ること。}
 
-\PageBreak
+\BlockTitle{3.2 部品別材料指定}
+\begin{SpecTable}{|p{9mm}|p{48mm}|p{30mm}|p{30mm}|p{29mm}|}
+\hline
+\Head{No.} & \Head{部品名} & \Head{材質} & \Head{規格} & \Head{備考} \\
+\hline
+1 &  &  &  &  \\
+\hline
+2 &  &  &  &  \\
+\hline
+3 &  &  &  &  \\
+\hline
+\end{SpecTable}
+
+\BlockTitle{3.3 機械加工の基本要求}
+\begin{itemize}
+  \item 図面指示寸法、公差、幾何公差、面粗さを満足すること。
+  \item 図面に指示のないバリ、カエリ、鋭利エッジは除去すること。
+  \item ねじ部、はめあい部、シール面、摺動面に損傷がないこと。
+  \item 加工基準面、測定基準面を変更する場合は事前確認すること。
+  \item 加工歪みが懸念される場合は、加工順序または応力除去の要否を確認すること。
+\end{itemize}
+
+\BlockTitle{3.4 一般公差・標準仕上げ}
+\begin{SpecTable}{|p{42mm}|p{104mm}|}
+\hline
+\Lab{図面指示なき寸法公差} & 例：JIS B 0405-m 相当 / 個別指定 \\
+\hline
+\Lab{図面指示なき幾何公差} & 例：JIS B 0419 相当 / 個別指定 \\
+\hline
+\Lab{指示なき角部} & 糸面取り / C0.2から0.5程度 / 個別指定 \\
+\hline
+\Lab{指示なき面粗さ} & 例：Ra 6.3 / 個別指定 \\
+\hline
+\end{SpecTable}
+
+\clearpage
 
 % =========================================================
-\section{溶接仕様・組立仕様}
+\PageTitle{4. 溶接仕様・組立仕様}
 
-\subsection{溶接仕様}
-\begin{tabularx}{\linewidth}{|L{30mm}|Y|L{30mm}|Y|}
+\BlockTitle{4.1 溶接仕様}
+\begin{SpecTable}{|p{28mm}|p{43mm}|p{30mm}|p{43mm}|}
 \hline
-\labelcell{溶接方法} & TIG / MIG / MAG / アーク / その他 & \labelcell{溶接材料} & 図面指示 / 下記指定 \\ \hline
-\labelcell{外観要求} & 割れ、ブローホール、有害なアンダーカットなきこと & \labelcell{歪み管理} & \choice{要 / 不要} \\ \hline
-\labelcell{溶接後処理} & スパッタ除去 / ビード仕上げ / 酸洗い & \labelcell{非破壊検査} & 不要 / PT / MT / UT / RT \\ \hline
-\end{tabularx}
+\Lab{溶接方法} & TIG / MIG / MAG / アーク / その他 & \Lab{溶接材料} & 図面指示 / 下記指定 \\
+\hline
+\Lab{外観要求} & 割れ、ブローホール、有害なアンダーカットなきこと & \Lab{歪み管理} & \YN \\
+\hline
+\Lab{溶接後処理} & スパッタ除去 / ビード仕上げ / 酸洗い & \Lab{非破壊検査} & 不要 / PT / MT / UT / RT \\
+\hline
+\end{SpecTable}
 
-\subsection{溶接に関する要求事項}
+\BlockTitle{4.2 溶接に関する要求事項}
 \begin{itemize}
   \item 溶接寸法、脚長、溶接範囲は図面指示によること。
   \item 溶接歪みにより、機能寸法、取付寸法、平面度、直角度を損なわないこと。
@@ -245,36 +300,42 @@
   \item 欠陥補修を行う場合は、補修方法を明確にし、必要に応じて承認を得ること。
 \end{itemize}
 
-\subsection{組立仕様}
-\begin{tabularx}{\linewidth}{|L{30mm}|Y|L{30mm}|Y|}
+\BlockTitle{4.3 組立仕様}
+\begin{SpecTable}{|p{28mm}|p{43mm}|p{30mm}|p{43mm}|}
 \hline
-\labelcell{組立範囲} & 全組立 / 部分組立 / 仮組 & \labelcell{締結部品} & 支給 / 製作者手配 \\ \hline
-\labelcell{接着剤・固定剤} & 使用可 / 使用不可 / 指定品あり & \labelcell{分解納入} & 可 / 不可 \\ \hline
-\labelcell{可動部確認} & 要 / 不要 & \labelcell{締付トルク管理} & 要 / 不要 / 指定部のみ \\ \hline
-\end{tabularx}
-
-\subsection{組立に関する要求事項}
-\begin{tabularx}{\linewidth}{|Y|Y|}
+\Lab{組立範囲} & 全組立 / 部分組立 / 仮組 & \Lab{締結部品} & 支給 / 製作者手配 \\
 \hline
-\cb\ 部品相互の干渉なし & \cb\ 芯ずれ、傾き、ガタつきなし \\ \hline
-\cb\ 可動部の引っ掛かり、異音なし & \cb\ 締結部の緩み止めを確認 \\ \hline
-\cb\ 分解困難な構造は事前確認 & \cb\ 組立後の外観・機能を確認 \\ \hline
-\end{tabularx}
+\Lab{接着剤・固定剤} & 使用可 / 使用不可 / 指定品あり & \Lab{分解納入} & 可 / 不可 \\
+\hline
+\Lab{可動部確認} & \YN & \Lab{締付トルク管理} & 要 / 不要 / 指定部のみ \\
+\hline
+\end{SpecTable}
 
-\PageBreak
+\BlockTitle{4.4 組立に関する要求事項}
+\begin{itemize}
+  \item 部品相互の干渉、芯ずれ、傾き、ガタつきがないこと。
+  \item 締結部は必要なトルク、緩み止め、座面状態を満足すること。
+  \item 可動部は、引っ掛かり、異音、過大抵抗がないこと。
+  \item 組立後に分解が困難となる構造については、事前に確認すること。
+\end{itemize}
+
+\clearpage
 
 % =========================================================
-\section{処理仕様・外観仕上げ}
+\PageTitle{5. 処理仕様・外観仕上げ}
 
-\subsection{熱処理・表面処理}
-\begin{tabularx}{\linewidth}{|L{30mm}|Y|L{30mm}|Y|}
+\BlockTitle{5.1 熱処理・表面処理}
+\begin{SpecTable}{|p{28mm}|p{43mm}|p{30mm}|p{43mm}|}
 \hline
-\labelcell{熱処理} & なし / 焼入れ / 焼戻し / 焼鈍 / 応力除去 & \labelcell{処理証明書} & 要 / 不要 \\ \hline
-\labelcell{表面処理} & なし / 黒染め / 無電解Ni / アルマイト / 塗装 / その他 & \labelcell{マスキング指定} & あり / なし \\ \hline
-\labelcell{硬度指定} & あり / なし & \labelcell{処理後寸法管理} & 要 / 不要 / 重要部のみ \\ \hline
-\end{tabularx}
+\Lab{熱処理} & なし / 焼入れ / 焼戻し / 焼鈍 / 応力除去 & \Lab{処理証明書} & \YN \\
+\hline
+\Lab{表面処理} & なし / 黒染め / 無電解Ni / アルマイト / 塗装 / その他 & \Lab{マスキング指定} & あり / なし \\
+\hline
+\Lab{硬度指定} & あり / なし & \Lab{処理後寸法管理} & 要 / 不要 / 重要部のみ \\
+\hline
+\end{SpecTable}
 
-\subsection{処理時の注意事項}
+\BlockTitle{5.2 処理時の注意事項}
 \begin{itemize}
   \item 処理により寸法、公差、ねじ、はめあい、面粗さを損なわないこと。
   \item 処理膜厚または熱変形が重要寸法に影響する場合は、製作前に確認すること。
@@ -282,144 +343,187 @@
   \item 処理後の錆、変色、剥離、膨れ、密着不良がないこと。
 \end{itemize}
 
-\subsection{外観・仕上げ要求}
-\begin{tabularx}{\linewidth}{|L{32mm}|Y|}
+\BlockTitle{5.3 外観・仕上げ要求}
+\begin{SpecTable}{|p{34mm}|p{112mm}|}
 \hline
-\rowcolor{SpecSoft}\thcell{項目} & \thcell{判定基準} \\ \hline
-バリ・カエリ & 使用上有害なものがないこと。 \\ \hline
-傷・打痕 & 機能面、シール面、摺動面に有害な傷・打痕がないこと。 \\ \hline
-錆・変色 & 有害な錆、腐食、処理不良がないこと。 \\ \hline
-汚れ・異物 & 切粉、粉塵、溶接スパッタ、過剰な油分がないこと。 \\ \hline
-エッジ & 機能上必要な箇所を除き、鋭利でないこと。 \\ \hline
-\end{tabularx}
-
-\subsection{使用環境・特記事項}
-\begin{tabularx}{\linewidth}{|L{38mm}|Y|}
+\Head{項目} & \Head{判定基準} \\
 \hline
-\labelcell{使用環境} &  \\ \hline
-\labelcell{温度 / 湿度 / 腐食環境} &  \\ \hline
-\labelcell{清浄度要求} &  \\ \hline
-\end{tabularx}
+バリ・カエリ & 使用上有害なものがないこと。 \\
+\hline
+傷・打痕 & 機能面、シール面、摺動面に有害な傷・打痕がないこと。 \\
+\hline
+錆・変色 & 有害な錆、腐食、処理不良がないこと。 \\
+\hline
+汚れ・異物 & 切粉、粉塵、溶接スパッタ、過剰な油分がないこと。 \\
+\hline
+エッジ & 機能上必要な箇所を除き、鋭利でないこと。 \\
+\hline
+\end{SpecTable}
 
-\PageBreak
+\BlockTitle{5.4 使用環境・特記事項}
+\begin{itemize}
+  \item 使用環境：記入。
+  \item 温度、湿度、腐食環境：記入。
+  \item 清浄度要求：記入。
+  \item その他の禁止事項、注意事項：記入。
+\end{itemize}
+
+\clearpage
 
 % =========================================================
-\section{検査要求}
+\PageTitle{6. 検査要求}
 
-\subsection{検査項目}
-\begin{tabularx}{\linewidth}{|Y|L{22mm}|L{24mm}|Y|}
+\BlockTitle{6.1 検査項目}
+\begin{SpecTable}{|p{48mm}|p{22mm}|p{24mm}|p{52mm}|}
 \hline
-\rowcolor{SpecSoft}\thcell{検査項目} & \thcell{要否} & \thcell{記録提出} & \thcell{備考} \\ \hline
-外観検査 & 要 / 不要 & 要 / 不要 &  \\ \hline
-主要寸法検査 & 要 / 不要 & 要 / 不要 &  \\ \hline
-幾何公差検査 & 要 / 不要 & 要 / 不要 &  \\ \hline
-ねじ検査 & 要 / 不要 & 要 / 不要 &  \\ \hline
-表面粗さ検査 & 要 / 不要 & 要 / 不要 &  \\ \hline
-硬度検査 & 要 / 不要 & 要 / 不要 &  \\ \hline
-溶接外観検査 & 要 / 不要 & 要 / 不要 &  \\ \hline
-非破壊検査 & 要 / 不要 & 要 / 不要 & PT / MT / UT / RT \\ \hline
-組立動作確認 & 要 / 不要 & 要 / 不要 &  \\ \hline
-\end{tabularx}
-
-\subsection{重点管理寸法・特性}
-\begin{tabularx}{\linewidth}{|L{8mm}|L{22mm}|Y|L{22mm}|L{26mm}|L{22mm}|}
+\Head{検査項目} & \Head{要否} & \Head{記録提出} & \Head{備考} \\
 \hline
-\rowcolor{SpecSoft}\thcell{No.} & \thcell{図面位置} & \thcell{寸法 / 特性} & \thcell{公差} & \thcell{検査方法} & \thcell{備考} \\ \hline
-1 &  &  &  &  &  \\ \hline
-2 &  &  &  &  &  \\ \hline
-3 &  &  &  &  &  \\ \hline
-4 &  &  &  &  &  \\ \hline
-5 &  &  &  &  &  \\ \hline
-\end{tabularx}
-
-\begin{SpecNote}
-検査成績書が必要な場合は、測定値、使用測定器、検査日、検査者を記録すること。
-\end{SpecNote}
-
-\subsection{検査・判定に関する補足}
-\begin{tabularx}{\linewidth}{|L{38mm}|Y|}
+外観検査 & \YN & \YN &  \\
 \hline
-\labelcell{抜取 / 全数} & 全数 / 抜取 / 重要寸法のみ全数 \\ \hline
-\labelcell{測定器指定} & 指定なし / 三次元測定機 / 粗さ計 / 硬度計 / その他 \\ \hline
-\labelcell{判定保留時の扱い} & 発注者確認後に処置すること。 \\ \hline
-\end{tabularx}
+主要寸法検査 & \YN & \YN &  \\
+\hline
+幾何公差検査 & \YN & \YN &  \\
+\hline
+ねじ検査 & \YN & \YN &  \\
+\hline
+表面粗さ検査 & \YN & \YN &  \\
+\hline
+硬度検査 & \YN & \YN &  \\
+\hline
+溶接外観検査 & \YN & \YN &  \\
+\hline
+非破壊検査 & \YN & \YN & PT / MT / UT / RT \\
+\hline
+組立動作確認 & \YN & \YN &  \\
+\hline
+\end{SpecTable}
 
-\PageBreak
+\BlockTitle{6.2 重点管理寸法・特性}
+\begin{SpecTable}{|p{8mm}|p{22mm}|p{44mm}|p{20mm}|p{28mm}|p{24mm}|}
+\hline
+\Head{No.} & \Head{図面位置} & \Head{寸法 / 特性} & \Head{公差} & \Head{検査方法} & \Head{備考} \\
+\hline
+1 &  &  &  &  &  \\
+\hline
+2 &  &  &  &  &  \\
+\hline
+3 &  &  &  &  &  \\
+\hline
+4 &  &  &  &  &  \\
+\hline
+5 &  &  &  &  &  \\
+\hline
+\end{SpecTable}
+\Note{検査成績書が必要な場合は、測定値、使用測定器、検査日、検査者を記録すること。}
+
+\BlockTitle{6.3 検査・判定に関する補足}
+\begin{itemize}
+  \item 検査範囲：全数、抜取、重要寸法のみ全数などを明記すること。
+  \item 測定器指定：三次元測定機、粗さ計、硬度計など、必要時に指定すること。
+  \item 判定保留時は、発注者確認後に処置すること。
+\end{itemize}
+
+\clearpage
 
 % =========================================================
-\section{提出物・納入条件}
+\PageTitle{7. 提出物・納入条件}
 
-\subsection{提出書類・納入物}
-\begin{tabularx}{\linewidth}{|Y|L{22mm}|L{34mm}|Y|}
+\BlockTitle{7.1 提出書類・納入物}
+\begin{SpecTable}{|p{48mm}|p{22mm}|p{34mm}|p{42mm}|}
 \hline
-\rowcolor{SpecSoft}\thcell{提出物} & \thcell{要否} & \thcell{提出タイミング} & \thcell{備考} \\ \hline
-見積書 & 要 / 不要 & 発注前 &  \\ \hline
-工程表 & 要 / 不要 & 製作前 &  \\ \hline
-材料証明書 & 要 / 不要 & 納入時 &  \\ \hline
-熱処理証明書 & 要 / 不要 & 納入時 &  \\ \hline
-表面処理証明書 & 要 / 不要 & 納入時 &  \\ \hline
-検査成績書 & 要 / 不要 & 納入時 &  \\ \hline
-非破壊検査記録 & 要 / 不要 & 納入時 &  \\ \hline
-完成写真 & 要 / 不要 & 出荷前 / 納入時 &  \\ \hline
-\end{tabularx}
-
-\subsection{梱包要求}
-\begin{tabularx}{\linewidth}{|Y|Y|}
+\Head{提出物} & \Head{要否} & \Head{提出タイミング} & \Head{備考} \\
 \hline
-\cb\ 輸送中の傷、打痕、錆、変形を防止 & \cb\ 精密面、シール面、摺動面を保護 \\ \hline
-\cb\ ねじ部、突起部、薄肉部を保護 & \cb\ 必要に応じ防錆油、防錆紙、乾燥剤を使用 \\ \hline
-\cb\ 重量物は安全に荷扱い可能な荷姿 & \cb\ 混載時は部品識別を明確化 \\ \hline
-\end{tabularx}
-
-\subsection{識別・納入条件}
-\begin{tabularx}{\linewidth}{|L{35mm}|Y|}
+見積書 & \YN & 発注前 &  \\
 \hline
-\labelcell{部品識別} & 品名 / 図面番号 / Rev. / 数量を表示 \\ \hline
-\labelcell{個別刻印} & 要 / 不要 / 指定部のみ \\ \hline
-\labelcell{ロット管理} & 要 / 不要 \\ \hline
-\labelcell{納品書記載} & 品名、図面番号、Rev.、数量を記載 \\ \hline
-\labelcell{納入場所} &  \\ \hline
-\end{tabularx}
+工程表 & \YN & 製作前 &  \\
+\hline
+材料証明書 & \YN & 納入時 &  \\
+\hline
+熱処理証明書 & \YN & 納入時 &  \\
+\hline
+表面処理証明書 & \YN & 納入時 &  \\
+\hline
+検査成績書 & \YN & 納入時 &  \\
+\hline
+非破壊検査記録 & \YN & 納入時 &  \\
+\hline
+完成写真 & \YN & 出荷前 / 納入時 &  \\
+\hline
+\end{SpecTable}
 
-\PageBreak
+\BlockTitle{7.2 梱包要求}
+\begin{itemize}
+  \item 輸送中に傷、打痕、錆、変形が生じないよう梱包すること。
+  \item 精密面、シール面、摺動面、ねじ部は保護すること。
+  \item 防錆が必要な場合は、防錆油、防錆紙、乾燥剤等を使用すること。
+  \item 重量物は安全に荷扱いできる荷姿とすること。
+  \item 混載時は部品識別を明確にすること。
+\end{itemize}
+
+\BlockTitle{7.3 識別・納入条件}
+\begin{itemize}
+  \item 部品識別：品名、図面番号、Rev.、数量を表示すること。
+  \item 個別刻印：要否および刻印位置を図面または別紙で指定すること。
+  \item ロット管理：必要時はロット番号と対象数量を記録すること。
+  \item 納品書：品名、図面番号、Rev.、数量を記載すること。
+  \item 納入場所：記入。
+\end{itemize}
+
+\BlockTitle{7.4 納入時確認事項}
+\begin{itemize}
+  \item 納入品の品名、図面番号、Rev.、数量が発注内容と一致していること。
+  \item 必要な提出書類が同梱または事前提出されていること。
+  \item 梱包破損、部品の変形、錆、打痕、識別不備がないこと。
+  \item 分納、代替品、仕様逸脱がある場合は、事前承認が記録されていること。
+  \item 受入時に判定できない事項は、発注者と製作者で確認方法を協議すること。
+\end{itemize}
+
+\clearpage
 
 % =========================================================
-\section{品質保証・変更管理}
+\PageTitle{8. 品質保証・変更管理}
 
-\subsection{不適合・疑義発生時の報告対象}
-\begin{tabularx}{\linewidth}{|Y|Y|}
+\BlockTitle{8.1 不適合・疑義発生時の報告対象}
+\begin{itemize}
+  \item 図面または仕様を満足しない寸法、形状、外観。
+  \item 材料、処理、溶接、組立に関する不適合。
+  \item 納期に影響する問題。
+  \item 図面・仕様の解釈に疑義がある事項。
+  \item 製作上、仕様変更が必要と考えられる事項。
+  \item 補修、再製作、特別採用が必要な事項。
+\end{itemize}
+\Note{不適合品の補修、再製作、特別採用は、発注者の承認なく実施しないこと。}
+
+\BlockTitle{8.2 事前承認を要する変更}
+\begin{itemize}
+  \item 材料の変更。
+  \item 加工方法、溶接方法、溶接材料の変更。
+  \item 熱処理または表面処理条件の変更。
+  \item 外注先、再委託先の変更。
+  \item 図面・仕様からの逸脱。
+  \item 納入形態または補修方法の変更。
+\end{itemize}
+
+\BlockTitle{8.3 見積時確認事項}
+\begin{SpecTable}{|p{48mm}|p{40mm}|p{58mm}|}
 \hline
-\cb\ 図面または仕様を満足しない寸法、形状、外観 & \cb\ 材料、処理、溶接、組立に関する不適合 \\ \hline
-\cb\ 納期に影響する問題 & \cb\ 図面・仕様の解釈に疑義がある事項 \\ \hline
-\cb\ 製作上、仕様変更が必要と考えられる事項 & \cb\ 補修、再製作、特別採用が必要な事項 \\ \hline
-\end{tabularx}
-
-\begin{SpecNote}
-不適合品の補修、再製作、特別採用は、発注者の承認なく実施しないこと。
-\end{SpecNote}
-
-\subsection{事前承認を要する変更}
-\begin{tabularx}{\linewidth}{|Y|Y|}
+\Head{確認項目} & \Head{回答} & \Head{備考} \\
 \hline
-材料の変更 & 加工方法の大幅な変更 \\ \hline
-溶接方法または溶接材料の変更 & 熱処理または表面処理条件の変更 \\ \hline
-外注先、再委託先の変更 & 図面・仕様からの逸脱 \\ \hline
-納入形態の変更 & 補修方法の変更 \\ \hline
-\end{tabularx}
-
-\subsection{見積時確認事項}
-\begin{tabularx}{\linewidth}{|Y|L{42mm}|Y|}
+製作可否 & 可 / 不可 / 条件付き可 &  \\
 \hline
-\rowcolor{SpecSoft}\thcell{確認項目} & \thcell{回答} & \thcell{備考} \\ \hline
-製作可否 & 可 / 不可 / 条件付き可 &  \\ \hline
-希望納期対応 & 可 / 不可 &  \\ \hline
-材料手配 & 可 / 不可 &  \\ \hline
-表面処理対応 & 自社 / 外注 / 不可 &  \\ \hline
-溶接対応 & 自社 / 外注 / 不可 &  \\ \hline
-検査成績書提出 & 可 / 不可 &  \\ \hline
-\end{tabularx}
+希望納期対応 & 可 / 不可 &  \\
+\hline
+材料手配 & 可 / 不可 &  \\
+\hline
+表面処理対応 & 自社 / 外注 / 不可 &  \\
+\hline
+溶接対応 & 自社 / 外注 / 不可 &  \\
+\hline
+検査成績書提出 & 可 / 不可 &  \\
+\hline
+\end{SpecTable}
 
-\subsection{受入条件}
+\BlockTitle{8.4 受入条件}
 \begin{enumerate}
   \item 図面および本仕様書の要求を満足していること。
   \item 必要な検査および提出書類が揃っていること。
@@ -428,39 +532,49 @@
   \item 不明点、逸脱、変更について事前承認が得られていること。
 \end{enumerate}
 
-\PageBreak
+\clearpage
 
 % =========================================================
-\section{特記事項・承認}
+\PageTitle{9. 案件固有の特記事項}
 
-\subsection{案件固有の特記事項}
-\begin{tabularx}{\linewidth}{|L{42mm}|Y|}
-\hline
-\labelcell{使用環境} &  \\ \hline
-\labelcell{取付相手 / インターフェース} &  \\ \hline
-\labelcell{荷重条件 / 使用条件} &  \\ \hline
-\labelcell{温度条件 / 耐食性要求} &  \\ \hline
-\labelcell{禁止事項} &  \\ \hline
-\labelcell{その他} & \rule{0pt}{10mm} \\ \hline
-\end{tabularx}
+\BlockTitle{9.1 設計・使用条件}
+\begin{itemize}
+  \item 使用環境：記入。
+  \item 取付相手、インターフェース：記入。
+  \item 荷重条件、使用条件：記入。
+  \item 温度条件、耐食性要求：記入。
+  \item 清浄度要求、禁止事項：記入。
+  \item その他：記入。
+\end{itemize}
 
-\subsection{最低記入項目チェック}
-\begin{tabularx}{\linewidth}{|L{30mm}|Y|L{16mm}|}
-\hline
-\rowcolor{SpecSoft}\thcell{分類} & \thcell{必須項目} & \thcell{確認} \\ \hline
-基本情報 & 品名、図面番号、Rev.、数量、納期 & \cb \\ \hline
-技術情報 & 図面、材質、表面処理、熱処理、一般公差 & \cb \\ \hline
-製作範囲 & 加工、溶接、組立、材料手配の要否 & \cb \\ \hline
-品質要求 & 検査項目、検査成績書の要否、重点管理寸法 & \cb \\ \hline
-納入条件 & 梱包、識別、提出書類 & \cb \\ \hline
-変更管理 & 代替材、仕様逸脱、補修時の承認要否 & \cb \\ \hline
-\end{tabularx}
+\BlockTitle{9.2 最低記入項目}
+\begin{itemize}
+  \item 基本情報：品名、図面番号、Rev.、数量、納期。
+  \item 技術情報：図面、材質、表面処理、熱処理、一般公差。
+  \item 製作範囲：加工、溶接、組立、材料手配の要否。
+  \item 品質要求：検査項目、検査成績書の要否、重点管理寸法。
+  \item 納入条件：梱包、識別、提出書類、納入時確認事項。
+  \item 変更管理：代替材、仕様逸脱、補修時の承認要否。
+\end{itemize}
 
-\subsection{承認欄}
-\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|}
+\clearpage
+
+% =========================================================
+\PageTitle{10. 改訂履歴}
+
+\BlockTitle{10.1 改訂履歴}
+\begin{SpecTable}{|p{16mm}|p{28mm}|p{74mm}|p{28mm}|}
 \hline
-\labelcell{作成} & \labelcell{確認} & \labelcell{承認} & \labelcell{受領確認} \\ \hline
-\rule{0pt}{22mm}日付： & 日付： & 日付： & 日付： \\ \hline
-\end{tabularx}
+\Head{Rev.} & \Head{日付} & \Head{改訂内容} & \Head{作成 / 承認} \\
+\hline
+0 & 記入 & 初版 & 記入 \\
+\hline
+ &  &  &  \\
+\hline
+ &  &  &  \\
+\hline
+ &  &  &  \\
+\hline
+\end{SpecTable}
 
 \end{document}
