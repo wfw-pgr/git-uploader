@@ -48,11 +48,10 @@
 \setlength{\SpecBodyWidth}{\linewidth}
 
 % ===== 入力欄 =====
-% 図番・仕様書番号等は、半角アンダースコアを避け、ハイフン推奨。
+% 仕様書番号は YYMMDD-連番 形式を基本とする。例：260523-01
 \newcommand{\DocTitle}{機械加工・組立・溶接部品 要求仕様書}
-\newcommand{\SpecNo}{記入}
-\newcommand{\SpecRev}{記入}
-\newcommand{\SpecDate}{記入}
+\newcommand{\SpecNo}{260523-01}
+\newcommand{\SpecDate}{\today}
 \newcommand{\ProjectName}{記入}
 \newcommand{\PartName}{記入}
 \newcommand{\DrawingNo}{記入}
@@ -63,7 +62,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\small \DocTitle}
-\rhead{\small 仕様書番号：\SpecNo\quad Rev.：\SpecRev}
+\rhead{\small 仕様書番号：\SpecNo}
 \lfoot{\small\textcolor{SpecMuted}{\DocTitle}}
 \rfoot{\small\textcolor{SpecMuted}{Page \thepage\ / \pageref{LastPage}}}
 \renewcommand{\headrulewidth}{0.6pt}
@@ -125,20 +124,16 @@
 % =========================================================
 \PageTitle{1. 文書情報・調達対象}
 
-\BlockTitle{1.1 文書基本情報}
-\begin{SpecTable}{|p{28mm}|p{43mm}|p{30mm}|p{43mm}|}
+\BlockTitle{1.1 基本情報}
+\begin{SpecTable}{|p{30mm}|p{50mm}|p{30mm}|p{50mm}|}
 \hline
 \Lab{対象品名} & \PartName & \Lab{適用装置 / 案件名} & \ProjectName \\
 \hline
-\Lab{図面番号} & \DrawingNo & \Lab{図面 Rev.} & 記入 \\
-\hline
-\Lab{仕様書番号} & \SpecNo & \Lab{仕様書 Rev.} & \SpecRev \\
+\Lab{仕様書番号} & \SpecNo & \Lab{作成日} & \SpecDate \\
 \hline
 \Lab{希望数量} & \Quantity & \Lab{希望納期} & \DueDate \\
 \hline
-\Lab{作成部門 / 作成者} & 記入 & \Lab{取引先 / 製作者} & 記入 \\
-\hline
-\Lab{作成日} & \SpecDate & \Lab{承認者} & 記入 \\
+\Lab{要求者 所属・名} & 記入 & \Lab{依頼先} & 記入 \\
 \hline
 \end{SpecTable}
 
@@ -157,20 +152,14 @@
 \hline
 \end{SpecTable}
 
-\BlockTitle{1.3 この文書で指定する事項}
-\begin{itemize}
-  \item 製作範囲、支給資料、図面・仕様の優先順位。
-  \item 材料、加工、溶接、組立、熱処理、表面処理に関する要求事項。
-  \item 検査、提出書類、梱包、識別、納入、不適合時の処置。
-\end{itemize}
 
 \clearpage
 
 % =========================================================
-\PageTitle{2. 適用範囲・支給資料}
+\PageTitle{2. 依頼範囲・提示資料}
 
-\BlockTitle{2.1 本仕様書の適用範囲}
-\begin{SpecTable}{|p{36mm}|p{24mm}|p{86mm}|}
+\BlockTitle{2.1 依頼範囲}
+\begin{SpecTable}{|p{40mm}|p{24mm}|p{96mm}|}
 \hline
 \Head{項目} & \Head{要否} & \Head{指定内容 / 備考} \\
 \hline
@@ -182,45 +171,36 @@
 \hline
 組立 & \YN &  \\
 \hline
-熱処理 & \YN &  \\
-\hline
-表面処理 & \YN &  \\
+熱処理・表面処理 & \YN &  \\
 \hline
 検査・検査成績書 & \YN &  \\
 \hline
-梱包・識別・納入 & \YN &  \\
-\hline
 \end{SpecTable}
 
-\BlockTitle{2.2 対象外範囲・別途手配}
+\BlockTitle{2.2 その他、依頼事項}
 \begin{itemize}
-  \item 対象外作業：記入。
-  \item 別途手配品：記入。
-  \item 支給品：記入。
+  \item その他依頼事項：記入。
+  \item 対象外作業または別途手配がある場合は、本欄に明記すること。
+  \item 支給品がある場合は、品名、数量、支給時期、返却要否を明記すること。
 \end{itemize}
 
-\BlockTitle{2.3 図面・仕様の優先順位}
-\begin{enumerate}
-  \item 本要求仕様書。
-  \item 承認済み製作図。
-  \item 部品表。
-  \item 3D CADデータ。
-  \item その他参考資料。
-\end{enumerate}
-\Note{不一致、疑義、製作上の制約を発見した場合は、製作前に発注者へ確認すること。}
+\BlockTitle{2.3 留意事項}
+不一致、疑義、製作上の制約を発見した場合は、製作前に発注者へ確認すること。
 
-\BlockTitle{2.4 支給資料}
-\begin{SpecTable}{|p{46mm}|p{18mm}|p{34mm}|p{48mm}|}
+\BlockTitle{2.4 提示資料}
+\begin{SpecTable}{|p{32mm}|p{58mm}|p{70mm}|}
 \hline
-\Head{資料名} & \Head{Rev.} & \Head{形式} & \Head{備考} \\
+\Head{分類} & \Head{資料名} & \Head{備考} \\
 \hline
-製作図 &  & PDF / DXF &  \\
+製作図 & 例：金属カプセル設計図 &  \\
 \hline
-3D CAD &  & STEP / Parasolid &  \\
+3D CAD &  &  \\
 \hline
-部品表 &  & Excel / PDF &  \\
+部品表 &  &  \\
 \hline
-検査基準書 &  & PDF & 必要時 \\
+検査基準書 &  & 必要時 \\
+\hline
+その他 &  &  \\
 \hline
 \end{SpecTable}
 
